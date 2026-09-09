@@ -20,6 +20,7 @@ scripts/         Helper scripts (publish.sh deploys the site)
 ```
 
 Preview URL: https://theleochai.github.io/leochai-website/
+**Note:** while the old repo `TheLeoChai.github.io` owns `www.leochai.com`, GitHub redirects this preview URL to `www.leochai.com/leochai-website/` (standard behavior when a user site has a custom domain). It will resolve correctly after the cutover below. To check a deploy before then, inspect the `gh-pages` branch or run the site locally.
 
 ### Custom domain (pending cutover)
 
