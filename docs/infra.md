@@ -154,8 +154,10 @@ curl -s ifconfig.me
 # DNS records (Cloudflare MCP): zone leochai.com, list dns_records
 
 # live TLS + backend through the public name, hitting the LAN IP directly
+# (--resolve needed: hairpin NAT is off, public names don't loop back from the LAN)
 curl -sv --resolve api.leochai.com:443:192.168.2.20 https://api.leochai.com/docs
 
-# container inventory without docker access
-for p in /proc/[0-9]*/cgroup; do grep -o 'docker-[0-9a-f]*' "$p" 2>/dev/null; done | sort -u
+# container inventory (kimaki is in the docker group since 2026-09-10)
+docker ps
+# (earlier snapshots used /proc cgroup enumeration, before docker access existed)
 ```
