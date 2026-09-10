@@ -23,11 +23,24 @@
     </style>
   </head>
   <body>
-    <main>
-      <h1>Leo Chai</h1>
-      <p>Building things. Demos coming soon.</p>
-      <p><a href="https://api.leochai.com/docs">api.leochai.com — live API demo</a></p>
-      <p><a href="mailto:contact@leochai.com">contact@leochai.com</a></p>
-    </main>
+      <main>
+        <h1>Leo Chai</h1>
+        <p>Building things. Demos coming soon.</p>
+        <div id="posts"><p>loading posts…</p></div>
+        <p><a href="https://api.leochai.com/docs">api.leochai.com — live API demo</a></p>
+        <p><a href="mailto:contact@leochai.com">contact@leochai.com</a></p>
+      </main>
+      <script>
+        fetch("https://api.leochai.com/api/posts")
+          .then((r) => r.json())
+          .then((posts) => {
+            document.getElementById("posts").innerHTML = posts.length
+              ? posts.map((p) => `<p><strong>${p.title}</strong></p>`).join("")
+              : "<p>no posts yet</p>";
+          })
+          .catch(() => {
+            document.getElementById("posts").innerHTML = "<p>API unreachable</p>";
+          });
+      </script>
   </body>
 </html>
