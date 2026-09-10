@@ -34,11 +34,9 @@ https://api.leochai.com  :443  ──> NAS ──> Caddy container ──> Perso
 | apex | TXT | `v=spf1 include:_spf.google.com ~all` | no | SPF |
 | `google._domainkey` | TXT | RSA key | no | DKIM |
 
-> **Stale records:** `nas.leochai.com` and `proxy.leochai.com` point at old
-> public IPs (the NAS IP has changed at least once since October 2025 — it was
-> `173.33.99.249` / `184.145.4.143`, now `142.188.246.243`). Only
-> `api.leochai.com` is DDNS-managed. Decide: delete these, or repoint them at
-> `api.leochai.com`.
+> **Stale records (deleted 2026-09-10):** `nas.leochai.com` and
+> `proxy.leochai.com` pointed at old public IPs and were removed from
+> Cloudflare. Only `api.leochai.com` is DDNS-managed.
 
 ## DDNS
 
@@ -60,6 +58,42 @@ https://api.leochai.com  :443  ──> NAS ──> Caddy container ──> Perso
   cert (verified live: valid until 2026-11-15, issuer LE, HTTP/2).
 - The Caddyfile itself lives inside the container mount and is root-only from
   the `kimaki` user. Inspect with: `docker exec <caddy-container> cat /etc/caddy/Caddyfile`.
+
+## OpenVPN Access Server (VPN)
+
+Container `openvpn-as` runs an OpenVPN Access Server, UGOS-integrated (portal
+redirect carries `?os=ugospro`).
+
+- **Hostname:** `vpn.leochai.com` — a CNAME to `api.leochai.com`, so it rides
+  on the DDNS-managed record and survives IP changes.
+- **Client portal:** port `943/tcp` (`https://vpn.leochai.com:943`) — login,
+  download profile, or use the OpenVPN Connect app pointing at this host.
+- **Admin UI:** `https://vpn.leochai.com:943/admin`
+- **Tunnel:** OpenVPN AS default `1194/udp` (assumed; container config is
+  root-only and OpenVPN silently drops probes, so the exact port/forward
+  couldn't be verified externally).
+
+### External reachability (check-host.net, 2026-09-10)
+
+| Port | Result |
+|---|---|
+| `443/tcp` (Caddy / Personal API) | ✅ reachable (external node connected) |
+| `943/tcp` (VPN portal) | ❌ **blocked** — 8/8 external nodes timed out |
+| `1194/udp` (VPN tunnel) | ⚠️ unverifiable — OpenVPN ignores probe packets |
+
+**Consequence:** the VPN portal only works from inside the LAN or over
+Tailscale. To make the VPN usable from outside, forward `943/tcp` and
+`1194/udp` on the router to `192.168.2.20`.
+
+### How to connect
+
+1. **From LAN / Tailscale:** open `https://192.168.2.20:943` (or
+   `https://100.97.57.4:943`), sign in, install OpenVPN Connect or download
+   the profile.
+2. **From the internet:** first forward `943/tcp` + `1194/udp` on the router;
+   then use `https://vpn.leochai.com:943` anywhere.
+
+
 
 ## Running containers (verified via /proc, 2026-09-10)
 
