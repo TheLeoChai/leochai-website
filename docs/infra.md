@@ -43,11 +43,11 @@ https://api.leochai.com  :443  ──> NAS ──> Caddy container ──> Perso
 - `api.leochai.com` tracks the NAS's changing home IP and is **currently
   correct**: the record matches the IP the NAS itself reports today
   (`curl ifconfig.me` → `142.188.246.243`).
-- The updater mechanism is **not visible to the `kimaki` user**: no crontab
-  entries, no ddclient/cloudflare process on the host. It is either the UGOS
-  built-in DDNS client or a root-owned container.
-- To inspect/confirm: UGOS Control Panel → external access / DDNS, or
-  `docker ps` as root.
+- **Updater identity (updated 2026-09-10):** the compose project defines two
+  `oznu/cloudflare-ddns` containers (`cf-ddns-api`, `cf-ddns-nas`) but both
+  have been dead (`Exited 1`) for ~10 months. The record was still updated
+  2026-09-03, so the working updater is something else — most likely the
+  UGOS built-in DDNS. Unconfirmed; works as of today.
 - `vpn.leochai.com` rides on the same record via CNAME, so OpenVPN keeps
   working across IP changes automatically.
 
