@@ -77,13 +77,29 @@ redirect carries `?os=ugospro`).
 
 | Port | Result |
 |---|---|
-| `443/tcp` (Caddy / Personal API) | ✅ reachable (external node connected) |
+| `443/tcp` (Caddy / Personal API) | ✅ reachable (external node connected) — manual router forward |
 | `943/tcp` (VPN portal) | ❌ **blocked** — 8/8 external nodes timed out |
-| `1194/udp` (VPN tunnel) | ⚠️ unverifiable — OpenVPN ignores probe packets |
+| `1194/udp` (VPN tunnel) | ✅ **already mapped on the router** — UPnP `AddPortMapping` returned 718 `ConflictInMappingEntry`, i.e. the port is taken by an existing mapping. Tunnel likely reachable; unverifiable by probe (OpenVPN ignores packets) |
+| `9443`, `9444`, `8443` | ❌ blocked externally (probed 2026-09-10) |
+
+### UPnP on the router (2026-09-10)
+
+- IGD is alive: `http://192.168.2.1:49152/.../WANPPPConn1`, external IP
+  matches DDNS (`142.188.246.243`).
+- Mapping table enumerates as **empty** — no live UPnP leases.
+- Adding `943/tcp` via UPnP is **refused** with code 606 (*Action not
+  authorized*) — the router restricts UPnP adds; 1194/udp returns 718
+  (conflict → already mapped, presumably statically or by the NAS itself).
+- **No UPnP/forward script exists on the NAS** (searched kimaki data, scripts,
+  cron, `/volume1/general`). If one existed, it wasn't here.
+- Consequence: `943` can only be opened via a **manual router forward**
+  (router admin UI) or by proxying it through Caddy (see below).
 
 **Consequence:** the VPN portal only works from inside the LAN or over
-Tailscale. To make the VPN usable from outside, forward `943/tcp` and
-`1194/udp` on the router to `192.168.2.20`.
+Tailscale. To make the portal usable from outside: forward `943/tcp` on the
+router to `192.168.2.20`, **or** add a Caddy site `vpn.leochai.com` on 443
+proxying to `192.168.2.20:943` (needs one root `docker exec` to edit the
+Caddyfile — 443 is the only externally-open TLS port).
 
 ### How to connect
 
