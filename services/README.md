@@ -2,19 +2,23 @@
 
 Live, testable demos of Leo's side projects, reachable from the main site. One folder per service, each independently deployable.
 
+## Hosting decision (made 2026-09)
+
+**This NAS (kawaiinas) + Caddy + DDNS on Cloudflare.** Public entrypoint is
+`https://api.leochai.com` — DNS-only A record managed by DDNS, terminated by a
+Caddy container with auto-Let's-Encrypt TLS, which routes to per-service
+containers. Runpod stays available for GPU-flavored demos; the kimaki tunnel
+(traforo) is for ad-hoc dev previews, not for hosted demos.
+
+Full infrastructure inventory (DNS records, containers, DDNS notes, known
+gaps): [`docs/infra.md`](../docs/infra.md).
+
 ## Status
 
-Nothing deployed yet. Groundwork only.
-
-## Hosting decision (to be made)
-
-Options, in order of how this workspace is set up:
-
-1. **This NAS (Synology) + kimaki tunnel (traforo)** — already running here; `kimaki tunnel -- pnpm dev` style wrapping gives public URLs. Zero extra cost, but NAS uptime = demo uptime.
-2. **Runpod serverless / pods** — MCP tools are wired into this Discord; good for GPU-flavored demos. Pay per use.
-3. **Cheap always-on host** (Fly.io, Railway, Hetzner) — most "production" feel, small monthly cost.
-
-Pick one before the first service lands, and record the choice + public URL pattern here.
+- **Personal API** — live at https://api.leochai.com (FastAPI, `/docs` open,
+  `GET/POST /api/posts`), backed by postgres + redis + worker containers.
+  Source not yet in a repo — see gaps in `docs/infra.md`. No `services/`
+  folder exists for it yet.
 
 ## Conventions
 

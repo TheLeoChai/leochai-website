@@ -6,6 +6,7 @@ Personal website for Leo Chai. Live at https://leochai.com (frontend on GitHub P
 
 - `site/` — static frontend only. **No server-side runtime is possible here**: GitHub Pages serves static files. No Node/Python servers, no APIs.
 - `services/<project-name>/` — one self-contained folder per backend demo. Each has its own README stating: what it demos, how to run it locally, where it is hosted, and its public URL (if live).
+- `docs/` — infrastructure documentation. `docs/infra.md` is the inventory of the NAS (kawaiinas), DNS, DDNS, and Caddy setup; keep it current when infra changes.
 - `tasks/` — markdown task specs for kimaki scheduled/delegated sessions.
 
 ## Deploy
