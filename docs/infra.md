@@ -111,33 +111,35 @@ Caddyfile — 443 is the only externally-open TLS port).
 
 
 
-## Running containers (verified via /proc, 2026-09-10)
+## Running containers (verified via docker, 2026-09-10)
+
+All service containers belong to the Docker Compose project `server`, rooted
+at `/home/mihu/Server` (root-owned). Source repo for the API:
+[TheLeoChai/personal-api](https://github.com/TheLeoChai/personal-api),
+prod-stack reference in its `docs/prod-stack.md`.
 
 | Container | Image/process | Role |
 |---|---|---|
-| `caddy` | caddy | Reverse proxy + auto-TLS for `api.leochai.com` |
-| personal-api | python3.11, `uvicorn app.main:app :8081` | FastAPI "Personal API" v0.1.0 — routes `GET/POST /api/posts`, `/docs`; fronted by Caddy |
-| postgres | postgres | Database `personal` (user `personal`) backing the API |
-| redis | redis :6379 | Cache/queue for the API stack |
-| worker | `python worker.py` | Background worker for the API stack |
-| second uvicorn | python3.12, `uvicorn main:app :8000` | Unknown service; not exposed publicly (probe: 404 via Caddy) — needs owner confirmation |
-| openvpn-as | OpenVPN Access Server | VPN endpoint via `vpn.leochai.com` |
-| jellyfin | jellyfin | Media server (no domain) |
+| `server-caddy-1` | caddy | Reverse proxy + TLS (Cloudflare DNS-01) for `api.leochai.com`; serves `/media/*` from uploads; `:8443/xiaoesp/*` → nas-ingest |
+| `server-app-1` | python3.12, `uvicorn main:app :8000` | **Personal API** (FastAPI) — fronted by Caddy on 443 |
+| `server-worker-1` | `python worker.py` | RQ worker for the API's `/api/run` queue |
+| `server-db-1` | postgres:16 | Database `personal` backing the API |
+| `server-redis-1` | redis :6379 | RQ broker |
+| `server-nas-ingest-1` | internal :8081 | Separate service ("xiaoesp"), only at `api.leochai.com:8443/xiaoesp/*` |
+| `openvpn-as` | OpenVPN Access Server | VPN endpoint via `vpn.leochai.com` |
+| `jellyfin-app-1` | jellyfin :8899 | Media server (no domain) |
+
+**Access:** `kimaki` was added to the `docker` group (2026-09-10), so
+container inspection/build no longer needs root. The compose project folder
+`/home/mihu/Server` itself remains root-only.
 
 ## Known gaps
 
-- **Personal API source code is not in any local git repo.** The four project
-  repos under `/volume1/projects/` (ai-society, job-agent, leochai-website,
-  leos-opencode) contain nothing matching `app.main` / the API routes. The
-  source is inside the container image or a root-only build directory. It
-  should be moved into a repo under `/volume1/projects/` so it is versioned.
-
-  **Update 2026-09-10:** repo created for it —
+- ~~**Personal API source code is not in any local git repo.**~~
+  **Resolved 2026-09-10:** source recovered from the container into
   [TheLeoChai/personal-api](https://github.com/TheLeoChai/personal-api)
-  (local: `/volume1/projects/personal-api`), seeded with the API contract
-  snapshot, recovery runbook (`RECOVERY.md`), and dev compose. Remaining
-  step: extract `src/` from the container (root, one command — see that
-  repo's `RECOVERY.md`).
+  (local: `/volume1/projects/personal-api`) — contract, compose stack, schema
+  and prod reference included.
 - **Docker is root-only** on this NAS. The `kimaki` user cannot run
   `docker ps`/`docker exec` or read `/volume1/docker` compose files. Anything
   container-level needs root, or docker group membership for `kimaki`.

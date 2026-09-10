@@ -5,8 +5,9 @@ plus a run log. This is the backend currently running on the NAS behind
 `https://api.leochai.com`.
 
 **Code repo: [TheLeoChai/personal-api](https://github.com/TheLeoChai/personal-api)**
-(source recovery pending — see that repo's `RECOVERY.md`). This folder keeps
-the contract snapshot + entry for the site's services list.
+— source recovered from the live container (2026-09-10); that repo holds the
+code, dev compose, prod-stack reference, and deploy runbook. This folder
+keeps the contract snapshot + entry for the site's services list.
 
 ## What it demos
 
