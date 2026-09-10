@@ -4,6 +4,10 @@ Live content API for leochai.com — serves posts and photo albums to the site,
 plus a run log. This is the backend currently running on the NAS behind
 `https://api.leochai.com`.
 
+**Code repo: [TheLeoChai/personal-api](https://github.com/TheLeoChai/personal-api)**
+(source recovery pending — see that repo's `RECOVERY.md`). This folder keeps
+the contract snapshot + entry for the site's services list.
+
 ## What it demos
 
 A personal content API: markdown posts (CRUD, slug-addressed), photo albums

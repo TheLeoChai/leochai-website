@@ -131,6 +131,13 @@ Caddyfile — 443 is the only externally-open TLS port).
   leos-opencode) contain nothing matching `app.main` / the API routes. The
   source is inside the container image or a root-only build directory. It
   should be moved into a repo under `/volume1/projects/` so it is versioned.
+
+  **Update 2026-09-10:** repo created for it —
+  [TheLeoChai/personal-api](https://github.com/TheLeoChai/personal-api)
+  (local: `/volume1/projects/personal-api`), seeded with the API contract
+  snapshot, recovery runbook (`RECOVERY.md`), and dev compose. Remaining
+  step: extract `src/` from the container (root, one command — see that
+  repo's `RECOVERY.md`).
 - **Docker is root-only** on this NAS. The `kimaki` user cannot run
   `docker ps`/`docker exec` or read `/volume1/docker` compose files. Anything
   container-level needs root, or docker group membership for `kimaki`.
