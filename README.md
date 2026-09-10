@@ -37,3 +37,19 @@ Preview URL: https://theleochai.github.io/leochai-website/
 Each side project gets a folder under `services/` with its own README, runtime, and deployment notes. See `services/README.md` for the hosting plan.
 
 The backend currently runs on the NAS behind `https://api.leochai.com` (Caddy + DDNS). Infrastructure inventory and verification notes: [`docs/infra.md`](docs/infra.md).
+
+## Development workflow
+
+**Frontend** (`site/`):
+
+```bash
+./scripts/dev.sh                  # local preview on :8080
+kimaki tunnel -p 8080 -- ./scripts/dev.sh  # public preview URL (agents/remote)
+./scripts/publish.sh              # ship: publish site/ to gh-pages
+```
+
+**Backend** (`services/`):
+
+- Live environment: `https://api.leochai.com` on the NAS — see [`docs/infra.md`](docs/infra.md)
+- API contract per service lives in `services/<name>/` (e.g. [`services/personal-api/openapi.json`](services/personal-api/openapi.json)); frontend can build against the live URL
+- Each service folder documents its own run/deploy steps
