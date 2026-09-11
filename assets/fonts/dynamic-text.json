@@ -1,0 +1,4 @@
+{
+  "description": "Every JS-rendered string must also occur in static HTML or be declared here, grouped by route and font role. Paths exclude deployment prefix. No dynamic UI is shipped yet.",
+  "routes": {}
+}

@@ -7,6 +7,8 @@
   <meta name="description" content="{{ route.description }}">
   <meta name="content-revision" content="{{ route.revision }}">
   {% if route.sourceRevision %}<meta name="translation-source-revision" content="{{ route.sourceRevision }}">{% endif %}
+  <link rel="stylesheet" href="/css/fonts.css">
+  <link rel="stylesheet" href="/css/typography.css">
   <link rel="canonical" href="{{ route.canonical | canonicalUrl }}">
   <link rel="alternate" type="application/atom+xml" title="{% if route.locale == 'zh' %}Leo Chai — 笔记{% else %}Leo Chai — Notes{% endif %}" href="/{{ route.locale }}/rss.xml">
   {% for alternate in route.alternates %}<link rel="alternate" hreflang="{{ alternate.lang }}" href="{{ alternate.path | canonicalUrl }}">

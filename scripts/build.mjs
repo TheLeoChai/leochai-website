@@ -2,6 +2,7 @@ import { spawnSync } from 'node:child_process';
 import { mkdir, mkdtemp, rename, rm, readFile } from 'node:fs/promises';
 import { resolve, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { validateFonts } from './validate-fonts.mjs';
 import { validateBuild } from './validate-build.mjs';
 
 const root = resolve(fileURLToPath(new URL('..', import.meta.url)));
@@ -24,6 +25,7 @@ try {
       if (build.error) throw build.error;
       if (build.status !== 0) throw new Error(`Eleventy exited ${build.status}`);
       await validateBuild(temporary, targetPrefix);
+      await validateFonts(temporary);
       const existingCname = await readFile('site/CNAME', 'utf8').catch(error => { if (error.code !== 'ENOENT') throw error; return null; });
       if (existingCname !== null && await readFile(join(temporary, 'CNAME'), 'utf8') !== existingCname) throw new Error('CNAME changed during build');
       if (checkAll) continue;

@@ -1,0 +1,97 @@
+[
+  {
+    "route": "/en/",
+    "fontBytesUpperBound": 96128,
+    "budgetBytes": 100000
+  },
+  {
+    "route": "/en/leo/",
+    "fontBytesUpperBound": 96128,
+    "budgetBytes": 100000
+  },
+  {
+    "route": "/en/notes/",
+    "fontBytesUpperBound": 96128,
+    "budgetBytes": 100000
+  },
+  {
+    "route": "/en/projects/",
+    "fontBytesUpperBound": 96128,
+    "budgetBytes": 100000
+  },
+  {
+    "route": "/en/work/job-matching/",
+    "fontBytesUpperBound": 96128,
+    "budgetBytes": 100000
+  },
+  {
+    "route": "/en/work/opencode/",
+    "fontBytesUpperBound": 96128,
+    "budgetBytes": 100000
+  },
+  {
+    "route": "/en/work/tiny-world/",
+    "fontBytesUpperBound": 96128,
+    "budgetBytes": 100000
+  },
+  {
+    "route": "/",
+    "fontBytesUpperBound": 96128,
+    "budgetBytes": 100000
+  },
+  {
+    "route": "/notes/",
+    "fontBytesUpperBound": 0,
+    "budgetBytes": 100000
+  },
+  {
+    "route": "/work/job-matching/",
+    "fontBytesUpperBound": 0,
+    "budgetBytes": 100000
+  },
+  {
+    "route": "/work/opencode/",
+    "fontBytesUpperBound": 0,
+    "budgetBytes": 100000
+  },
+  {
+    "route": "/work/tiny-world/",
+    "fontBytesUpperBound": 0,
+    "budgetBytes": 100000
+  },
+  {
+    "route": "/zh/",
+    "fontBytesUpperBound": 0,
+    "budgetBytes": 100000
+  },
+  {
+    "route": "/zh/leo/",
+    "fontBytesUpperBound": 0,
+    "budgetBytes": 100000
+  },
+  {
+    "route": "/zh/notes/",
+    "fontBytesUpperBound": 0,
+    "budgetBytes": 100000
+  },
+  {
+    "route": "/zh/projects/",
+    "fontBytesUpperBound": 0,
+    "budgetBytes": 100000
+  },
+  {
+    "route": "/zh/work/job-matching/",
+    "fontBytesUpperBound": 0,
+    "budgetBytes": 100000
+  },
+  {
+    "route": "/zh/work/opencode/",
+    "fontBytesUpperBound": 0,
+    "budgetBytes": 100000
+  },
+  {
+    "route": "/zh/work/tiny-world/",
+    "fontBytesUpperBound": 0,
+    "budgetBytes": 100000
+  }
+]
