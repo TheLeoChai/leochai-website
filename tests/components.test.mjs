@@ -33,7 +33,7 @@ test('central registry pauses another player and stale release does not forget c
 test('execution metadata gate rejects synthetic recordings and replay LIVE labels', () => {
   assert.equal(proofState({ state: 'LIVE', committed: true, origin: 'capture', runId: 'r1', lastEventAt: '2026-09-11T00:00:00Z' }).state, 'UNKNOWN');
   assert.equal(proofState({ state: 'RECORDED', origin: 'illustration', capturedAt: '2026-09-11T00:00:00Z', revision: 'a' }).state, 'UNKNOWN');
-  assert.equal(proofState({ state: 'LIVE', origin: 'live', committed: true, runId: 'r1', lastEventAt: '2026-09-11T00:00:00Z' }).state, 'LIVE');
+  assert.equal(proofState({ state: 'LIVE', origin: 'live', committed: true, lifecycle: 'active', runId: 'r1', lastEventAt: '2026-09-11T00:00:00Z', lastHeartbeatAt: '2026-09-11T00:00:00Z' }, 'en', { now: Date.parse('2026-09-11T00:00:01Z') }).state, 'LIVE');
   assert.equal(proofState({ state: 'RECORDED', origin: 'capture', capturedAt: '2026-09-11T00:00:00Z', revision: 'a' }).state, 'RECORDED');
   assert.equal(evidenceRows({}).rows.filter(row => row.value === 'Not supplied').length, 9);
 });
