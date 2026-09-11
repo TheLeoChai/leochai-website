@@ -1,0 +1,8 @@
+<nav class="site-nav site-width" aria-label="{% if route.locale == 'zh' %}主导航{% else %}Main navigation{% endif %}">
+  <a class="site-name" href="/{{ route.locale }}/"{% if route.key == 'home' %} aria-current="page"{% endif %}>Leo Chai</a>
+  <ul>
+    <li><a href="/{{ route.locale }}/projects/"{% if route.key == 'projects' or route.path.includes('/work/') or route.key == 'leo' %} aria-current="{% if route.key == 'projects' %}page{% else %}location{% endif %}"{% endif %}>{% if route.locale == 'zh' %}项目{% else %}Projects{% endif %}</a></li>
+    <li><a href="/{{ route.locale }}/notes/"{% if route.key == 'notes' or route.kind == 'article' %} aria-current="{% if route.key == 'notes' %}page{% else %}location{% endif %}"{% endif %}>{% if route.locale == 'zh' %}笔记{% else %}Notes{% endif %}</a></li>
+    <li><a href="{% if resume.available %}{{ resume.url }}{% else %}{{ resume.requestUrl }}{% endif %}">{% if resume.available %}{% if route.locale == 'zh' %}简历{% else %}Résumé{% endif %}{% else %}{{ resume.labels[route.locale].request }}{% endif %}</a></li>
+  </ul>
+</nav>

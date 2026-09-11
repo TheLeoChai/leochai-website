@@ -1,0 +1,22 @@
+{% macro button(label, href, variant='solid') %}<a class="button button--{{ variant }}" href="{{ href }}">{{ label }}</a>{% endmacro %}
+{% macro source(label) %}<span class="chip chip--source">{{ label }}</span>{% endmacro %}
+{% macro state(proof, locale='en') %}
+{% set status = proof | proofState(locale) %}
+<div class="proof-state"><span class="chip chip--{{ status.state | lower }}">{{ status.state }}</span><span class="proof-state__detail">{{ status.detail }}</span></div>
+{% endmacro %}
+{% macro card(title, href, summary, highlight=false, heading='h2') %}
+<article class="card{% if highlight %} card--highlight{% endif %}">
+  <{{ heading }}><a href="{{ href }}">{{ title }}</a></{{ heading }}>
+  <p>{{ summary }}</p>
+  {% if caller %}{{ caller() }}{% endif %}
+</article>
+{% endmacro %}
+{% macro prose() %}<div class="prose">{{ caller() }}</div>{% endmacro %}
+{% macro figure(src, alt, caption, width, height) %}
+<figure class="figure">{% if src %}<img src="{{ src }}" alt="{{ alt }}" width="{{ width }}" height="{{ height }}" loading="lazy" decoding="async">{% elif caller %}{{ caller() }}{% endif %}<figcaption>{{ caption }}</figcaption></figure>
+{% endmacro %}
+{% macro callout(title) %}<aside class="callout"><strong>{{ title }}</strong>{{ caller() }}</aside>{% endmacro %}
+{% macro evidence(manifest, locale='en') %}
+{% set proof = manifest | evidenceRows(locale) %}
+<div class="evidence"><table><caption>{{ proof.caption }}</caption><tbody>{% for row in proof.rows %}<tr><th scope="row">{{ row.label }}</th><td>{% if row.href %}<a href="{{ row.href }}">{{ row.value }}</a>{% else %}{{ row.value }}{% endif %}</td></tr>{% endfor %}</tbody></table></div>
+{% endmacro %}
