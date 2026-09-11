@@ -63,7 +63,7 @@ test('validation failure preserves output; successful promotion preserves existi
     const passed = spawnSync(process.execPath, ['scripts/build.mjs'], { cwd: directory, encoding: 'utf8' });
     assert.equal(passed.status, 0, passed.stderr);
     assert.equal(await readFile(join(directory, 'site/CNAME'), 'utf8'), 'leochai.com\n');
-    assert.match(await readFile(join(directory, 'site/index.html'), 'utf8'), /<h1>/);
+    assert.match(await readFile(join(directory, 'site/index.html'), 'utf8'), /<h1(?:\s[^>]*)?>/);
     // Exercise the real virtual-template plugin with encoded metadata, mixed
     // publication states and a missing translation, without public fixtures.
     const fixture = structuredClone(sources);

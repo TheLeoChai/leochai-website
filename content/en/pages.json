@@ -3,8 +3,14 @@
     "key": "home",
     "title": "Leo Chai",
     "description": "Backend, AI tooling, and interfaces for complex data.",
-    "revision": "scaffold-1",
-    "body": "This page is being built."
+    "revision": "home-exemplar-1",
+    "body": "This page is being built.",
+    "pageStyles": [
+      "/css/home.css"
+    ],
+    "pageScripts": [
+      "/js/home.js"
+    ]
   },
   {
     "key": "projects",

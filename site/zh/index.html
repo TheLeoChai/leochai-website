@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Leo Chai</title>
   <meta name="description" content="后端、AI 工具，以及让复杂数据更易理解的界面。">
-  <meta name="content-revision" content="scaffold-1">
-<meta name="translation-source-revision" content="scaffold-1">  <link rel="stylesheet" href="/css/tokens.css">
+  <meta name="content-revision" content="home-exemplar-1">
+<meta name="translation-source-revision" content="home-exemplar-1">  <link rel="stylesheet" href="/css/tokens.css">
   <link rel="stylesheet" href="/css/fonts.css">
   <link rel="stylesheet" href="/css/typography.css">
   <link rel="canonical" href="https://leochai.com/zh/">
@@ -15,7 +15,7 @@
 <link rel="alternate" hreflang="zh-Hans" href="https://leochai.com/zh/">
 <link rel="alternate" hreflang="x-default" href="https://leochai.com/">
   <link rel="stylesheet" href="/css/components.css">
-</head>
+<link rel="stylesheet" href="/css/home.css"><script type="module" src="/js/home.js"></script></head>
 <body>
   <a class="skip-link" href="#main">跳到正文</a>
 <nav class="site-nav site-width" aria-label="主导航">
@@ -26,10 +26,145 @@
     <li><a href="mailto:contact@leochai.com?subject=R%C3%A9sum%C3%A9%20request">索取简历</a></li>
   </ul>
 </nav>
-  <main class="site-main site-width" id="main" tabindex="-1"><h1>Leo Chai</h1>
-<p>后端、AI 工具，以及让复杂数据更易理解的界面。</p>
-<p>此页面正在建设中。</p>
-<p>简历暂未提供下载。 <a href="mailto:contact@leochai.com?subject=R%C3%A9sum%C3%A9%20request">索取简历</a></p>
+  <main class="site-main site-width" id="main" tabindex="-1"><div class="home">
+  <header class="home-hero" aria-labelledby="home-title">
+    <div class="home-hero__statement entrance">
+      <p class="home-label">Leo Chai / 精选项目</p>
+      <h1 id="home-title">我构建的系统，<br> 让你看得明白。</h1>
+      <div class="home-actions">
+        <a class="button button--solid" href="mailto:contact@leochai.com?subject=R%C3%A9sum%C3%A9%20request">索取简历</a>
+        <a class="home-text-link" href="mailto:contact@leochai.com">contact@leochai.com</a>
+      </div>
+    </div>
+    <div class="home-hero__margin">
+      <p>后端、AI 工具，以及让复杂数据更易理解的界面。</p>
+      <p class="home-location">加拿大</p>
+      <a class="home-text-link" href="#identity">看看这些项目 <span aria-hidden="true">↓</span></a>
+    </div>
+  </header>
+
+  <section class="home-section home-specimen" id="identity" aria-labelledby="identity-title">
+    <div class="home-section-heading">
+      <div><p class="home-label">01 / 识别同一份职位</p><h2 id="identity-title">同一份工作，出现在多个地方。</h2><p class="home-deck">判断哪些招聘信息属于同一职位，正是这个系统要做的事。</p></div>
+      <span class="chip chip--source">合成测试样本</span>
+    </div>
+    <div class="home-ledger">
+      <div class="home-ledger__result"><p>7 条合成招聘信息 → 3 个规范化职位</p><span>重复导入新增 0 个职位，来源记录完整保留。</span></div>
+      <div id="resolved-specimen" class="home-resolved">
+        <div class="home-observations">
+          <h3 class="home-label">五条招聘信息</h3>
+          <dl class="home-source-list">
+            <div><dt lang="en">LinkedIn</dt><dd lang="en">SWE II</dd></div>
+            <div><dt lang="en">Indeed</dt><dd lang="en">Software Engineer 2</dd></div>
+            <div><dt lang="en">Google</dt><dd lang="en">Software Engineer II</dd></div>
+            <div><dt lang="en">Greenhouse</dt><dd lang="en">Software Engineer II</dd></div>
+            <div><dt lang="en">Example Labs Careers</dt><dd lang="en">Software Engineer II</dd></div>
+          </dl>
+        </div>
+        <div class="home-canonical">
+          <p class="home-label">一个规范化职位 <span aria-hidden="true">→</span></p>
+          <h3><span lang="en">Software Engineer II</span></h3>
+          <p lang="en">Example Labs · Toronto, ON</p>
+          <p class="home-requisition data" lang="en">greenhouse / 42</p>
+          <p class="home-canonical__selection">优先采用公司招聘页记录</p>
+          <p class="home-small">公司发布的信息优先，五条原始来源记录仍全部关联到这个职位。</p>
+        </div>
+      </div>
+      <div class="home-uncertain" id="uncertain-specimen">
+        <h3>名称相同，不代表是同一个职位。</h3>
+        <p>合成样本中有两条 LinkedIn 招聘信息，规范化后的公司、职位名称和地点相同，但招聘编号不同，因此保留为两个职位。</p>
+        <div class="home-pair">
+          <div><span class="data" lang="en">LinkedIn / 1001</span><strong lang="en">SWE II</strong><span lang="en">Example Labs Inc. · Toronto, ON</span></div>
+          <span class="home-pair__separation" aria-hidden="true">/</span>
+          <div><span class="data" lang="en">LinkedIn / 1002</span><strong lang="en">Software Engineer II</strong><span lang="en">Example Labs · Toronto, ON</span></div>
+        </div>
+        <p><strong>保留两个独立职位</strong> — 不强行归并：名称一致的证据，不能盖过招聘编号的冲突。</p>
+      </div>
+      <div class="home-ledger__retained"><strong>另外保留</strong><p>Example Labs 的另一个招聘编号，以及 Sample Systems 的平台工程师岗位，分别保留为独立职位。</p></div>
+    </div>
+    <div class="home-specimen__actions">
+      <button class="button button--outline" type="button" data-specimen-toggle aria-controls="resolved-specimen uncertain-specimen" aria-pressed="false" hidden><span data-show-uncertain>看看不确定的配对</span><span data-show-resolved hidden>返回已归并的示例</span></button>
+      <a class="home-text-link" href="https://github.com/TheLeoChai/job-agent/blob/20bdedb/README.md#run-discovery">测试样本与结果 <span class="data">20bdedb</span> <span aria-hidden="true">→</span></a>
+      <a class="home-text-link" href="/zh/work/job-matching/">了解职位匹配的原理 <span aria-hidden="true">→</span></a>
+    </div>
+  </section>
+
+  <section class="home-section" id="projects" aria-labelledby="projects-title">
+    <div class="home-section-heading"><div><p class="home-label">02 / 精选项目</p><h2 id="projects-title">三个方向，各有实物。</h2></div><a class="home-text-link" href="/zh/projects/">全部项目 <span aria-hidden="true">→</span></a></div>
+    <div class="home-projects">
+      <div class="home-projects__featured">
+<article class="card card--highlight">
+  <h3><a href="/zh/work/job-matching/">职位匹配</a></h3>
+  <p>多条招聘信息可能属于同一个岗位。这个流程保留统一的职位身份，也保留全部来源。</p>
+          <div class="home-job-mark" aria-hidden="true"><span>7</span><span>→</span><span>3</span><span class="home-job-mark__rerun">+0</span></div>
+          <p class="home-project-proof">7 条信息 → 3 个职位 → 重复导入新增 0 个</p>
+          <p class="home-small">Leo 的 job-agent 项目 · 合成测试样本</p>
+          <p class="home-small">此处展示离线身份归并示例，尚未验证在线评分和 Discord 消息投递。</p>
+          <a class="card__link" href="/zh/work/job-matching/">阅读项目介绍 <span aria-hidden="true">&nbsp;→</span></a>
+</article>
+      </div>
+      <div class="home-projects__stack">
+<article class="card">
+  <h3><a href="/zh/work/tiny-world/">小小世界</a></h3>
+  <p>一座小农场，三位居民，各自只能看到世界的一部分。</p>
+          <p class="home-project-proof">观察 → 提议行动 → 世界状态</p>
+          <p class="home-small">基于 AI Society 的网站改编 · 概念插画；简化的记忆与提示词决策，不采用激活引导。</p>
+          <a class="card__link" href="/zh/work/tiny-world/">走进农场 <span aria-hidden="true">&nbsp;→</span></a>
+</article>
+<article class="card">
+  <h3><a href="/zh/work/opencode/">OpenCode</a></h3>
+  <p>Leo 的 OpenCode 代码分支与配套工具。</p>
+          <p class="home-project-proof">代码分支、配套工具与可见的解释</p>
+          <p class="home-small">Leo 基于上游 OpenCode 开发的分支 · 功能证据仍在核查中。本站不提供公开终端。</p>
+          <a class="card__link" href="/zh/work/opencode/">查看项目 <span aria-hidden="true">&nbsp;→</span></a>
+</article>
+      </div>
+    </div>
+  </section>
+
+  <section class="home-section home-farm" aria-labelledby="farm-title">
+    <div class="home-section-heading"><div><p class="home-label">03 / 一个小世界</p><h2 id="farm-title">三位居民，一座小农场。</h2></div><span class="chip chip--source">插画</span></div>
+    <div class="home-farm__bleed">
+<figure class="figure">      <svg class="home-farm-map" viewBox="0 0 1152 120" width="1152" height="120" preserveAspectRatio="xMidYMid slice" role="img" aria-labelledby="farm-image-title">
+        <title id="farm-image-title">原创俯视农场插画：小路、菜畦、水井和三位居民。</title>
+        <defs>
+          <g id="crop"><path class="farm-crop" d="M0 12V3M0 8L-5 3M0 8L5 3"/></g>
+          <g id="resident"><rect class="farm-person" x="-4" y="-14" width="8" height="8"/><path class="farm-person" d="M-6-4H6V6H3V11H-3V6H-6Z"/></g>
+          <g id="bed"><rect class="farm-soil" width="72" height="30"/><use href="#crop" x="12" y="6"/><use href="#crop" x="36" y="6"/><use href="#crop" x="60" y="6"/></g>
+        </defs>
+        <path class="farm-path" d="M0 55H1152V75H0ZM566 0H586V120H566Z"/>
+        <path class="farm-boundary" d="M0 114H1152M72 92V114M96 92V114M120 92V114M144 92V114M72 100H144M932 10H1080M948 2V18M972 2V18M996 2V18M1020 2V18M1044 2V18"/>
+        <path class="farm-house" d="M190 46V18L222 2L254 18V46Z"/><path class="farm-outline" d="M184 20L222 0L260 20M216 46V30H230V46"/>
+        <use href="#bed" x="356" y="10"/><use href="#bed" x="444" y="10"/><use href="#bed" x="356" y="84"/>
+        <use href="#bed" x="668" y="10"/><use href="#bed" x="756" y="10"/><use href="#bed" x="756" y="84"/>
+        <path class="farm-well" d="M596 91H622V112H596ZM592 88L609 76L626 88Z"/><path class="farm-outline" d="M599 90V81M619 90V81M603 100H615"/>
+        <use href="#resident" x="456" y="64"/><use href="#resident" x="548" y="92"/><use href="#resident" x="644" y="58"/>
+        <path class="farm-step" d="M560 94H564M574 94H578M588 94H592"/>
+        <path class="farm-tree" d="M854 114V94M838 94H870L854 70ZM306 43V23M290 23H322L306 0Z"/>
+      </svg>
+<figcaption>插画场景：一位居民走向水井。</figcaption></figure>
+    </div>
+    <a class="home-text-link" href="/zh/work/tiny-world/#live">探访农场 <span aria-hidden="true">→</span></a>
+  </section>
+
+  <section class="home-section home-person" aria-labelledby="person-title">
+    <div class="home-monogram" aria-hidden="true"><span>L</span><span>C</span></div>
+    <div class="home-person__copy">
+      <p class="home-label">04 / 项目背后的人</p><h2 id="person-title">认识 Leo。</h2>
+      <!-- TODO(LEO): Supply two authored biographical sentences, including interests and desired work. -->
+      <p class="home-placeholder">个人介绍占位 — Leo 尚未提供亲自撰写的两句话。</p>
+      <div class="home-update"><p class="home-label">个人近况 / 占位</p><!-- TODO(LEO): Supply a real personal update and its date; do not use the build date. --><p>这里将放置 Leo 的一则带日期近况，正文和日期尚未提供。</p></div>
+      <div class="home-actions"><a class="home-text-link" href="/zh/leo/">认识 Leo <span aria-hidden="true">→</span></a><a class="home-text-link" href="/zh/leo/#ask">关于 AI-Leo <span aria-hidden="true">→</span></a></div>
+    </div>
+  </section>
+
+  <section class="home-section home-notes" aria-labelledby="notes-title">
+    <div class="home-section-heading"><div><p class="home-label">05 / 笔记</p><h2 id="notes-title">写想法，也写晚饭。</h2><p class="home-deck">首批随笔和食谱尚未提供。</p></div></div>
+    <!-- TODO(LEO): Replace these clearly unpublished placeholders with three supplied Notes titles, categories and publication dates. -->
+    <ol class="home-notes-list"><li><span class="home-label">技术</span><h3>技术随笔标题占位</h3><span class="home-small">未发布 · 日期待提供</span></li><li><span class="home-label">动手制作</span><h3>开发随笔标题占位</h3><span class="home-small">未发布 · 日期待提供</span></li><li><span class="home-label">食谱</span><h3>食谱标题占位</h3><span class="home-small">未发布 · 日期待提供</span></li></ol>
+    <div class="home-contact"><div><h2>聊聊吧。</h2><p>后端、AI 工具、界面。</p></div><div class="home-actions"><a class="home-text-link" href="mailto:contact@leochai.com">contact@leochai.com</a><a class="button button--outline" href="mailto:contact@leochai.com?subject=R%C3%A9sum%C3%A9%20request">索取简历</a></div></div>
+  </section>
+</div>
 </main>
 <footer class="site-footer site-width">
   <ul aria-label="联系方式和订阅">
