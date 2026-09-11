@@ -1,0 +1,20 @@
+---
+pagination:
+  data: routes.aliases
+  size: 1
+  alias: alias
+permalink: "{{ alias.path }}"
+---
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ alias.title }} · Page moved</title>
+  <meta name="robots" content="noindex">
+  <link rel="canonical" href="{{ alias.target | canonicalUrl }}">
+  <meta http-equiv="refresh" content="0;url={{ alias.target }}">
+  <script src="/js/legacy-redirect.js" defer></script>
+</head>
+<body><main><h1>This page has moved</h1><p><a id="destination" href="{{ alias.target }}">Continue to {{ alias.title }}</a></p>{% if alias.anchors.length %}<ul>{% for anchor in alias.anchors %}<li><a href="{{ alias.target }}#{{ anchor }}">{{ anchor }}</a></li>{% endfor %}</ul>{% endif %}</main></body>
+</html>

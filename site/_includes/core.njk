@@ -1,0 +1,15 @@
+---
+layout: base.njk
+---
+<h1>{{ route.title }}</h1>
+<p>{{ route.description }}</p>
+<p>{{ route.body }}</p>
+{% for anchor in route.anchors %}<section id="{{ anchor }}" aria-label="{{ anchor }}"></section>{% endfor %}
+{% if route.key == 'notes' and route.locale == 'zh' %}
+<section aria-labelledby="awaiting-translation">
+  <h2 id="awaiting-translation">待翻译的英文文章</h2>
+  {% if routes.untranslated.length %}<ul>{% for article in routes.untranslated %}
+    <li><a href="{{ article.path }}" hreflang="en" lang="en">{{ article.title }}</a>（英文）</li>
+  {% endfor %}</ul>{% else %}<p>目前没有待翻译的英文文章。</p>{% endif %}
+</section>
+{% endif %}
