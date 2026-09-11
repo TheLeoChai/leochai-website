@@ -1,10 +1,22 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { cp, mkdtemp, mkdir, readFile, writeFile, symlink, rm } from 'node:fs/promises';
+import { cp, mkdtemp, mkdir, readFile, readdir, writeFile, symlink, rm } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { spawnSync } from 'node:child_process';
 import { createRoutes } from '../lib/routes.js';
+import metadata from '../content/_data/metadata.js';
+
+async function snapshot(directory) {
+  const files = {};
+  for (const entry of await readdir(directory, { withFileTypes: true, recursive: true })) {
+    if (entry.isFile()) {
+      const path = join(entry.parentPath, entry.name);
+      files[path.slice(directory.length)] = (await readFile(path)).toString('base64');
+    }
+  }
+  return files;
+}
 
 const sources = Object.fromEntries(await Promise.all(['en', 'zh'].map(async locale => [locale, JSON.parse(await readFile(new URL(`../content/${locale}/pages.json`, import.meta.url), 'utf8'))])));
 test('untranslated article has English route and legacy alias, no false Chinese alternate', () => {
@@ -64,6 +76,22 @@ test('validation failure preserves output; successful promotion preserves existi
     assert.equal(passed.status, 0, passed.stderr);
     assert.equal(await readFile(join(directory, 'site/CNAME'), 'utf8'), 'leochai.com\n');
     assert.match(await readFile(join(directory, 'site/index.html'), 'utf8'), /<h1(?:\s[^>]*)?>/);
+    // Real full builds must be byte-identical, including empty Atom feeds.
+    // Check each deployment base independently; preview links differ by design.
+    for (const prefix of ['/', '/leochai-website/']) {
+      const build = () => spawnSync(process.execPath, ['scripts/build.mjs', `--pathprefix=${prefix}`], { cwd: directory, encoding: 'utf8' });
+      if (prefix !== '/') {
+        const first = build();
+        assert.equal(first.status, 0, first.stdout + first.stderr);
+      }
+      const before = await snapshot(join(directory, 'site'));
+      const repeated = build();
+      assert.equal(repeated.status, 0, repeated.stdout + repeated.stderr);
+      assert.deepEqual(await snapshot(join(directory, 'site')), before, `${prefix}: unchanged full builds`);
+      for (const locale of ['en', 'zh']) {
+        assert((await readFile(join(directory, `site/${locale}/rss.xml`), 'utf8')).includes(`<updated>${metadata.emptyFeedUpdated}</updated>`));
+      }
+    }
     // Exercise the real virtual-template plugin with encoded metadata, mixed
     // publication states and a missing translation, without public fixtures.
     const fixture = structuredClone(sources);

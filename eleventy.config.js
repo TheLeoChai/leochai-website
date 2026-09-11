@@ -25,7 +25,7 @@ export default function (config) {
   }
   config.addTransform('canonical-feed-discovery', function (content) {
     const feed = feeds.find(feed => this.page.outputPath?.endsWith(`/${feed.locale}/rss.xml`));
-    return feed ? canonicalizeFeed(content, feed.locale, metadata.base) : content;
+    return feed ? canonicalizeFeed(content, feed.locale, metadata.base, metadata.emptyFeedUpdated) : content;
   });
   config.addFilter('proofState', proofState);
   config.addFilter('evidenceRows', evidenceRows);
