@@ -23,8 +23,10 @@ apply the prefix explicitly. Meta refresh is handled by HtmlBasePlugin. Shared l
 Core records require title, description, revision and body. Chinese records
 also name the English `sourceRevision`; stale or missing revisions fail the
 build. Core slugs and stable anchors are defined once in the manifest. These
-initial pages are structural placeholders; page scenes and shared styling are
-subsequent issues. No missing résumé or live demo is represented as available.
+routes include the first bilingual Home exemplar and shared components; the
+remaining core destinations are structural pages awaiting their feature work.
+Home visual approval (CP2) remains pending; see [the review record](wave1-review.md).
+No missing résumé or live demo is represented as available.
 
 Articles can be added as records with a unique key, `kind: "article"`, an
 explicit ASCII `slug`, metadata and body. Publication is opt-in; drafts are excluded.
@@ -51,7 +53,13 @@ anchor IDs; no-JS automatic fragment preservation is not claimed.
 LEO-113 adds Atom feeds using RSS plugin v2 virtual templates at `/en/rss.xml`
 and `/zh/rss.xml`. Each locale has only its published articles, newest first,
 with an escaped plain-text description as an HTML summary. Empty feeds are
-valid and use the build time for `updated`; no placeholder posts are published.
+valid and use `metadata.emptyFeedUpdated` for `updated`. This authored baseline
+was recorded once on 2026-09-11 when deterministic empty feeds were introduced;
+it is feed metadata, not an article publication date. Keep it unchanged for
+routine builds; deliberately update it if the empty feed's authored metadata
+changes. Populated feeds retain the newest published article's actual date.
+No placeholder posts are published, and unchanged builds produce identical
+output, including both locale feeds.
 Feed self links, IDs and entry URLs always use the canonical production origin,
 including preview artifacts. HTML subscription links use the deployment prefix.
 The plugin's feed-level discovery URLs are normalized with an XML parser;
@@ -71,7 +79,7 @@ request link to the approved `contact@leochai.com` address. Do not fabricate a
 PDF or copy private documents. Once approved, place the file at
 `assets/assets/leo-chai-resume.pdf` (the outer assets folder is copied to the
 output root), set the data URL to `/assets/leo-chai-resume.pdf`, and enable the
-shared component's download state. The current Home placeholder has a request
+shared component's download state. The Home exemplar has a request
 link and no broken download link.
 
 Owner tools belong on the private NAS origin, reachable through Tailscale only.

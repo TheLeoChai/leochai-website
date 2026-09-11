@@ -51,8 +51,8 @@ export async function validateBuild(directory, prefix = '/') {
     assert.equal(root.getAttribute('xml:lang'), feed.language);
     assert.equal(root.querySelector('link[rel="self"]')?.getAttribute('href'), absolute(`/${feed.locale}/rss.xml`));
     assert.equal(root.querySelector('id')?.textContent, absolute(`/${feed.locale}/notes/`));
-    assert(!Number.isNaN(Date.parse(root.querySelector('updated')?.textContent)), 'Feed updated date required even when empty');
     const expected = feedArticles(routes, feed.locale, metadata.base).reverse();
+    assert.equal(Date.parse(root.querySelector('updated')?.textContent), Date.parse(expected[0]?.date ?? metadata.emptyFeedUpdated), `${feed.locale}: newest publication date or authored empty-feed baseline`);
     const entries = [...root.querySelectorAll('entry')];
     assert.equal(entries.length, expected.length, `${feed.locale}: published article feed count`);
     entries.forEach((entry, index) => {

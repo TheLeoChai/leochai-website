@@ -63,12 +63,17 @@ kimaki tunnel -p 8080 -- ./scripts/dev.sh  # public preview URL (agents/remote)
 
 Edit the sources, then rebuild; direct edits to `site/` are overwritten. Build
 details and publication rules are in [`docs/static-build.md`](docs/static-build.md).
-The seven bilingual core destinations are currently structural placeholders.
+The first bilingual Home iteration and shared components are implemented;
+the other core destinations remain structural pages. Home visual approval (CP2)
+and missing authored content remain with Leo. Review evidence and limitations
+are recorded in [`docs/wave1-review.md`](docs/wave1-review.md).
 No approved résumé PDF or published articles have been supplied: Home offers a
 résumé request by email, both locale Atom feeds are valid but empty, and Chinese
-Notes explicitly labels the English articles awaiting translation. Page content
-and shared visual components are subsequent issues. These build commands do
-not perform a domain cutover or publish the site.
+Notes explicitly labels the English articles awaiting translation. Remaining
+page content is tracked in its feature issues. Build and
+check commands only generate or validate static files. The only publish command
+is `./scripts/publish.sh`, which ships the existing generated `site/` artifact
+to `gh-pages`. None of these commands performs the domain cutover.
 
 **Backend** (`services/`):
 
