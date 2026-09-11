@@ -1,0 +1,137 @@
+{% from "components/ui.njk" import button, source, card, figure %}
+{% set t = home[route.locale] %}
+{% set localeRoot = '/' + route.locale + '/' %}
+<div class="home">
+  <header class="home-hero" aria-labelledby="home-title">
+    <div class="home-hero__statement entrance">
+      <p class="home-label">{{ t.eyebrow }}</p>
+      <h1 id="home-title">{{ t.statement[0] }}<br> {{ t.statement[1] }}</h1>
+      <div class="home-actions">
+        {{ button(resume.labels[route.locale].request, resume.requestUrl) }}
+        <a class="home-text-link" href="mailto:contact@leochai.com">contact@leochai.com</a>
+      </div>
+    </div>
+    <div class="home-hero__margin">
+      <p>{{ t.discipline }}</p>
+      <p class="home-location">{{ t.location }}</p>
+      <a class="home-text-link" href="#identity">{{ t.work }} <span aria-hidden="true">↓</span></a>
+    </div>
+  </header>
+
+  <section class="home-section home-specimen" id="identity" aria-labelledby="identity-title">
+    <div class="home-section-heading">
+      <div><p class="home-label">{{ t.specimenLabel }}</p><h2 id="identity-title">{{ t.specimenTitle }}</h2><p class="home-deck">{{ t.specimenIntro }}</p></div>
+      {{ source(t.synthetic) }}
+    </div>
+    <div class="home-ledger">
+      <div class="home-ledger__result"><p>{{ t.result }}</p><span>{{ t.resultNote }}</span></div>
+      <div id="resolved-specimen" class="home-resolved">
+        <div class="home-observations">
+          <h3 class="home-label">{{ t.observations }}</h3>
+          <dl class="home-source-list">
+            <div><dt lang="en">LinkedIn</dt><dd lang="en">SWE II</dd></div>
+            <div><dt lang="en">Indeed</dt><dd lang="en">Software Engineer 2</dd></div>
+            <div><dt lang="en">Google</dt><dd lang="en">Software Engineer II</dd></div>
+            <div><dt lang="en">Greenhouse</dt><dd lang="en">Software Engineer II</dd></div>
+            <div><dt lang="en">Example Labs Careers</dt><dd lang="en">Software Engineer II</dd></div>
+          </dl>
+        </div>
+        <div class="home-canonical">
+          <p class="home-label">{{ t.canonical }} <span aria-hidden="true">→</span></p>
+          <h3><span lang="en">{{ t.canonicalTitle }}</span></h3>
+          <p lang="en">{{ t.canonicalCompany }}</p>
+          <p class="home-requisition data" lang="en">greenhouse / 42</p>
+          <p class="home-canonical__selection">{{ t.selectedSource }}</p>
+          <p class="home-small">{{ t.canonicalReason }}</p>
+        </div>
+      </div>
+      <div class="home-uncertain" id="uncertain-specimen">
+        <h3>{{ t.uncertainTitle }}</h3>
+        <p>{{ t.uncertainCopy }}</p>
+        <div class="home-pair">
+          <div><span class="data" lang="en">LinkedIn / 1001</span><strong lang="en">SWE II</strong><span lang="en">Example Labs Inc. · Toronto, ON</span></div>
+          <span class="home-pair__separation" aria-hidden="true">/</span>
+          <div><span class="data" lang="en">LinkedIn / 1002</span><strong lang="en">Software Engineer II</strong><span lang="en">Example Labs · Toronto, ON</span></div>
+        </div>
+        <p><strong>{{ t.retained }}</strong> — {{ t.uncertainNote }}</p>
+      </div>
+      <div class="home-ledger__retained"><strong>{{ t.distinct }}</strong><p>{{ t.distinctCopy }}</p></div>
+    </div>
+    <div class="home-specimen__actions">
+      <button class="button button--outline" type="button" data-specimen-toggle aria-controls="resolved-specimen uncertain-specimen" aria-pressed="false" hidden><span data-show-uncertain>{{ t.uncertainButton }}</span><span data-show-resolved hidden>{{ t.resolvedButton }}</span></button>
+      <a class="home-text-link" href="https://github.com/TheLeoChai/job-agent/blob/20bdedb/README.md#run-discovery">{{ t.proof }} <span class="data">20bdedb</span> <span aria-hidden="true">→</span></a>
+      <a class="home-text-link" href="{{ localeRoot }}work/job-matching/">{{ t.detail }} <span aria-hidden="true">→</span></a>
+    </div>
+  </section>
+
+  <section class="home-section" id="projects" aria-labelledby="projects-title">
+    <div class="home-section-heading"><div><p class="home-label">{{ t.projectsLabel }}</p><h2 id="projects-title">{{ t.projectsTitle }}</h2></div><a class="home-text-link" href="{{ localeRoot }}projects/">{{ t.allProjects }} <span aria-hidden="true">→</span></a></div>
+    <div class="home-projects">
+      <div class="home-projects__featured">
+        {% call card(t.jobs.title, localeRoot + 'work/job-matching/', t.jobs.summary, true, 'h3') %}
+          <div class="home-job-mark" aria-hidden="true"><span>7</span><span>→</span><span>3</span><span class="home-job-mark__rerun">+0</span></div>
+          <p class="home-project-proof">{{ t.jobs.proof }}</p>
+          <p class="home-small">{{ t.jobs.credit }}</p>
+          <p class="home-small">{{ t.jobs.limit }}</p>
+          <a class="card__link" href="{{ localeRoot }}work/job-matching/">{{ t.jobs.link }} <span aria-hidden="true">&nbsp;→</span></a>
+        {% endcall %}
+      </div>
+      <div class="home-projects__stack">
+        {% call card(t.farm.title, localeRoot + 'work/tiny-world/', t.farm.summary, false, 'h3') %}
+          <p class="home-project-proof">{{ t.farm.proof }}</p>
+          <p class="home-small">{{ t.farm.credit }} · {{ t.farm.limit }}</p>
+          <a class="card__link" href="{{ localeRoot }}work/tiny-world/">{{ t.farm.link }} <span aria-hidden="true">&nbsp;→</span></a>
+        {% endcall %}
+        {% call card(t.code.title, localeRoot + 'work/opencode/', t.code.summary, false, 'h3') %}
+          <p class="home-project-proof">{{ t.code.proof }}</p>
+          <p class="home-small">{{ t.code.credit }} · {{ t.code.limit }}</p>
+          <a class="card__link" href="{{ localeRoot }}work/opencode/">{{ t.code.link }} <span aria-hidden="true">&nbsp;→</span></a>
+        {% endcall %}
+      </div>
+    </div>
+  </section>
+
+  <section class="home-section home-farm" aria-labelledby="farm-title">
+    <div class="home-section-heading"><div><p class="home-label">{{ t.farmLabel }}</p><h2 id="farm-title">{{ t.farmTitle }}</h2></div>{{ source(t.illustration) }}</div>
+    <div class="home-farm__bleed">
+      {% call figure(false, '', t.farmCaption, 1152, 120) %}
+      <svg class="home-farm-map" viewBox="0 0 1152 120" width="1152" height="120" preserveAspectRatio="xMidYMid slice" role="img" aria-labelledby="farm-image-title">
+        <title id="farm-image-title">{{ t.farmAlt }}</title>
+        <defs>
+          <g id="crop"><path class="farm-crop" d="M0 12V3M0 8L-5 3M0 8L5 3"/></g>
+          <g id="resident"><rect class="farm-person" x="-4" y="-14" width="8" height="8"/><path class="farm-person" d="M-6-4H6V6H3V11H-3V6H-6Z"/></g>
+          <g id="bed"><rect class="farm-soil" width="72" height="30"/><use href="#crop" x="12" y="6"/><use href="#crop" x="36" y="6"/><use href="#crop" x="60" y="6"/></g>
+        </defs>
+        <path class="farm-path" d="M0 55H1152V75H0ZM566 0H586V120H566Z"/>
+        <path class="farm-boundary" d="M0 114H1152M72 92V114M96 92V114M120 92V114M144 92V114M72 100H144M932 10H1080M948 2V18M972 2V18M996 2V18M1020 2V18M1044 2V18"/>
+        <path class="farm-house" d="M190 46V18L222 2L254 18V46Z"/><path class="farm-outline" d="M184 20L222 0L260 20M216 46V30H230V46"/>
+        <use href="#bed" x="356" y="10"/><use href="#bed" x="444" y="10"/><use href="#bed" x="356" y="84"/>
+        <use href="#bed" x="668" y="10"/><use href="#bed" x="756" y="10"/><use href="#bed" x="756" y="84"/>
+        <path class="farm-well" d="M596 91H622V112H596ZM592 88L609 76L626 88Z"/><path class="farm-outline" d="M599 90V81M619 90V81M603 100H615"/>
+        <use href="#resident" x="456" y="64"/><use href="#resident" x="548" y="92"/><use href="#resident" x="644" y="58"/>
+        <path class="farm-step" d="M560 94H564M574 94H578M588 94H592"/>
+        <path class="farm-tree" d="M854 114V94M838 94H870L854 70ZM306 43V23M290 23H322L306 0Z"/>
+      </svg>
+      {% endcall %}
+    </div>
+    <a class="home-text-link" href="{{ localeRoot }}work/tiny-world/#live">{{ t.visit }} <span aria-hidden="true">→</span></a>
+  </section>
+
+  <section class="home-section home-person" aria-labelledby="person-title">
+    <div class="home-monogram" aria-hidden="true"><span>L</span><span>C</span></div>
+    <div class="home-person__copy">
+      <p class="home-label">{{ t.personLabel }}</p><h2 id="person-title">{{ t.personTitle }}</h2>
+      <!-- TODO(LEO): Supply two authored biographical sentences, including interests and desired work. -->
+      <p class="home-placeholder">{{ t.biography }}</p>
+      <div class="home-update"><p class="home-label">{{ t.updateLabel }}</p><!-- TODO(LEO): Supply a real personal update and its date; do not use the build date. --><p>{{ t.update }}</p></div>
+      <div class="home-actions"><a class="home-text-link" href="{{ localeRoot }}leo/">{{ t.meet }} <span aria-hidden="true">→</span></a><a class="home-text-link" href="{{ localeRoot }}leo/#ask">{{ t.ai }} <span aria-hidden="true">→</span></a></div>
+    </div>
+  </section>
+
+  <section class="home-section home-notes" aria-labelledby="notes-title">
+    <div class="home-section-heading"><div><p class="home-label">{{ t.notesLabel }}</p><h2 id="notes-title">{{ t.notesTitle }}</h2><p class="home-deck">{{ t.notesIntro }}</p></div></div>
+    <!-- TODO(LEO): Replace these clearly unpublished placeholders with three supplied Notes titles, categories and publication dates. -->
+    <ol class="home-notes-list">{% for title in t.noteTitles %}<li><span class="home-label">{{ t.categories[loop.index0] }}</span><h3>{{ title }}</h3><span class="home-small">{{ t.unpublished }}</span></li>{% endfor %}</ol>
+    <div class="home-contact"><div><h2>{{ t.contactTitle }}</h2><p>{{ t.contactCopy }}</p></div><div class="home-actions"><a class="home-text-link" href="mailto:contact@leochai.com">contact@leochai.com</a>{{ button(resume.labels[route.locale].request, resume.requestUrl, 'outline') }}</div></div>
+  </section>
+</div>

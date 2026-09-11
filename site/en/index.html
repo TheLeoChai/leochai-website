@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Leo Chai</title>
   <meta name="description" content="Backend, AI tooling, and interfaces for complex data.">
-  <meta name="content-revision" content="scaffold-1">
+  <meta name="content-revision" content="home-exemplar-1">
   <link rel="stylesheet" href="/css/tokens.css">
   <link rel="stylesheet" href="/css/fonts.css">
   <link rel="stylesheet" href="/css/typography.css">
@@ -15,7 +15,7 @@
 <link rel="alternate" hreflang="zh-Hans" href="https://leochai.com/zh/">
 <link rel="alternate" hreflang="x-default" href="https://leochai.com/">
   <link rel="stylesheet" href="/css/components.css">
-</head>
+<link rel="stylesheet" href="/css/home.css"><script type="module" src="/js/home.js"></script></head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 <nav class="site-nav site-width" aria-label="Main navigation">
@@ -26,10 +26,145 @@
     <li><a href="mailto:contact@leochai.com?subject=R%C3%A9sum%C3%A9%20request">Request résumé</a></li>
   </ul>
 </nav>
-  <main class="site-main site-width" id="main" tabindex="-1"><h1>Leo Chai</h1>
-<p>Backend, AI tooling, and interfaces for complex data.</p>
-<p>This page is being built.</p>
-<p>Résumé download is not available yet. <a href="mailto:contact@leochai.com?subject=R%C3%A9sum%C3%A9%20request">Request résumé</a></p>
+  <main class="site-main site-width" id="main" tabindex="-1"><div class="home">
+  <header class="home-hero" aria-labelledby="home-title">
+    <div class="home-hero__statement entrance">
+      <p class="home-label">Leo Chai / Selected work</p>
+      <h1 id="home-title">I build systems<br> you can understand.</h1>
+      <div class="home-actions">
+        <a class="button button--solid" href="mailto:contact@leochai.com?subject=R%C3%A9sum%C3%A9%20request">Request résumé</a>
+        <a class="home-text-link" href="mailto:contact@leochai.com">contact@leochai.com</a>
+      </div>
+    </div>
+    <div class="home-hero__margin">
+      <p>Backend, AI tooling, and interfaces for complex data.</p>
+      <p class="home-location">Canada</p>
+      <a class="home-text-link" href="#identity">See the work <span aria-hidden="true">↓</span></a>
+    </div>
+  </header>
+
+  <section class="home-section home-specimen" id="identity" aria-labelledby="identity-title">
+    <div class="home-section-heading">
+      <div><p class="home-label">01 / An identity problem</p><h2 id="identity-title">Same opening. Several postings.</h2><p class="home-deck">Deciding whether they belong together is the work.</p></div>
+      <span class="chip chip--source">Synthetic fixture</span>
+    </div>
+    <div class="home-ledger">
+      <div class="home-ledger__result"><p>7 synthetic observations → 3 canonical jobs</p><span>Rerun adds 0. Source history stays intact.</span></div>
+      <div id="resolved-specimen" class="home-resolved">
+        <div class="home-observations">
+          <h3 class="home-label">Five observations</h3>
+          <dl class="home-source-list">
+            <div><dt lang="en">LinkedIn</dt><dd lang="en">SWE II</dd></div>
+            <div><dt lang="en">Indeed</dt><dd lang="en">Software Engineer 2</dd></div>
+            <div><dt lang="en">Google</dt><dd lang="en">Software Engineer II</dd></div>
+            <div><dt lang="en">Greenhouse</dt><dd lang="en">Software Engineer II</dd></div>
+            <div><dt lang="en">Example Labs Careers</dt><dd lang="en">Software Engineer II</dd></div>
+          </dl>
+        </div>
+        <div class="home-canonical">
+          <p class="home-label">One canonical job <span aria-hidden="true">→</span></p>
+          <h3><span lang="en">Software Engineer II</span></h3>
+          <p lang="en">Example Labs · Toronto, ON</p>
+          <p class="home-requisition data" lang="en">greenhouse / 42</p>
+          <p class="home-canonical__selection">Company careers record selected</p>
+          <p class="home-small">The company posting takes priority. All five source observations remain attached.</p>
+        </div>
+      </div>
+      <div class="home-uncertain" id="uncertain-specimen">
+        <h3>Same title does not establish the same job.</h3>
+        <p>The synthetic fixture includes two LinkedIn requisitions with matching normalized company, title, and location. Their IDs differ, so they stay separate.</p>
+        <div class="home-pair">
+          <div><span class="data" lang="en">LinkedIn / 1001</span><strong lang="en">SWE II</strong><span lang="en">Example Labs Inc. · Toronto, ON</span></div>
+          <span class="home-pair__separation" aria-hidden="true">/</span>
+          <div><span class="data" lang="en">LinkedIn / 1002</span><strong lang="en">Software Engineer II</strong><span lang="en">Example Labs · Toronto, ON</span></div>
+        </div>
+        <p><strong>Two identities retained</strong> — No forced merge: matching names are weaker evidence than conflicting requisition IDs.</p>
+      </div>
+      <div class="home-ledger__retained"><strong>Also retained</strong><p>A separate requisition at Example Labs and a Platform Engineer role at Sample Systems remain separate jobs.</p></div>
+    </div>
+    <div class="home-specimen__actions">
+      <button class="button button--outline" type="button" data-specimen-toggle aria-controls="resolved-specimen uncertain-specimen" aria-pressed="false" hidden><span data-show-uncertain>Show an uncertain pair</span><span data-show-resolved hidden>Back to the resolved example</span></button>
+      <a class="home-text-link" href="https://github.com/TheLeoChai/job-agent/blob/20bdedb/README.md#run-discovery">Fixture and result <span class="data">20bdedb</span> <span aria-hidden="true">→</span></a>
+      <a class="home-text-link" href="/en/work/job-matching/">How Job Matching works <span aria-hidden="true">→</span></a>
+    </div>
+  </section>
+
+  <section class="home-section" id="projects" aria-labelledby="projects-title">
+    <div class="home-section-heading"><div><p class="home-label">02 / Selected projects</p><h2 id="projects-title">The work, in three directions.</h2></div><a class="home-text-link" href="/en/projects/">All projects <span aria-hidden="true">→</span></a></div>
+    <div class="home-projects">
+      <div class="home-projects__featured">
+<article class="card card--highlight">
+  <h3><a href="/en/work/job-matching/">Job Matching</a></h3>
+  <p>Several postings can describe one opening. The pipeline keeps one identity and its source history.</p>
+          <div class="home-job-mark" aria-hidden="true"><span>7</span><span>→</span><span>3</span><span class="home-job-mark__rerun">+0</span></div>
+          <p class="home-project-proof">7 observations → 3 jobs → 0 added on rerun</p>
+          <p class="home-small">Leo’s job-agent project · synthetic fixture</p>
+          <p class="home-small">Offline identity example. Live scoring and Discord delivery are not verified here.</p>
+          <a class="card__link" href="/en/work/job-matching/">Read the case study <span aria-hidden="true">&nbsp;→</span></a>
+</article>
+      </div>
+      <div class="home-projects__stack">
+<article class="card">
+  <h3><a href="/en/work/tiny-world/">Tiny World</a></h3>
+  <p>A little farm. Three residents with partial views of the same world.</p>
+          <p class="home-project-proof">Observation → proposed action → world state</p>
+          <p class="home-small">Website adaptation of AI Society · Illustrated concept; simplified memory and prompt-based decisions. No activation steering.</p>
+          <a class="card__link" href="/en/work/tiny-world/">Explore the farm <span aria-hidden="true">&nbsp;→</span></a>
+</article>
+<article class="card">
+  <h3><a href="/en/work/opencode/">OpenCode</a></h3>
+  <p>Leo’s OpenCode fork and companion tools.</p>
+          <p class="home-project-proof">A fork, companion tools, and visible explanations</p>
+          <p class="home-small">Leo’s fork of upstream OpenCode · Feature evidence is being audited. This site does not run a public terminal.</p>
+          <a class="card__link" href="/en/work/opencode/">See the project <span aria-hidden="true">&nbsp;→</span></a>
+</article>
+      </div>
+    </div>
+  </section>
+
+  <section class="home-section home-farm" aria-labelledby="farm-title">
+    <div class="home-section-heading"><div><p class="home-label">03 / A small world</p><h2 id="farm-title">Three residents. One little farm.</h2></div><span class="chip chip--source">Illustration</span></div>
+    <div class="home-farm__bleed">
+<figure class="figure">      <svg class="home-farm-map" viewBox="0 0 1152 120" width="1152" height="120" preserveAspectRatio="xMidYMid slice" role="img" aria-labelledby="farm-image-title">
+        <title id="farm-image-title">Original overhead farm illustration: a path, crop beds, a well, and three residents.</title>
+        <defs>
+          <g id="crop"><path class="farm-crop" d="M0 12V3M0 8L-5 3M0 8L5 3"/></g>
+          <g id="resident"><rect class="farm-person" x="-4" y="-14" width="8" height="8"/><path class="farm-person" d="M-6-4H6V6H3V11H-3V6H-6Z"/></g>
+          <g id="bed"><rect class="farm-soil" width="72" height="30"/><use href="#crop" x="12" y="6"/><use href="#crop" x="36" y="6"/><use href="#crop" x="60" y="6"/></g>
+        </defs>
+        <path class="farm-path" d="M0 55H1152V75H0ZM566 0H586V120H566Z"/>
+        <path class="farm-boundary" d="M0 114H1152M72 92V114M96 92V114M120 92V114M144 92V114M72 100H144M932 10H1080M948 2V18M972 2V18M996 2V18M1020 2V18M1044 2V18"/>
+        <path class="farm-house" d="M190 46V18L222 2L254 18V46Z"/><path class="farm-outline" d="M184 20L222 0L260 20M216 46V30H230V46"/>
+        <use href="#bed" x="356" y="10"/><use href="#bed" x="444" y="10"/><use href="#bed" x="356" y="84"/>
+        <use href="#bed" x="668" y="10"/><use href="#bed" x="756" y="10"/><use href="#bed" x="756" y="84"/>
+        <path class="farm-well" d="M596 91H622V112H596ZM592 88L609 76L626 88Z"/><path class="farm-outline" d="M599 90V81M619 90V81M603 100H615"/>
+        <use href="#resident" x="456" y="64"/><use href="#resident" x="548" y="92"/><use href="#resident" x="644" y="58"/>
+        <path class="farm-step" d="M560 94H564M574 94H578M588 94H592"/>
+        <path class="farm-tree" d="M854 114V94M838 94H870L854 70ZM306 43V23M290 23H322L306 0Z"/>
+      </svg>
+<figcaption>Illustrated scene: a resident heads toward the well.</figcaption></figure>
+    </div>
+    <a class="home-text-link" href="/en/work/tiny-world/#live">Visit the farm <span aria-hidden="true">→</span></a>
+  </section>
+
+  <section class="home-section home-person" aria-labelledby="person-title">
+    <div class="home-monogram" aria-hidden="true"><span>L</span><span>C</span></div>
+    <div class="home-person__copy">
+      <p class="home-label">04 / Behind the work</p><h2 id="person-title">Meet Leo.</h2>
+      <!-- TODO(LEO): Supply two authored biographical sentences, including interests and desired work. -->
+      <p class="home-placeholder">Personal introduction placeholder — Leo’s two authored sentences have not been supplied yet.</p>
+      <div class="home-update"><p class="home-label">Personal update / placeholder</p><!-- TODO(LEO): Supply a real personal update and its date; do not use the build date. --><p>A dated update from Leo will go here. Text and date have not been supplied.</p></div>
+      <div class="home-actions"><a class="home-text-link" href="/en/leo/">Meet Leo <span aria-hidden="true">→</span></a><a class="home-text-link" href="/en/leo/#ask">About AI-Leo <span aria-hidden="true">→</span></a></div>
+    </div>
+  </section>
+
+  <section class="home-section home-notes" aria-labelledby="notes-title">
+    <div class="home-section-heading"><div><p class="home-label">05 / Notes</p><h2 id="notes-title">Room for ideas. And dinner.</h2><p class="home-deck">The first essays and recipe have not been supplied yet.</p></div></div>
+    <!-- TODO(LEO): Replace these clearly unpublished placeholders with three supplied Notes titles, categories and publication dates. -->
+    <ol class="home-notes-list"><li><span class="home-label">Technology</span><h3>Essay title placeholder</h3><span class="home-small">Not published · date pending</span></li><li><span class="home-label">Making things</span><h3>Build reflection title placeholder</h3><span class="home-small">Not published · date pending</span></li><li><span class="home-label">Recipe</span><h3>Recipe title placeholder</h3><span class="home-small">Not published · date pending</span></li></ol>
+    <div class="home-contact"><div><h2>Let’s talk.</h2><p>Backend, AI tooling, interfaces.</p></div><div class="home-actions"><a class="home-text-link" href="mailto:contact@leochai.com">contact@leochai.com</a><a class="button button--outline" href="mailto:contact@leochai.com?subject=R%C3%A9sum%C3%A9%20request">Request résumé</a></div></div>
+  </section>
+</div>
 </main>
 <footer class="site-footer site-width">
   <ul aria-label="Contact and feeds">

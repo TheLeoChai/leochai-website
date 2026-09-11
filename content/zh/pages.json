@@ -3,9 +3,15 @@
     "key": "home",
     "title": "Leo Chai",
     "description": "后端、AI 工具，以及让复杂数据更易理解的界面。",
-    "revision": "scaffold-1",
+    "revision": "home-exemplar-1",
     "body": "此页面正在建设中。",
-    "sourceRevision": "scaffold-1"
+    "sourceRevision": "home-exemplar-1",
+    "pageStyles": [
+      "/css/home.css"
+    ],
+    "pageScripts": [
+      "/js/home.js"
+    ]
   },
   {
     "key": "projects",
