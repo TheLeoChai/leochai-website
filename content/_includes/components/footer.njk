@@ -1,0 +1,8 @@
+<footer class="site-footer site-width">
+  <ul aria-label="{% if route.locale == 'zh' %}联系方式和订阅{% else %}Contact and feeds{% endif %}">
+    <li><a href="mailto:contact@leochai.com">contact@leochai.com</a></li>
+    <li><a href="https://github.com/theleochai">GitHub</a></li>
+    <li><a href="/{{ route.locale }}/rss.xml">{% if route.locale == 'zh' %}中文 RSS{% else %}English RSS{% endif %}</a></li>
+  </ul>
+  <p>{% if route.locale == 'zh' %}页面为静态内容；实时实验运行在我家里的服务器上。{% else %}Static pages; live experiments run on my server at home.{% endif %}</p>
+</footer>

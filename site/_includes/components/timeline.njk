@@ -1,0 +1,21 @@
+{% macro timeline(input, locale='en', heading='h2') %}
+{% set model = input | timelineModel %}{% set final = model.steps | last %}
+<section class="timeline" id="{{ model.id }}" data-timeline aria-labelledby="{{ model.id }}-title">
+  <{{ heading }} class="timeline__heading" id="{{ model.id }}-title">{{ model.title }}</{{ heading }}>
+  {% if model.sourceLabel %}<span class="chip chip--source">{{ model.sourceLabel }}</span>{% endif %}
+  <div class="timeline__frame" aria-label="{% if locale == 'zh' %}图解{% else %}Diagram{% endif %}">
+    <strong data-frame-title>{{ final.title }}</strong><p data-frame-body>{{ final.body }}</p>
+    <ul class="timeline__items" data-frame-items>{% for item in final.items %}<li data-item="{{ item.id }}" data-status="{{ item.status }}"><strong>{{ item.label }}</strong><span>{{ item.detail }}</span></li>{% endfor %}</ul>
+  </div>
+  <div class="timeline__controls" data-controls hidden>
+    <button class="button" type="button" data-play>{% if locale == 'zh' %}播放{% else %}Play{% endif %}</button>
+    <button class="button button--outline" type="button" data-pause disabled>{% if locale == 'zh' %}暂停{% else %}Pause{% endif %}</button>
+    <button class="button button--outline" type="button" data-replay>{% if locale == 'zh' %}重播{% else %}Replay{% endif %}</button>
+    <label class="timeline__scrub" for="{{ model.id }}-scrub">{% if locale == 'zh' %}进度{% else %}Progress{% endif %}<input id="{{ model.id }}-scrub" data-scrub type="range" min="0" max="{{ model.duration }}" step="{{ model.duration / 100 }}" value="{{ model.duration }}" aria-valuetext="{{ model.steps.length }} / {{ model.steps.length }}: {{ final.title }}"></label>
+  </div>
+  <p class="timeline__status" data-status role="status" aria-live="polite" aria-atomic="true">{{ final.title }}</p>
+  <a class="timeline__steps-link" href="#{{ model.id }}-steps">{% if locale == 'zh' %}阅读分步说明{% else %}View as numbered steps{% endif %}</a>
+  <ol class="timeline__steps" id="{{ model.id }}-steps" tabindex="-1">{% for step in model.steps %}<li><strong>{{ step.title }}</strong><p>{{ step.body }}</p><ul>{% for item in step.items %}<li>{{ item.label }}: {{ item.detail }}</li>{% endfor %}</ul></li>{% endfor %}</ol>
+  <script type="application/json" data-timeline-model>{{ model | jsonScript | safe }}</script>
+</section>
+{% endmacro %}

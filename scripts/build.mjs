@@ -2,6 +2,7 @@ import { spawnSync } from 'node:child_process';
 import { mkdir, mkdtemp, rename, rm, readFile } from 'node:fs/promises';
 import { resolve, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { validateDesign } from './validate-design.mjs';
 import { validateFonts } from './validate-fonts.mjs';
 import { validateBuild } from './validate-build.mjs';
 
@@ -18,6 +19,9 @@ await mkdir('.build', { recursive: true });
 const lock = join(root, '.build/lock');
 await mkdir(lock).catch(() => { throw new Error('Another build owns .build/lock; wait for it to finish.'); });
 try {
+  await validateDesign();
+  const contentCheck = spawnSync(process.execPath, ['scripts/check-content.mjs'], { stdio: 'inherit' });
+  if (contentCheck.status !== 0) throw new Error('Content quality gate failed');
   for (const targetPrefix of checkAll ? ['/', '/leochai-website/'] : [prefix]) {
     const temporary = await mkdtemp(join(root, '.build/candidate-'));
     try {

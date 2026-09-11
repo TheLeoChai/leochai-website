@@ -47,7 +47,7 @@ test('validation failure preserves output; successful promotion preserves existi
   const directory = await mkdtemp(join(tmpdir(), 'leochai-build-test-'));
   try {
     const root = new URL('../', import.meta.url);
-    for (const name of ['content', 'assets', 'lib', 'scripts', 'eleventy.config.js', 'package.json']) await cp(new URL(name, root), join(directory, name), { recursive: true });
+    for (const name of ['content', 'assets', 'lib', 'scripts', 'eleventy.config.js', 'stylelint.config.mjs', 'package.json']) await cp(new URL(name, root), join(directory, name), { recursive: true });
     await symlink(new URL('node_modules', root).pathname, join(directory, 'node_modules'), 'dir');
     await mkdir(join(directory, 'site'));
     await writeFile(join(directory, 'site/index.html'), 'old site survives');

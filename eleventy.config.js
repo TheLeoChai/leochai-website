@@ -1,7 +1,10 @@
+import { jsonScript } from './lib/serialization.js';
 import { HtmlBasePlugin, I18nPlugin } from '@11ty/eleventy';
 import { existsSync } from 'node:fs';
 import metadata from './content/_data/metadata.js';
 import { feedPlugin } from '@11ty/eleventy-plugin-rss';
+import { proofState, evidenceRows } from './lib/evidence.js';
+import { validateTimeline } from './assets/js/timeline-model.js';
 import routes from './content/_data/routes.js';
 import { feeds, feedArticles, canonicalizeFeed } from './lib/feeds.js';
 
@@ -24,6 +27,10 @@ export default function (config) {
     const feed = feeds.find(feed => this.page.outputPath?.endsWith(`/${feed.locale}/rss.xml`));
     return feed ? canonicalizeFeed(content, feed.locale, metadata.base) : content;
   });
+  config.addFilter('proofState', proofState);
+  config.addFilter('evidenceRows', evidenceRows);
+  config.addFilter('timelineModel', validateTimeline);
+  config.addFilter('jsonScript', jsonScript);
   config.addFilter('canonicalUrl', path => new URL(path, metadata.base).href);
   config.addFilter('localeRoutes', (routes, locale) => routes.canonical.filter(route => route.locale === locale && route.kind === 'core'));
   config.addPassthroughCopy({ assets: '.' });

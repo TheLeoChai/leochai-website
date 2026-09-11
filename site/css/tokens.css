@@ -1,0 +1,18 @@
+:root {
+  --canvas: #F7F9FC;
+  --canvas-raised: #FFFFFF;
+  --ink: #1A1421;
+  --ink-soft: #5C5470;
+  --border: #E4E8F1;
+  --accent: #39C5BB;
+  --accent-ink: #0E756D;
+  --pastel-teal: #DDF5F2;
+  --pastel-violet: #ECE6F8;
+  --pastel-sky: #E4EFFA;
+  --elevation: 3px 3px 0 0 var(--ink);
+  --dur-1: 160ms;
+  --dur-2: 300ms;
+  --ease-out-soft: cubic-bezier(.22, 1, .36, 1);
+  /* 01 */
+  --miku: var(--accent);
+}

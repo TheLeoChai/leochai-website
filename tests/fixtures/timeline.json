@@ -1,0 +1,16 @@
+{
+  "id": "identity-fixture", "title": "A conflict stays visible", "sourceLabel": "Illustration", "duration": 6000,
+  "steps": [
+    { "at": 0, "title": "Read the two observations", "body": "The title and employer match, but the requisition IDs differ.", "items": [
+      {"id":"first","label":"Observation A","detail":"Requisition 1042","status":"pending"},
+      {"id":"second","label":"Observation B","detail":"Requisition 1068","status":"pending"}
+    ]},
+    { "at": 3000, "title": "Retain the conflicting IDs", "body": "A matching title alone is not enough to combine these records.", "items": [
+      {"id":"conflict","label":"Identity unresolved","detail":"Different requisitions retained","status":"uncertain"}
+    ]},
+    { "at": 6000, "title": "Keep two records for review", "body": "The fixture ends with two separate records and a visible reason for review.", "items": [
+      {"id":"first","label":"Record A","detail":"1042 · separate","status":"complete"},
+      {"id":"second","label":"Record B","detail":"1068 · separate","status":"complete"}
+    ]}
+  ]
+}
