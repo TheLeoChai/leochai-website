@@ -5,7 +5,10 @@ Personal website for Leo Chai — portfolio frontend on GitHub Pages, plus live,
 ## Layout
 
 ```
-site/            Static frontend — source of truth, published to gh-pages branch
+content/         Authored locale records, shared templates and public data
+assets/          Shared static assets, copied to the generated output root
+lib/             Build-time route and feed helpers
+site/            Generated, validated static frontend; published to gh-pages
 services/        Backend demo services, one folder per project
 docs/            Infrastructure docs — NAS, DNS, Caddy (see docs/infra.md)
 tasks/           Task specs for scheduled / delegated agent work
@@ -25,6 +28,11 @@ Preview URL: https://theleochai.github.io/leochai-website/
 
 ### Custom domain (pending cutover)
 
+The current contract is the apex `leochai.com`; `www` redirects to it. The
+historical steps below predate that decision and need reconciliation before a
+separately approved cutover. Local builds preserve an existing CNAME but do not
+introduce one. Do not modify the old repository without Leo's approval.
+
 `leochai.com` / `www.leochai.com` is currently bound to the old repo `TheLeoChai.github.io` (DNS on Cloudflare, proxied). To point the domain at this repo:
 
 1. Remove the custom domain from `TheLeoChai.github.io` Pages settings
@@ -40,13 +48,27 @@ The backend currently runs on the NAS behind `https://api.leochai.com` (Caddy + 
 
 ## Development workflow
 
-**Frontend** (`site/`):
+**Frontend** (Node 22+, authored in `content/` and `assets/`):
 
 ```bash
+npm ci
+npm run check                    # validate production and preview prefixes
+npm test                         # publication, routing and promotion fixtures
+npm run build                    # validate, then replace generated site/
+npm run build:preview            # use /leochai-website/ for project preview
 ./scripts/dev.sh                  # local preview on :8080
 kimaki tunnel -p 8080 -- ./scripts/dev.sh  # public preview URL (agents/remote)
 ./scripts/publish.sh              # ship: publish site/ to gh-pages
 ```
+
+Edit the sources, then rebuild; direct edits to `site/` are overwritten. Build
+details and publication rules are in [`docs/static-build.md`](docs/static-build.md).
+The seven bilingual core destinations are currently structural placeholders.
+No approved résumé PDF or published articles have been supplied: Home offers a
+résumé request by email, both locale Atom feeds are valid but empty, and Chinese
+Notes explicitly labels the English articles awaiting translation. Page content
+and shared visual components are subsequent issues. These build commands do
+not perform a domain cutover or publish the site.
 
 **Backend** (`services/`):
 

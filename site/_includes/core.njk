@@ -4,6 +4,12 @@ layout: base.njk
 <h1>{{ route.title }}</h1>
 <p>{{ route.description }}</p>
 <p>{{ route.body }}</p>
+{% if route.key == 'home' %}
+<p>{{ resume.labels[route.locale].status }} <a href="{{ resume.requestUrl }}">{{ resume.labels[route.locale].request }}</a></p>
+{% endif %}
+{% if route.key == 'notes' %}
+<p><a href="/{{ route.locale }}/rss.xml">{% if route.locale == 'zh' %}订阅中文笔记（Atom）{% else %}Subscribe to English Notes (Atom){% endif %}</a></p>
+{% endif %}
 {% for anchor in route.anchors %}<section id="{{ anchor }}" aria-label="{{ anchor }}"></section>{% endfor %}
 {% if route.key == 'notes' and route.locale == 'zh' %}
 <section aria-labelledby="awaiting-translation">
