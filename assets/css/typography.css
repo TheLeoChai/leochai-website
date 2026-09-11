@@ -1,0 +1,22 @@
+body {
+  font-family: "Source Sans 3", system-ui, sans-serif;
+  font-weight: 400;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Newsreader", Georgia, serif;
+  font-weight: 500;
+}
+
+html:lang(zh) body {
+  font-family: "PingFang SC", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif;
+}
+
+/* Iteration 2: exact Noto Serif SC heading subsets (LEO-161 follow-up). */
+h1:lang(zh), h2:lang(zh), h3:lang(zh), h4:lang(zh), h5:lang(zh), h6:lang(zh) {
+  font-family: "Songti SC", SimSun, "Noto Serif CJK SC", serif;
+}
+
+code, pre, kbd, samp {
+  font-family: ui-monospace, "SFMono-Regular", Consolas, monospace;
+}

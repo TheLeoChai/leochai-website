@@ -1,0 +1,33 @@
+[
+  {
+    "family": "Newsreader",
+    "source": "Newsreader[opsz,wght].ttf",
+    "output": "newsreader-latin.woff2",
+    "axes": {
+      "opsz": 48,
+      "wght": [
+        400,
+        400,
+        600
+      ]
+    },
+    "weight": "400 600",
+    "sha256": "8a08d13f8a6c0d51be379a60af84f945f65369a67e509ee3c3bdcc421254d7c1",
+    "revision": "8e44913e4ff26fc997e6856c1ec40ff4791c98c5"
+  },
+  {
+    "family": "Source Sans 3",
+    "source": "SourceSans3[wght].ttf",
+    "output": "source-sans-3-latin.woff2",
+    "axes": {
+      "wght": [
+        400,
+        400,
+        650
+      ]
+    },
+    "weight": "400 650",
+    "sha256": "042fe2cc0b933e328410d7acbd0aa6a1873dca5aef81875f4bc214b08825c7b9",
+    "revision": "8e44913e4ff26fc997e6856c1ec40ff4791c98c5"
+  }
+]
