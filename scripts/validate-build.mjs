@@ -1,9 +1,10 @@
 import assert from 'node:assert/strict';
 import { readFile, readdir, stat } from 'node:fs/promises';
-import { join } from 'node:path';
-import { parseHTML } from 'linkedom';
+import { join, relative } from 'node:path';
+import { parseHTML, DOMParser } from 'linkedom';
 import routes from '../content/_data/routes.js';
 import metadata from '../content/_data/metadata.js';
+import { feeds, feedArticles } from '../lib/feeds.js';
 
 const absolute = path => new URL(path, metadata.base).href;
 const outputFile = (directory, path) => join(directory, path, path.endsWith('/') ? 'index.html' : '');
@@ -17,6 +18,7 @@ export async function validateBuild(directory, prefix = '/') {
     const { document } = parseHTML(await readFile(outputFile(directory, route.path), 'utf8'));
     assert.equal(document.documentElement.lang, route.lang, `${route.path}: language`);
     assert.equal(document.querySelector('link[rel="canonical"]')?.getAttribute('href'), absolute(route.canonical), `${route.path}: canonical`);
+    assert.equal(document.querySelector('link[type="application/atom+xml"]')?.getAttribute('href'), `${prefix}${route.locale}/rss.xml`, `${route.path}: locale feed discovery`);
     assert.equal(document.querySelector('meta[name="description"]')?.content, route.description);
     if (route.locale === 'zh') assert.equal(document.querySelector('meta[name="translation-source-revision"]')?.content, route.sourceRevision);
     const alternates = [...document.querySelectorAll('link[hreflang]')].map(link => [link.hreflang, link.getAttribute('href')]);
@@ -41,12 +43,35 @@ export async function validateBuild(directory, prefix = '/') {
   assert.equal(new Set(locations).size, locations.length);
   assert(!locations.includes(absolute('/en/')));
   await stat(join(directory, '.nojekyll'));
+  for (const feed of feeds) {
+    const xml = new DOMParser().parseFromString(await readFile(join(directory, feed.locale, 'rss.xml'), 'utf8'), 'text/xml');
+    const root = xml.documentElement;
+    assert.equal(root.localName, 'feed');
+    assert.equal(root.getAttribute('xmlns'), 'http://www.w3.org/2005/Atom');
+    assert.equal(root.getAttribute('xml:lang'), feed.language);
+    assert.equal(root.querySelector('link[rel="self"]')?.getAttribute('href'), absolute(`/${feed.locale}/rss.xml`));
+    assert.equal(root.querySelector('id')?.textContent, absolute(`/${feed.locale}/notes/`));
+    assert(!Number.isNaN(Date.parse(root.querySelector('updated')?.textContent)), 'Feed updated date required even when empty');
+    const expected = feedArticles(routes, feed.locale, metadata.base).reverse();
+    const entries = [...root.querySelectorAll('entry')];
+    assert.equal(entries.length, expected.length, `${feed.locale}: published article feed count`);
+    entries.forEach((entry, index) => {
+      assert.equal(entry.querySelector('id')?.textContent, expected[index].url);
+      assert.equal(entry.querySelector('link')?.getAttribute('href'), expected[index].url);
+      assert.equal(entry.querySelector('title')?.textContent, expected[index].data.title);
+      assert.equal(entry.querySelector('content')?.textContent, expected[index].content);
+    });
+  }
+  const publicFiles = await files(directory);
+  for (const file of publicFiles) assert(!relative(directory, file).split('/').some(part => part.toLowerCase() === 'owner'), `${file}: owner tools must stay outside public output`);
   // Check rendered HTML, never template-source copies. This catches broken
   // prefix paths and missing local files without a network or a running NAS.
-  for (const file of (await files(directory)).filter(file => file.endsWith('.html'))) {
+  for (const file of publicFiles.filter(file => file.endsWith('.html'))) {
     const { document } = parseHTML(await readFile(file, 'utf8'));
     for (const node of document.querySelectorAll('[href], [src]')) {
       const value = node.getAttribute('href') ?? node.getAttribute('src');
+      const url = new URL(value, metadata.base);
+      assert(!decodeURIComponent(url.pathname).split('/').some(part => part.toLowerCase() === 'owner'), `${file}: public link to private owner tools`);
       if (!value.startsWith('/') || value.startsWith('//')) continue;
       assert(value.startsWith(prefix), `${file}: prefix missing on ${value}`);
       const local = new URL(value, metadata.base);

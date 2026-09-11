@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+  <title>Leo Chai — Notes</title>
+  <subtitle>Build reflections, technology, and recipes.</subtitle>
+  <link href="https://leochai.com/en/rss.xml" rel="self" />
+  <link href="https://leochai.com/en/notes/" />
+  <updated>2026-09-11T04:37:07Z</updated>
+  <id>https://leochai.com/en/notes/</id>
+  <author>
+    <name>Leo Chai</name>  </author></feed>

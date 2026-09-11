@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-Hans">
+  <title>Leo Chai — 笔记</title>
+  <subtitle>构建心得、技术与食谱。</subtitle>
+  <link href="https://leochai.com/zh/rss.xml" rel="self" />
+  <link href="https://leochai.com/zh/notes/" />
+  <updated>2026-09-11T04:37:07Z</updated>
+  <id>https://leochai.com/zh/notes/</id>
+  <author>
+    <name>Leo Chai</name>  </author></feed>
