@@ -29,12 +29,12 @@ ES modules; top-level `pageStyles`/`pageScripts` are fallback layout hooks.
 
 ## Execution metadata boundary
 
-`lib/evidence.js` is the initial metadata gate. LIVE requires live origin,
-committed execution, run ID, server event timestamp. RECORDED requires capture
-origin, capture timestamp, revision. Other or incomplete inputs produce UNKNOWN
-with a visible reason. A source label cannot grant an execution state.
-LEO-115 owns the stricter freshness/lifecycle policy and its application;
-metadata alone does not establish that an old run is still active.
+`lib/evidence.js` enforces the [execution and authorship policy](evidence-policy.md).
+Static `state(proof, locale)` calls emit RECORDED or UNKNOWN only. The helper's
+optional third argument supplies an explicit runtime clock; LIVE then also
+requires active committed execution and fresh server event/heartbeat evidence.
+A source label cannot grant an execution state. Capture metadata is an authoring
+contract, not proof of asset existence or cryptographic verification.
 
 Proof manifest keys: `repo`, `commit`, `capturedAt`, `inputHash`, `provider`,
 `model`, `schema`, `redaction`, `contribution`. Explain non-model execution in the
