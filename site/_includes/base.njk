@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="{{ route.lang }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ route.title }}{% if route.key != 'home' %} · {{ metadata.title }}{% endif %}</title>
+  <meta name="description" content="{{ route.description }}">
+  <meta name="content-revision" content="{{ route.revision }}">
+  {% if route.sourceRevision %}<meta name="translation-source-revision" content="{{ route.sourceRevision }}">{% endif %}
+  <link rel="canonical" href="{{ route.canonical | canonicalUrl }}">
+  {% for alternate in route.alternates %}<link rel="alternate" hreflang="{{ alternate.lang }}" href="{{ alternate.path | canonicalUrl }}">
+  {% endfor %}
+</head>
+<body>
+  <a href="#main">{% if route.locale == 'zh' %}跳到正文{% else %}Skip to content{% endif %}</a>
+  <nav aria-label="{% if route.locale == 'zh' %}主导航{% else %}Main navigation{% endif %}">
+  {% for destination in routes | localeRoutes(route.locale) %}
+    <a href="{{ destination.path }}"{% if destination.key == route.key %} aria-current="page"{% endif %}>{{ destination.title }}</a>
+  {% endfor %}
+  </nav>
+  <main id="main">{{ content | safe }}</main>
+</body>
+</html>

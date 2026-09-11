@@ -1,0 +1,20 @@
+{
+  "name": "leochai-website",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "build:preview": "node scripts/build.mjs --pathprefix=/leochai-website/",
+    "check": "node scripts/build.mjs --check-all",
+    "dev": "bash scripts/dev.sh",
+    "test": "node --test"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "3.1.6",
+    "@11ty/eleventy-plugin-rss": "2.0.4",
+    "linkedom": "0.18.12"
+  }
+}

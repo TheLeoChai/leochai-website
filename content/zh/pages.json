@@ -1,0 +1,58 @@
+[
+  {
+    "key": "home",
+    "title": "Leo Chai",
+    "description": "后端、AI 工具，以及让复杂数据更易理解的界面。",
+    "revision": "scaffold-1",
+    "body": "此页面正在建设中。",
+    "sourceRevision": "scaffold-1"
+  },
+  {
+    "key": "projects",
+    "title": "项目",
+    "description": "Leo Chai的项目。",
+    "revision": "scaffold-1",
+    "body": "此页面正在建设中。",
+    "sourceRevision": "scaffold-1"
+  },
+  {
+    "key": "job-matching",
+    "title": "职位匹配",
+    "description": "匹配招聘信息的数据处理流程。",
+    "revision": "scaffold-1",
+    "body": "此页面正在建设中。",
+    "sourceRevision": "scaffold-1"
+  },
+  {
+    "key": "tiny-world",
+    "title": "小小世界",
+    "description": "共享的农场模拟。",
+    "revision": "scaffold-1",
+    "body": "此页面正在建设中。",
+    "sourceRevision": "scaffold-1"
+  },
+  {
+    "key": "opencode",
+    "title": "OpenCode",
+    "description": "我的 OpenCode 分支与配套工具。",
+    "revision": "scaffold-1",
+    "body": "此页面正在建设中。",
+    "sourceRevision": "scaffold-1"
+  },
+  {
+    "key": "leo",
+    "title": "认识 Leo",
+    "description": "关于Leo Chai。",
+    "revision": "scaffold-1",
+    "body": "此页面正在建设中。",
+    "sourceRevision": "scaffold-1"
+  },
+  {
+    "key": "notes",
+    "title": "笔记",
+    "description": "开发随笔、技术与食谱。",
+    "revision": "scaffold-1",
+    "body": "此页面正在建设中。",
+    "sourceRevision": "scaffold-1"
+  }
+]

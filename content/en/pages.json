@@ -1,0 +1,51 @@
+[
+  {
+    "key": "home",
+    "title": "Leo Chai",
+    "description": "Backend, AI tooling, and interfaces for complex data.",
+    "revision": "scaffold-1",
+    "body": "This page is being built."
+  },
+  {
+    "key": "projects",
+    "title": "Projects",
+    "description": "Projects by Leo Chai.",
+    "revision": "scaffold-1",
+    "body": "This page is being built."
+  },
+  {
+    "key": "job-matching",
+    "title": "Job Matching",
+    "description": "A pipeline for matching job postings.",
+    "revision": "scaffold-1",
+    "body": "This page is being built."
+  },
+  {
+    "key": "tiny-world",
+    "title": "Tiny World",
+    "description": "A shared farm simulation.",
+    "revision": "scaffold-1",
+    "body": "This page is being built."
+  },
+  {
+    "key": "opencode",
+    "title": "OpenCode",
+    "description": "My OpenCode fork and companion tooling.",
+    "revision": "scaffold-1",
+    "body": "This page is being built."
+  },
+  {
+    "key": "leo",
+    "title": "Meet Leo",
+    "description": "About Leo Chai.",
+    "revision": "scaffold-1",
+    "body": "This page is being built."
+  },
+  {
+    "key": "notes",
+    "title": "Notes",
+    "description": "Build reflections, technology, and recipes.",
+    "revision": "scaffold-1",
+    "body": "This page is being built."
+  }
+]
