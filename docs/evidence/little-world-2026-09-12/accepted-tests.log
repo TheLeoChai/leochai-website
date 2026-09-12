@@ -1,0 +1,44 @@
+
+> test
+> node --test
+
+TAP version 13
+# Subtest: tests/build.test.mjs
+ok 1 - tests/build.test.mjs
+  ---
+  duration_ms: 19964.481762
+  type: 'test'
+  ...
+# Subtest: tests/components.test.mjs
+ok 2 - tests/components.test.mjs
+  ---
+  duration_ms: 903.279188
+  type: 'test'
+  ...
+# Subtest: tests/evidence.test.mjs
+ok 3 - tests/evidence.test.mjs
+  ---
+  duration_ms: 226.049846
+  type: 'test'
+  ...
+# Subtest: tests/fonts.test.mjs
+ok 4 - tests/fonts.test.mjs
+  ---
+  duration_ms: 387.492564
+  type: 'test'
+  ...
+# Subtest: tests/world-model.test.mjs
+ok 5 - tests/world-model.test.mjs
+  ---
+  duration_ms: 495.500009
+  type: 'test'
+  ...
+1..5
+# tests 5
+# suites 0
+# pass 5
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 20060.899357

@@ -1,0 +1,1877 @@
+{
+  "base": "http://127.0.0.1:8082",
+  "capturedAt": "2026-09-12T05:43:25.761Z",
+  "normal": [
+    {
+      "locale": "en",
+      "width": 390,
+      "details": {
+        "scrollWidth": 390,
+        "viewport": 390,
+        "headings": [
+          "Little World",
+          "Small things, coming together"
+        ],
+        "images": [
+          {
+            "src": "/world/poster.png",
+            "complete": true,
+            "width": 512
+          },
+          {
+            "src": "/world/still-1.png",
+            "complete": true,
+            "width": 512
+          },
+          {
+            "src": "/world/still-2.png",
+            "complete": true,
+            "width": 512
+          },
+          {
+            "src": "/world/still-3.png",
+            "complete": true,
+            "width": 512
+          }
+        ],
+        "canvases": [
+          {
+            "width": 512,
+            "height": 320,
+            "display": "block"
+          }
+        ],
+        "resourceTiming": [
+          {
+            "name": "http://127.0.0.1:8082/css/tokens.css",
+            "transferSize": 706,
+            "encodedBodySize": 406,
+            "decodedBodySize": 406
+          },
+          {
+            "name": "http://127.0.0.1:8082/css/fonts.css",
+            "transferSize": 1733,
+            "encodedBodySize": 1433,
+            "decodedBodySize": 1433
+          },
+          {
+            "name": "http://127.0.0.1:8082/css/typography.css",
+            "transferSize": 898,
+            "encodedBodySize": 598,
+            "decodedBodySize": 598
+          },
+          {
+            "name": "http://127.0.0.1:8082/css/components.css",
+            "transferSize": 7667,
+            "encodedBodySize": 7367,
+            "decodedBodySize": 7367
+          },
+          {
+            "name": "http://127.0.0.1:8082/css/world.css",
+            "transferSize": 6944,
+            "encodedBodySize": 6644,
+            "decodedBodySize": 6644
+          },
+          {
+            "name": "http://127.0.0.1:8082/js/world.js",
+            "transferSize": 7438,
+            "encodedBodySize": 7138,
+            "decodedBodySize": 7138
+          },
+          {
+            "name": "http://127.0.0.1:8082/world/poster.png",
+            "transferSize": 21072,
+            "encodedBodySize": 20772,
+            "decodedBodySize": 20772
+          },
+          {
+            "name": "http://127.0.0.1:8082/js/world-model.js",
+            "transferSize": 7056,
+            "encodedBodySize": 6756,
+            "decodedBodySize": 6756
+          },
+          {
+            "name": "http://127.0.0.1:8082/world/scene.json",
+            "transferSize": 4702,
+            "encodedBodySize": 4402,
+            "decodedBodySize": 4402
+          },
+          {
+            "name": "http://127.0.0.1:8082/world/trace.json",
+            "transferSize": 8500,
+            "encodedBodySize": 8200,
+            "decodedBodySize": 8200
+          },
+          {
+            "name": "http://127.0.0.1:8082/fonts/source-sans-3-latin.woff2",
+            "transferSize": 44960,
+            "encodedBodySize": 44660,
+            "decodedBodySize": 44660
+          },
+          {
+            "name": "http://127.0.0.1:8082/fonts/newsreader-latin.woff2",
+            "transferSize": 51768,
+            "encodedBodySize": 51468,
+            "decodedBodySize": 51468
+          },
+          {
+            "name": "http://127.0.0.1:8082/world/map-base.png",
+            "transferSize": 19326,
+            "encodedBodySize": 19026,
+            "decodedBodySize": 19026
+          },
+          {
+            "name": "http://127.0.0.1:8082/world/map-front.png",
+            "transferSize": 1841,
+            "encodedBodySize": 1541,
+            "decodedBodySize": 1541
+          },
+          {
+            "name": "http://127.0.0.1:8082/world/sprites.png",
+            "transferSize": 2318,
+            "encodedBodySize": 2018,
+            "decodedBodySize": 2018
+          },
+          {
+            "name": "http://127.0.0.1:8082/world/still-1.png",
+            "transferSize": 20951,
+            "encodedBodySize": 20651,
+            "decodedBodySize": 20651
+          },
+          {
+            "name": "http://127.0.0.1:8082/world/still-2.png",
+            "transferSize": 20890,
+            "encodedBodySize": 20590,
+            "decodedBodySize": 20590
+          },
+          {
+            "name": "http://127.0.0.1:8082/world/still-3.png",
+            "transferSize": 21072,
+            "encodedBodySize": 20772,
+            "decodedBodySize": 20772
+          }
+        ]
+      },
+      "errors": [],
+      "network": [
+        {
+          "url": "http://127.0.0.1:8082/css/tokens.css",
+          "status": 200,
+          "mimeType": "text/css",
+          "fromDiskCache": false,
+          "encodedDataLength": 591
+        },
+        {
+          "url": "http://127.0.0.1:8082/css/fonts.css",
+          "status": 200,
+          "mimeType": "text/css",
+          "fromDiskCache": false,
+          "encodedDataLength": 1619
+        },
+        {
+          "url": "http://127.0.0.1:8082/en/work/tiny-world/",
+          "status": 200,
+          "mimeType": "text/html",
+          "fromDiskCache": false,
+          "encodedDataLength": 6533
+        },
+        {
+          "url": "http://127.0.0.1:8082/css/typography.css",
+          "status": 200,
+          "mimeType": "text/css",
+          "fromDiskCache": false,
+          "encodedDataLength": 783
+        },
+        {
+          "url": "http://127.0.0.1:8082/css/components.css",
+          "status": 200,
+          "mimeType": "text/css",
+          "fromDiskCache": false,
+          "encodedDataLength": 7553
+        },
+        {
+          "url": "http://127.0.0.1:8082/css/world.css",
+          "status": 200,
+          "mimeType": "text/css",
+          "fromDiskCache": false,
+          "encodedDataLength": 6830
+        },
+        {
+          "url": "http://127.0.0.1:8082/js/world.js",
+          "status": 200,
+          "mimeType": "text/javascript",
+          "fromDiskCache": false,
+          "encodedDataLength": 7331
+        },
+        {
+          "url": "http://127.0.0.1:8082/world/poster.png",
+          "status": 200,
+          "mimeType": "image/png",
+          "fromDiskCache": false,
+          "encodedDataLength": 20960
+        },
+        {
+          "url": "http://127.0.0.1:8082/js/world-model.js",
+          "status": 200,
+          "mimeType": "text/javascript",
+          "fromDiskCache": false,
+          "encodedDataLength": 6949
+        },
+        {
+          "url": "http://127.0.0.1:8082/world/scene.json",
+          "status": 200,
+          "mimeType": "application/json",
+          "fromDiskCache": false,
+          "encodedDataLength": 4596
+        },
+        {
+          "url": "http://127.0.0.1:8082/world/trace.json",
+          "status": 200,
+          "mimeType": "application/json",
+          "fromDiskCache": false,
+          "encodedDataLength": 8394
+        },
+        {
+          "url": "http://127.0.0.1:8082/fonts/newsreader-latin.woff2",
+          "status": 200,
+          "mimeType": "font/woff2",
+          "fromDiskCache": false,
+          "encodedDataLength": 51657
+        },
+        {
+          "url": "http://127.0.0.1:8082/fonts/source-sans-3-latin.woff2",
+          "status": 200,
+          "mimeType": "font/woff2",
+          "fromDiskCache": false,
+          "encodedDataLength": 44849
+        },
+        {
+          "url": "http://127.0.0.1:8082/world/map-front.png",
+          "status": 200,
+          "mimeType": "image/png",
+          "fromDiskCache": false,
+          "encodedDataLength": 1728
+        },
+        {
+          "url": "http://127.0.0.1:8082/world/map-base.png",
+          "status": 200,
+          "mimeType": "image/png",
+          "fromDiskCache": false,
+          "encodedDataLength": 19214
+        },
+        {
+          "url": "http://127.0.0.1:8082/world/sprites.png",
+          "status": 200,
+          "mimeType": "image/png",
+          "fromDiskCache": false,
+          "encodedDataLength": 2205
+        },
+        {
+          "url": "http://127.0.0.1:8082/world/still-2.png",
+          "status": 200,
+          "mimeType": "image/png",
+          "fromDiskCache": false,
+          "encodedDataLength": 20778
+        },
+        {
+          "url": "http://127.0.0.1:8082/world/still-1.png",
+          "status": 200,
+          "mimeType": "image/png",
+          "fromDiskCache": false,
+          "encodedDataLength": 20839
+        },
+        {
+          "url": "http://127.0.0.1:8082/world/still-3.png",
+          "status": 200,
+          "mimeType": "image/png",
+          "fromDiskCache": false,
+          "encodedDataLength": 20960
+        }
+      ],
+      "encodedTransferredBytes": 254369,
+      "violations": []
+    },
+    {
+      "locale": "en",
+      "width": 768,
+      "details": {
+        "scrollWidth": 768,
+        "viewport": 768,
+        "headings": [
+          "Little World",
+          "Small things, coming together"
+        ],
+        "images": [
+          {
+            "src": "/world/poster.png",
+            "complete": true,
+            "width": 512
+          },
+          {
+            "src": "/world/still-1.png",
+            "complete": true,
+            "width": 512
+          },
+          {
+            "src": "/world/still-2.png",
+            "complete": true,
+            "width": 512
+          },
+          {
+            "src": "/world/still-3.png",
+            "complete": true,
+            "width": 512
+          }
+        ],
+        "canvases": [
+          {
+            "width": 512,
+            "height": 320,
+            "display": "block"
+          }
+        ],
+        "resourceTiming": [
+          {
+            "name": "http://127.0.0.1:8082/css/tokens.css",
+            "transferSize": 706,
+            "encodedBodySize": 406,
+            "decodedBodySize": 406
+          },
+          {
+            "name": "http://127.0.0.1:8082/css/fonts.css",
+            "transferSize": 1733,
+            "encodedBodySize": 1433,
+            "decodedBodySize": 1433
+          },
+          {
+            "name": "http://127.0.0.1:8082/css/typography.css",
+            "transferSize": 898,
+            "encodedBodySize": 598,
+            "decodedBodySize": 598
+          },
+          {
+            "name": "http://127.0.0.1:8082/css/components.css",
+            "transferSize": 7667,
+            "encodedBodySize": 7367,
+            "decodedBodySize": 7367
+          },
+          {
+            "name": "http://127.0.0.1:8082/css/world.css",
+            "transferSize": 6944,
+            "encodedBodySize": 6644,
+            "decodedBodySize": 6644
+          },
+          {
+            "name": "http://127.0.0.1:8082/js/world.js",
+            "transferSize": 7438,
+            "encodedBodySize": 7138,
+            "decodedBodySize": 7138
+          },
+          {
+            "name": "http://127.0.0.1:8082/world/poster.png",
+            "transferSize": 21072,
+            "encodedBodySize": 20772,
+            "decodedBodySize": 20772
+          },
+          {
+            "name": "http://127.0.0.1:8082/fonts/source-sans-3-latin.woff2",
+            "transferSize": 44960,
+            "encodedBodySize": 44660,
+            "decodedBodySize": 44660
+          },
+          {
+            "name": "http://127.0.0.1:8082/fonts/newsreader-latin.woff2",
+            "transferSize": 51768,
+            "encodedBodySize": 51468,
+            "decodedBodySize": 51468
+          },
+          {
+            "name": "http://127.0.0.1:8082/world/still-1.png",
+            "transferSize": 20951,
+            "encodedBodySize": 20651,
+            "decodedBodySize": 20651
+          },
+          {
+            "name": "http://127.0.0.1:8082/world/still-2.png",
+            "transferSize": 20890,
+            "encodedBodySize": 20590,
+            "decodedBodySize": 20590
+          },
+          {
+            "name": "http://127.0.0.1:8082/world/still-3.png",
+            "transferSize": 21072,
+            "encodedBodySize": 20772,
+            "decodedBodySize": 20772
+          },
+          {
+            "name": "http://127.0.0.1:8082/js/world-model.js",
+            "transferSize": 7056,
+            "encodedBodySize": 6756,
+            "decodedBodySize": 6756
+          },
+          {
+            "name": "http://127.0.0.1:8082/world/scene.json",
+            "transferSize": 4702,
+            "encodedBodySize": 4402,
+            "decodedBodySize": 4402
+          },
+          {
+            "name": "http://127.0.0.1:8082/world/trace.json",
+            "transferSize": 8500,
+            "encodedBodySize": 8200,
+            "decodedBodySize": 8200
+          },
+          {
+            "name": "http://127.0.0.1:8082/world/map-base.png",
+            "transferSize": 19326,
+            "encodedBodySize": 19026,
+            "decodedBodySize": 19026
+          },
+          {
+            "name": "http://127.0.0.1:8082/world/map-front.png",
+            "transferSize": 1841,
+            "encodedBodySize": 1541,
+            "decodedBodySize": 1541
+          },
+          {
+            "name": "http://127.0.0.1:8082/world/sprites.png",
+            "transferSize": 2318,
+            "encodedBodySize": 2018,
+            "decodedBodySize": 2018
+          }
+        ]
+      },
+      "errors": [],
+      "network": [
+        {
+          "url": "http://127.0.0.1:8082/en/work/tiny-world/",
+          "status": 200,
+          "mimeType": "text/html",
+          "fromDiskCache": false,
+          "encodedDataLength": 6533
+        },
+        {
+          "url": "http://127.0.0.1:8082/css/tokens.css",
+          "status": 200,
+          "mimeType": "text/css",
+          "fromDiskCache": false,
+          "encodedDataLength": 591
+        },
+        {
+          "url": "http://127.0.0.1:8082/css/typography.css",
+          "status": 200,
+          "mimeType": "text/css",
+          "fromDiskCache": false,
+          "encodedDataLength": 783
+        },
+        {
+          "url": "http://127.0.0.1:8082/css/fonts.css",
+          "status": 200,
+          "mimeType": "text/css",
+          "fromDiskCache": false,
+          "encodedDataLength": 1619
+        },
+        {
+          "url": "http://127.0.0.1:8082/css/components.css",
+          "status": 200,
+          "mimeType": "text/css",
+          "fromDiskCache": false,
+          "encodedDataLength": 7553
+        },
+        {
+          "url": "http://127.0.0.1:8082/css/world.css",
+          "status": 200,
+          "mimeType": "text/css",
+          "fromDiskCache": false,
+          "encodedDataLength": 6830
+        },
+        {
+          "url": "http://127.0.0.1:8082/world/poster.png",
+          "status": 200,
+          "mimeType": "image/png",
+          "fromDiskCache": false,
+          "encodedDataLength": 20960
+        },
+        {
+          "url": "http://127.0.0.1:8082/js/world.js",
+          "status": 200,
+          "mimeType": "text/javascript",
+          "fromDiskCache": false,
+          "encodedDataLength": 7331
+        },
+        {
+          "url": "http://127.0.0.1:8082/world/still-2.png",
+          "status": 200,
+          "mimeType": "image/png",
+          "fromDiskCache": false,
+          "encodedDataLength": 20778
+        },
+        {
+          "url": "http://127.0.0.1:8082/world/still-3.png",
+          "status": 200,
+          "mimeType": "image/png",
+          "fromDiskCache": false,
+          "encodedDataLength": 20960
+        },
+        {
+          "url": "http://127.0.0.1:8082/world/still-1.png",
+          "status": 200,
+          "mimeType": "image/png",
+          "fromDiskCache": false,
+          "encodedDataLength": 20839
+        },
+        {
+          "url": "http://127.0.0.1:8082/fonts/newsreader-latin.woff2",
+          "status": 200,
+          "mimeType": "font/woff2",
+          "fromDiskCache": false,
+          "encodedDataLength": 51657
+        },
+        {
+          "url": "http://127.0.0.1:8082/fonts/source-sans-3-latin.woff2",
+          "status": 200,
+          "mimeType": "font/woff2",
+          "fromDiskCache": false,
+          "encodedDataLength": 44849
+        },
+        {
+          "url": "http://127.0.0.1:8082/js/world-model.js",
+          "status": 200,
+          "mimeType": "text/javascript",
+          "fromDiskCache": false,
+          "encodedDataLength": 6949
+        },
+        {
+          "url": "http://127.0.0.1:8082/world/trace.json",
+          "status": 200,
+          "mimeType": "application/json",
+          "fromDiskCache": false,
+          "encodedDataLength": 8394
+        },
+        {
+          "url": "http://127.0.0.1:8082/world/scene.json",
+          "status": 200,
+          "mimeType": "application/json",
+          "fromDiskCache": false,
+          "encodedDataLength": 4596
+        },
+        {
+          "url": "http://127.0.0.1:8082/world/map-base.png",
+          "status": 200,
+          "mimeType": "image/png",
+          "fromDiskCache": false,
+          "encodedDataLength": 19214
+        },
+        {
+          "url": "http://127.0.0.1:8082/world/map-front.png",
+          "status": 200,
+          "mimeType": "image/png",
+          "fromDiskCache": false,
+          "encodedDataLength": 1728
+        },
+        {
+          "url": "http://127.0.0.1:8082/world/sprites.png",
+          "status": 200,
+          "mimeType": "image/png",
+          "fromDiskCache": false,
+          "encodedDataLength": 2205
+        }
+      ],
+      "encodedTransferredBytes": 254369,
+      "violations": []
+    },
+    {
+      "locale": "en",
+      "width": 1440,
+      "details": {
+        "scrollWidth": 1440,
+        "viewport": 1440,
+        "headings": [
+          "Little World",
+          "Small things, coming together"
+        ],
+        "images": [
+          {
+            "src": "/world/poster.png",
+            "complete": true,
+            "width": 512
+          },
+          {
+            "src": "/world/still-1.png",
+            "complete": true,
+            "width": 512
+          },
+          {
+            "src": "/world/still-2.png",
+            "complete": true,
+            "width": 512
+          },
+          {
+            "src": "/world/still-3.png",
+            "complete": true,
+            "width": 512
+          }
+        ],
+        "canvases": [
+          {
+            "width": 512,
+            "height": 320,
+            "display": "block"
+          }
+        ],
+        "resourceTiming": [
+          {
+            "name": "http://127.0.0.1:8082/css/tokens.css",
+            "transferSize": 706,
+            "encodedBodySize": 406,
+            "decodedBodySize": 406
+          },
+          {
+            "name": "http://127.0.0.1:8082/css/fonts.css",
+            "transferSize": 1733,
+            "encodedBodySize": 1433,
+            "decodedBodySize": 1433
+          },
+          {
+            "name": "http://127.0.0.1:8082/css/typography.css",
+            "transferSize": 898,
+            "encodedBodySize": 598,
+            "decodedBodySize": 598
+          },
+          {
+            "name": "http://127.0.0.1:8082/css/components.css",
+            "transferSize": 7667,
+            "encodedBodySize": 7367,
+            "decodedBodySize": 7367
+          },
+          {
+            "name": "http://127.0.0.1:8082/css/world.css",
+            "transferSize": 6944,
+            "encodedBodySize": 6644,
+            "decodedBodySize": 6644
+          },
+          {
+            "name": "http://127.0.0.1:8082/js/world.js",
+            "transferSize": 7438,
+            "encodedBodySize": 7138,
+            "decodedBodySize": 7138
+          },
+          {
+            "name": "http://127.0.0.1:8082/world/poster.png",
+            "transferSize": 21072,
+            "encodedBodySize": 20772,
+            "decodedBodySize": 20772
+          },
+          {
+            "name": "http://127.0.0.1:8082/fonts/source-sans-3-latin.woff2",
+            "transferSize": 44960,
+            "encodedBodySize": 44660,
+            "decodedBodySize": 44660
+          },
+          {
+            "name": "http://127.0.0.1:8082/fonts/newsreader-latin.woff2",
+            "transferSize": 51768,
+            "encodedBodySize": 51468,
+            "decodedBodySize": 51468
+          },
+          {
+            "name": "http://127.0.0.1:8082/world/still-1.png",
+            "transferSize": 20951,
+            "encodedBodySize": 20651,
+            "decodedBodySize": 20651
+          },
+          {
+            "name": "http://127.0.0.1:8082/world/still-2.png",
+            "transferSize": 20890,
+            "encodedBodySize": 20590,
+            "decodedBodySize": 20590
+          },
+          {
+            "name": "http://127.0.0.1:8082/world/still-3.png",
+            "transferSize": 21072,
+            "encodedBodySize": 20772,
+            "decodedBodySize": 20772
+          },
+          {
+            "name": "http://127.0.0.1:8082/js/world-model.js",
+            "transferSize": 7056,
+            "encodedBodySize": 6756,
+            "decodedBodySize": 6756
+          },
+          {
+            "name": "http://127.0.0.1:8082/world/scene.json",
+            "transferSize": 4702,
+            "encodedBodySize": 4402,
+            "decodedBodySize": 4402
+          },
+          {
+            "name": "http://127.0.0.1:8082/world/trace.json",
+            "transferSize": 8500,
+            "encodedBodySize": 8200,
+            "decodedBodySize": 8200
+          },
+          {
+            "name": "http://127.0.0.1:8082/world/map-base.png",
+            "transferSize": 19326,
+            "encodedBodySize": 19026,
+            "decodedBodySize": 19026
+          },
+          {
+            "name": "http://127.0.0.1:8082/world/map-front.png",
+            "transferSize": 1841,
+            "encodedBodySize": 1541,
+            "decodedBodySize": 1541
+          },
+          {
+            "name": "http://127.0.0.1:8082/world/sprites.png",
+            "transferSize": 2318,
+            "encodedBodySize": 2018,
+            "decodedBodySize": 2018
+          }
+        ]
+      },
+      "errors": [],
+      "network": [
+        {
+          "url": "http://127.0.0.1:8082/en/work/tiny-world/",
+          "status": 200,
+          "mimeType": "text/html",
+          "fromDiskCache": false,
+          "encodedDataLength": 6533
+        },
+        {
+          "url": "http://127.0.0.1:8082/css/fonts.css",
+          "status": 200,
+          "mimeType": "text/css",
+          "fromDiskCache": false,
+          "encodedDataLength": 1619
+        },
+        {
+          "url": "http://127.0.0.1:8082/css/tokens.css",
+          "status": 200,
+          "mimeType": "text/css",
+          "fromDiskCache": false,
+          "encodedDataLength": 591
+        },
+        {
+          "url": "http://127.0.0.1:8082/css/world.css",
+          "status": 200,
+          "mimeType": "text/css",
+          "fromDiskCache": false,
+          "encodedDataLength": 6830
+        },
+        {
+          "url": "http://127.0.0.1:8082/css/typography.css",
+          "status": 200,
+          "mimeType": "text/css",
+          "fromDiskCache": false,
+          "encodedDataLength": 783
+        },
+        {
+          "url": "http://127.0.0.1:8082/css/components.css",
+          "status": 200,
+          "mimeType": "text/css",
+          "fromDiskCache": false,
+          "encodedDataLength": 7553
+        },
+        {
+          "url": "http://127.0.0.1:8082/world/poster.png",
+          "status": 200,
+          "mimeType": "image/png",
+          "fromDiskCache": false,
+          "encodedDataLength": 20960
+        },
+        {
+          "url": "http://127.0.0.1:8082/js/world.js",
+          "status": 200,
+          "mimeType": "text/javascript",
+          "fromDiskCache": false,
+          "encodedDataLength": 7331
+        },
+        {
+          "url": "http://127.0.0.1:8082/world/still-1.png",
+          "status": 200,
+          "mimeType": "image/png",
+          "fromDiskCache": false,
+          "encodedDataLength": 20839
+        },
+        {
+          "url": "http://127.0.0.1:8082/world/still-2.png",
+          "status": 200,
+          "mimeType": "image/png",
+          "fromDiskCache": false,
+          "encodedDataLength": 20778
+        },
+        {
+          "url": "http://127.0.0.1:8082/fonts/source-sans-3-latin.woff2",
+          "status": 200,
+          "mimeType": "font/woff2",
+          "fromDiskCache": false,
+          "encodedDataLength": 44849
+        },
+        {
+          "url": "http://127.0.0.1:8082/world/still-3.png",
+          "status": 200,
+          "mimeType": "image/png",
+          "fromDiskCache": false,
+          "encodedDataLength": 20960
+        },
+        {
+          "url": "http://127.0.0.1:8082/fonts/newsreader-latin.woff2",
+          "status": 200,
+          "mimeType": "font/woff2",
+          "fromDiskCache": false,
+          "encodedDataLength": 51657
+        },
+        {
+          "url": "http://127.0.0.1:8082/js/world-model.js",
+          "status": 200,
+          "mimeType": "text/javascript",
+          "fromDiskCache": false,
+          "encodedDataLength": 6949
+        },
+        {
+          "url": "http://127.0.0.1:8082/world/scene.json",
+          "status": 200,
+          "mimeType": "application/json",
+          "fromDiskCache": false,
+          "encodedDataLength": 4596
+        },
+        {
+          "url": "http://127.0.0.1:8082/world/trace.json",
+          "status": 200,
+          "mimeType": "application/json",
+          "fromDiskCache": false,
+          "encodedDataLength": 8394
+        },
+        {
+          "url": "http://127.0.0.1:8082/world/map-front.png",
+          "status": 200,
+          "mimeType": "image/png",
+          "fromDiskCache": false,
+          "encodedDataLength": 1728
+        },
+        {
+          "url": "http://127.0.0.1:8082/world/sprites.png",
+          "status": 200,
+          "mimeType": "image/png",
+          "fromDiskCache": false,
+          "encodedDataLength": 2205
+        },
+        {
+          "url": "http://127.0.0.1:8082/world/map-base.png",
+          "status": 200,
+          "mimeType": "image/png",
+          "fromDiskCache": false,
+          "encodedDataLength": 19214
+        }
+      ],
+      "encodedTransferredBytes": 254369,
+      "violations": []
+    },
+    {
+      "locale": "zh",
+      "width": 390,
+      "details": {
+        "scrollWidth": 390,
+        "viewport": 390,
+        "headings": [
+          "小小世界",
+          "小事，慢慢连在一起"
+        ],
+        "images": [
+          {
+            "src": "/world/poster.png",
+            "complete": true,
+            "width": 512
+          },
+          {
+            "src": "/world/still-1.png",
+            "complete": true,
+            "width": 512
+          },
+          {
+            "src": "/world/still-2.png",
+            "complete": true,
+            "width": 512
+          },
+          {
+            "src": "/world/still-3.png",
+            "complete": true,
+            "width": 512
+          }
+        ],
+        "canvases": [
+          {
+            "width": 512,
+            "height": 320,
+            "display": "block"
+          }
+        ],
+        "resourceTiming": [
+          {
+            "name": "http://127.0.0.1:8082/css/tokens.css",
+            "transferSize": 706,
+            "encodedBodySize": 406,
+            "decodedBodySize": 406
+          },
+          {
+            "name": "http://127.0.0.1:8082/css/fonts.css",
+            "transferSize": 1733,
+            "encodedBodySize": 1433,
+            "decodedBodySize": 1433
+          },
+          {
+            "name": "http://127.0.0.1:8082/css/typography.css",
+            "transferSize": 898,
+            "encodedBodySize": 598,
+            "decodedBodySize": 598
+          },
+          {
+            "name": "http://127.0.0.1:8082/css/components.css",
+            "transferSize": 7667,
+            "encodedBodySize": 7367,
+            "decodedBodySize": 7367
+          },
+          {
+            "name": "http://127.0.0.1:8082/css/world.css",
+            "transferSize": 6944,
+            "encodedBodySize": 6644,
+            "decodedBodySize": 6644
+          },
+          {
+            "name": "http://127.0.0.1:8082/js/world.js",
+            "transferSize": 7438,
+            "encodedBodySize": 7138,
+            "decodedBodySize": 7138
+          },
+          {
+            "name": "http://127.0.0.1:8082/world/poster.png",
+            "transferSize": 21072,
+            "encodedBodySize": 20772,
+            "decodedBodySize": 20772
+          },
+          {
+            "name": "http://127.0.0.1:8082/fonts/source-sans-3-latin.woff2",
+            "transferSize": 44960,
+            "encodedBodySize": 44660,
+            "decodedBodySize": 44660
+          },
+          {
+            "name": "http://127.0.0.1:8082/world/still-1.png",
+            "transferSize": 20951,
+            "encodedBodySize": 20651,
+            "decodedBodySize": 20651
+          },
+          {
+            "name": "http://127.0.0.1:8082/world/still-2.png",
+            "transferSize": 20890,
+            "encodedBodySize": 20590,
+            "decodedBodySize": 20590
+          },
+          {
+            "name": "http://127.0.0.1:8082/world/still-3.png",
+            "transferSize": 21072,
+            "encodedBodySize": 20772,
+            "decodedBodySize": 20772
+          },
+          {
+            "name": "http://127.0.0.1:8082/js/world-model.js",
+            "transferSize": 7056,
+            "encodedBodySize": 6756,
+            "decodedBodySize": 6756
+          },
+          {
+            "name": "http://127.0.0.1:8082/world/scene.json",
+            "transferSize": 4702,
+            "encodedBodySize": 4402,
+            "decodedBodySize": 4402
+          },
+          {
+            "name": "http://127.0.0.1:8082/world/trace.json",
+            "transferSize": 8500,
+            "encodedBodySize": 8200,
+            "decodedBodySize": 8200
+          },
+          {
+            "name": "http://127.0.0.1:8082/world/map-base.png",
+            "transferSize": 19326,
+            "encodedBodySize": 19026,
+            "decodedBodySize": 19026
+          },
+          {
+            "name": "http://127.0.0.1:8082/world/map-front.png",
+            "transferSize": 1841,
+            "encodedBodySize": 1541,
+            "decodedBodySize": 1541
+          },
+          {
+            "name": "http://127.0.0.1:8082/world/sprites.png",
+            "transferSize": 2318,
+            "encodedBodySize": 2018,
+            "decodedBodySize": 2018
+          }
+        ]
+      },
+      "errors": [],
+      "network": [
+        {
+          "url": "http://127.0.0.1:8082/zh/work/tiny-world/",
+          "status": 200,
+          "mimeType": "text/html",
+          "fromDiskCache": false,
+          "encodedDataLength": 6469
+        },
+        {
+          "url": "http://127.0.0.1:8082/css/tokens.css",
+          "status": 200,
+          "mimeType": "text/css",
+          "fromDiskCache": false,
+          "encodedDataLength": 591
+        },
+        {
+          "url": "http://127.0.0.1:8082/css/fonts.css",
+          "status": 200,
+          "mimeType": "text/css",
+          "fromDiskCache": false,
+          "encodedDataLength": 1619
+        },
+        {
+          "url": "http://127.0.0.1:8082/css/typography.css",
+          "status": 200,
+          "mimeType": "text/css",
+          "fromDiskCache": false,
+          "encodedDataLength": 783
+        },
+        {
+          "url": "http://127.0.0.1:8082/css/components.css",
+          "status": 200,
+          "mimeType": "text/css",
+          "fromDiskCache": false,
+          "encodedDataLength": 7553
+        },
+        {
+          "url": "http://127.0.0.1:8082/css/world.css",
+          "status": 200,
+          "mimeType": "text/css",
+          "fromDiskCache": false,
+          "encodedDataLength": 6830
+        },
+        {
+          "url": "http://127.0.0.1:8082/world/poster.png",
+          "status": 200,
+          "mimeType": "image/png",
+          "fromDiskCache": false,
+          "encodedDataLength": 20960
+        },
+        {
+          "url": "http://127.0.0.1:8082/js/world.js",
+          "status": 200,
+          "mimeType": "text/javascript",
+          "fromDiskCache": false,
+          "encodedDataLength": 7331
+        },
+        {
+          "url": "http://127.0.0.1:8082/world/still-2.png",
+          "status": 200,
+          "mimeType": "image/png",
+          "fromDiskCache": false,
+          "encodedDataLength": 20778
+        },
+        {
+          "url": "http://127.0.0.1:8082/world/still-1.png",
+          "status": 200,
+          "mimeType": "image/png",
+          "fromDiskCache": false,
+          "encodedDataLength": 20839
+        },
+        {
+          "url": "http://127.0.0.1:8082/fonts/source-sans-3-latin.woff2",
+          "status": 200,
+          "mimeType": "font/woff2",
+          "fromDiskCache": false,
+          "encodedDataLength": 44849
+        },
+        {
+          "url": "http://127.0.0.1:8082/world/still-3.png",
+          "status": 200,
+          "mimeType": "image/png",
+          "fromDiskCache": false,
+          "encodedDataLength": 20960
+        },
+        {
+          "url": "http://127.0.0.1:8082/js/world-model.js",
+          "status": 200,
+          "mimeType": "text/javascript",
+          "fromDiskCache": false,
+          "encodedDataLength": 6949
+        },
+        {
+          "url": "http://127.0.0.1:8082/world/scene.json",
+          "status": 200,
+          "mimeType": "application/json",
+          "fromDiskCache": false,
+          "encodedDataLength": 4596
+        },
+        {
+          "url": "http://127.0.0.1:8082/world/trace.json",
+          "status": 200,
+          "mimeType": "application/json",
+          "fromDiskCache": false,
+          "encodedDataLength": 8394
+        },
+        {
+          "url": "http://127.0.0.1:8082/world/map-front.png",
+          "status": 200,
+          "mimeType": "image/png",
+          "fromDiskCache": false,
+          "encodedDataLength": 1728
+        },
+        {
+          "url": "http://127.0.0.1:8082/world/sprites.png",
+          "status": 200,
+          "mimeType": "image/png",
+          "fromDiskCache": false,
+          "encodedDataLength": 2205
+        },
+        {
+          "url": "http://127.0.0.1:8082/world/map-base.png",
+          "status": 200,
+          "mimeType": "image/png",
+          "fromDiskCache": false,
+          "encodedDataLength": 19214
+        }
+      ],
+      "encodedTransferredBytes": 202648,
+      "violations": []
+    },
+    {
+      "locale": "zh",
+      "width": 768,
+      "details": {
+        "scrollWidth": 768,
+        "viewport": 768,
+        "headings": [
+          "小小世界",
+          "小事，慢慢连在一起"
+        ],
+        "images": [
+          {
+            "src": "/world/poster.png",
+            "complete": true,
+            "width": 512
+          },
+          {
+            "src": "/world/still-1.png",
+            "complete": true,
+            "width": 512
+          },
+          {
+            "src": "/world/still-2.png",
+            "complete": true,
+            "width": 512
+          },
+          {
+            "src": "/world/still-3.png",
+            "complete": true,
+            "width": 512
+          }
+        ],
+        "canvases": [
+          {
+            "width": 512,
+            "height": 320,
+            "display": "block"
+          }
+        ],
+        "resourceTiming": [
+          {
+            "name": "http://127.0.0.1:8082/css/tokens.css",
+            "transferSize": 706,
+            "encodedBodySize": 406,
+            "decodedBodySize": 406
+          },
+          {
+            "name": "http://127.0.0.1:8082/css/fonts.css",
+            "transferSize": 1733,
+            "encodedBodySize": 1433,
+            "decodedBodySize": 1433
+          },
+          {
+            "name": "http://127.0.0.1:8082/css/typography.css",
+            "transferSize": 898,
+            "encodedBodySize": 598,
+            "decodedBodySize": 598
+          },
+          {
+            "name": "http://127.0.0.1:8082/css/components.css",
+            "transferSize": 7667,
+            "encodedBodySize": 7367,
+            "decodedBodySize": 7367
+          },
+          {
+            "name": "http://127.0.0.1:8082/css/world.css",
+            "transferSize": 6944,
+            "encodedBodySize": 6644,
+            "decodedBodySize": 6644
+          },
+          {
+            "name": "http://127.0.0.1:8082/js/world.js",
+            "transferSize": 7438,
+            "encodedBodySize": 7138,
+            "decodedBodySize": 7138
+          },
+          {
+            "name": "http://127.0.0.1:8082/world/poster.png",
+            "transferSize": 21072,
+            "encodedBodySize": 20772,
+            "decodedBodySize": 20772
+          },
+          {
+            "name": "http://127.0.0.1:8082/fonts/source-sans-3-latin.woff2",
+            "transferSize": 44960,
+            "encodedBodySize": 44660,
+            "decodedBodySize": 44660
+          },
+          {
+            "name": "http://127.0.0.1:8082/world/still-1.png",
+            "transferSize": 20951,
+            "encodedBodySize": 20651,
+            "decodedBodySize": 20651
+          },
+          {
+            "name": "http://127.0.0.1:8082/world/still-2.png",
+            "transferSize": 20890,
+            "encodedBodySize": 20590,
+            "decodedBodySize": 20590
+          },
+          {
+            "name": "http://127.0.0.1:8082/world/still-3.png",
+            "transferSize": 21072,
+            "encodedBodySize": 20772,
+            "decodedBodySize": 20772
+          },
+          {
+            "name": "http://127.0.0.1:8082/js/world-model.js",
+            "transferSize": 7056,
+            "encodedBodySize": 6756,
+            "decodedBodySize": 6756
+          },
+          {
+            "name": "http://127.0.0.1:8082/world/scene.json",
+            "transferSize": 4702,
+            "encodedBodySize": 4402,
+            "decodedBodySize": 4402
+          },
+          {
+            "name": "http://127.0.0.1:8082/world/trace.json",
+            "transferSize": 8500,
+            "encodedBodySize": 8200,
+            "decodedBodySize": 8200
+          },
+          {
+            "name": "http://127.0.0.1:8082/world/map-base.png",
+            "transferSize": 19326,
+            "encodedBodySize": 19026,
+            "decodedBodySize": 19026
+          },
+          {
+            "name": "http://127.0.0.1:8082/world/map-front.png",
+            "transferSize": 1841,
+            "encodedBodySize": 1541,
+            "decodedBodySize": 1541
+          },
+          {
+            "name": "http://127.0.0.1:8082/world/sprites.png",
+            "transferSize": 2318,
+            "encodedBodySize": 2018,
+            "decodedBodySize": 2018
+          }
+        ]
+      },
+      "errors": [],
+      "network": [
+        {
+          "url": "http://127.0.0.1:8082/zh/work/tiny-world/",
+          "status": 200,
+          "mimeType": "text/html",
+          "fromDiskCache": false,
+          "encodedDataLength": 6469
+        },
+        {
+          "url": "http://127.0.0.1:8082/css/typography.css",
+          "status": 200,
+          "mimeType": "text/css",
+          "fromDiskCache": false,
+          "encodedDataLength": 783
+        },
+        {
+          "url": "http://127.0.0.1:8082/css/tokens.css",
+          "status": 200,
+          "mimeType": "text/css",
+          "fromDiskCache": false,
+          "encodedDataLength": 591
+        },
+        {
+          "url": "http://127.0.0.1:8082/css/fonts.css",
+          "status": 200,
+          "mimeType": "text/css",
+          "fromDiskCache": false,
+          "encodedDataLength": 1619
+        },
+        {
+          "url": "http://127.0.0.1:8082/css/components.css",
+          "status": 200,
+          "mimeType": "text/css",
+          "fromDiskCache": false,
+          "encodedDataLength": 7553
+        },
+        {
+          "url": "http://127.0.0.1:8082/css/world.css",
+          "status": 200,
+          "mimeType": "text/css",
+          "fromDiskCache": false,
+          "encodedDataLength": 6830
+        },
+        {
+          "url": "http://127.0.0.1:8082/js/world.js",
+          "status": 200,
+          "mimeType": "text/javascript",
+          "fromDiskCache": false,
+          "encodedDataLength": 7331
+        },
+        {
+          "url": "http://127.0.0.1:8082/world/poster.png",
+          "status": 200,
+          "mimeType": "image/png",
+          "fromDiskCache": false,
+          "encodedDataLength": 20960
+        },
+        {
+          "url": "http://127.0.0.1:8082/js/world-model.js",
+          "status": 200,
+          "mimeType": "text/javascript",
+          "fromDiskCache": false,
+          "encodedDataLength": 6949
+        },
+        {
+          "url": "http://127.0.0.1:8082/world/still-1.png",
+          "status": 200,
+          "mimeType": "image/png",
+          "fromDiskCache": false,
+          "encodedDataLength": 20839
+        },
+        {
+          "url": "http://127.0.0.1:8082/world/still-3.png",
+          "status": 200,
+          "mimeType": "image/png",
+          "fromDiskCache": false,
+          "encodedDataLength": 20960
+        },
+        {
+          "url": "http://127.0.0.1:8082/world/still-2.png",
+          "status": 200,
+          "mimeType": "image/png",
+          "fromDiskCache": false,
+          "encodedDataLength": 20778
+        },
+        {
+          "url": "http://127.0.0.1:8082/world/trace.json",
+          "status": 200,
+          "mimeType": "application/json",
+          "fromDiskCache": false,
+          "encodedDataLength": 8394
+        },
+        {
+          "url": "http://127.0.0.1:8082/fonts/source-sans-3-latin.woff2",
+          "status": 200,
+          "mimeType": "font/woff2",
+          "fromDiskCache": false,
+          "encodedDataLength": 44849
+        },
+        {
+          "url": "http://127.0.0.1:8082/world/scene.json",
+          "status": 200,
+          "mimeType": "application/json",
+          "fromDiskCache": false,
+          "encodedDataLength": 4596
+        },
+        {
+          "url": "http://127.0.0.1:8082/world/map-base.png",
+          "status": 200,
+          "mimeType": "image/png",
+          "fromDiskCache": false,
+          "encodedDataLength": 19214
+        },
+        {
+          "url": "http://127.0.0.1:8082/world/map-front.png",
+          "status": 200,
+          "mimeType": "image/png",
+          "fromDiskCache": false,
+          "encodedDataLength": 1728
+        },
+        {
+          "url": "http://127.0.0.1:8082/world/sprites.png",
+          "status": 200,
+          "mimeType": "image/png",
+          "fromDiskCache": false,
+          "encodedDataLength": 2205
+        }
+      ],
+      "encodedTransferredBytes": 202648,
+      "violations": []
+    },
+    {
+      "locale": "zh",
+      "width": 1440,
+      "details": {
+        "scrollWidth": 1440,
+        "viewport": 1440,
+        "headings": [
+          "小小世界",
+          "小事，慢慢连在一起"
+        ],
+        "images": [
+          {
+            "src": "/world/poster.png",
+            "complete": true,
+            "width": 512
+          },
+          {
+            "src": "/world/still-1.png",
+            "complete": true,
+            "width": 512
+          },
+          {
+            "src": "/world/still-2.png",
+            "complete": true,
+            "width": 512
+          },
+          {
+            "src": "/world/still-3.png",
+            "complete": true,
+            "width": 512
+          }
+        ],
+        "canvases": [
+          {
+            "width": 512,
+            "height": 320,
+            "display": "block"
+          }
+        ],
+        "resourceTiming": [
+          {
+            "name": "http://127.0.0.1:8082/css/tokens.css",
+            "transferSize": 706,
+            "encodedBodySize": 406,
+            "decodedBodySize": 406
+          },
+          {
+            "name": "http://127.0.0.1:8082/css/fonts.css",
+            "transferSize": 1733,
+            "encodedBodySize": 1433,
+            "decodedBodySize": 1433
+          },
+          {
+            "name": "http://127.0.0.1:8082/css/typography.css",
+            "transferSize": 898,
+            "encodedBodySize": 598,
+            "decodedBodySize": 598
+          },
+          {
+            "name": "http://127.0.0.1:8082/css/components.css",
+            "transferSize": 7667,
+            "encodedBodySize": 7367,
+            "decodedBodySize": 7367
+          },
+          {
+            "name": "http://127.0.0.1:8082/css/world.css",
+            "transferSize": 6944,
+            "encodedBodySize": 6644,
+            "decodedBodySize": 6644
+          },
+          {
+            "name": "http://127.0.0.1:8082/js/world.js",
+            "transferSize": 7438,
+            "encodedBodySize": 7138,
+            "decodedBodySize": 7138
+          },
+          {
+            "name": "http://127.0.0.1:8082/world/poster.png",
+            "transferSize": 21072,
+            "encodedBodySize": 20772,
+            "decodedBodySize": 20772
+          },
+          {
+            "name": "http://127.0.0.1:8082/fonts/source-sans-3-latin.woff2",
+            "transferSize": 44960,
+            "encodedBodySize": 44660,
+            "decodedBodySize": 44660
+          },
+          {
+            "name": "http://127.0.0.1:8082/world/still-1.png",
+            "transferSize": 20951,
+            "encodedBodySize": 20651,
+            "decodedBodySize": 20651
+          },
+          {
+            "name": "http://127.0.0.1:8082/world/still-2.png",
+            "transferSize": 20890,
+            "encodedBodySize": 20590,
+            "decodedBodySize": 20590
+          },
+          {
+            "name": "http://127.0.0.1:8082/world/still-3.png",
+            "transferSize": 21072,
+            "encodedBodySize": 20772,
+            "decodedBodySize": 20772
+          },
+          {
+            "name": "http://127.0.0.1:8082/js/world-model.js",
+            "transferSize": 7056,
+            "encodedBodySize": 6756,
+            "decodedBodySize": 6756
+          },
+          {
+            "name": "http://127.0.0.1:8082/world/scene.json",
+            "transferSize": 4702,
+            "encodedBodySize": 4402,
+            "decodedBodySize": 4402
+          },
+          {
+            "name": "http://127.0.0.1:8082/world/trace.json",
+            "transferSize": 8500,
+            "encodedBodySize": 8200,
+            "decodedBodySize": 8200
+          },
+          {
+            "name": "http://127.0.0.1:8082/world/map-base.png",
+            "transferSize": 19326,
+            "encodedBodySize": 19026,
+            "decodedBodySize": 19026
+          },
+          {
+            "name": "http://127.0.0.1:8082/world/map-front.png",
+            "transferSize": 1841,
+            "encodedBodySize": 1541,
+            "decodedBodySize": 1541
+          },
+          {
+            "name": "http://127.0.0.1:8082/world/sprites.png",
+            "transferSize": 2318,
+            "encodedBodySize": 2018,
+            "decodedBodySize": 2018
+          }
+        ]
+      },
+      "errors": [],
+      "network": [
+        {
+          "url": "http://127.0.0.1:8082/zh/work/tiny-world/",
+          "status": 200,
+          "mimeType": "text/html",
+          "fromDiskCache": false,
+          "encodedDataLength": 6469
+        },
+        {
+          "url": "http://127.0.0.1:8082/css/components.css",
+          "status": 200,
+          "mimeType": "text/css",
+          "fromDiskCache": false,
+          "encodedDataLength": 7553
+        },
+        {
+          "url": "http://127.0.0.1:8082/css/fonts.css",
+          "status": 200,
+          "mimeType": "text/css",
+          "fromDiskCache": false,
+          "encodedDataLength": 1619
+        },
+        {
+          "url": "http://127.0.0.1:8082/css/tokens.css",
+          "status": 200,
+          "mimeType": "text/css",
+          "fromDiskCache": false,
+          "encodedDataLength": 591
+        },
+        {
+          "url": "http://127.0.0.1:8082/css/typography.css",
+          "status": 200,
+          "mimeType": "text/css",
+          "fromDiskCache": false,
+          "encodedDataLength": 783
+        },
+        {
+          "url": "http://127.0.0.1:8082/css/world.css",
+          "status": 200,
+          "mimeType": "text/css",
+          "fromDiskCache": false,
+          "encodedDataLength": 6830
+        },
+        {
+          "url": "http://127.0.0.1:8082/world/poster.png",
+          "status": 200,
+          "mimeType": "image/png",
+          "fromDiskCache": false,
+          "encodedDataLength": 20960
+        },
+        {
+          "url": "http://127.0.0.1:8082/js/world.js",
+          "status": 200,
+          "mimeType": "text/javascript",
+          "fromDiskCache": false,
+          "encodedDataLength": 7331
+        },
+        {
+          "url": "http://127.0.0.1:8082/world/still-1.png",
+          "status": 200,
+          "mimeType": "image/png",
+          "fromDiskCache": false,
+          "encodedDataLength": 20839
+        },
+        {
+          "url": "http://127.0.0.1:8082/fonts/source-sans-3-latin.woff2",
+          "status": 200,
+          "mimeType": "font/woff2",
+          "fromDiskCache": false,
+          "encodedDataLength": 44849
+        },
+        {
+          "url": "http://127.0.0.1:8082/world/still-2.png",
+          "status": 200,
+          "mimeType": "image/png",
+          "fromDiskCache": false,
+          "encodedDataLength": 20778
+        },
+        {
+          "url": "http://127.0.0.1:8082/world/still-3.png",
+          "status": 200,
+          "mimeType": "image/png",
+          "fromDiskCache": false,
+          "encodedDataLength": 20960
+        },
+        {
+          "url": "http://127.0.0.1:8082/js/world-model.js",
+          "status": 200,
+          "mimeType": "text/javascript",
+          "fromDiskCache": false,
+          "encodedDataLength": 6949
+        },
+        {
+          "url": "http://127.0.0.1:8082/world/scene.json",
+          "status": 200,
+          "mimeType": "application/json",
+          "fromDiskCache": false,
+          "encodedDataLength": 4596
+        },
+        {
+          "url": "http://127.0.0.1:8082/world/trace.json",
+          "status": 200,
+          "mimeType": "application/json",
+          "fromDiskCache": false,
+          "encodedDataLength": 8394
+        },
+        {
+          "url": "http://127.0.0.1:8082/world/map-base.png",
+          "status": 200,
+          "mimeType": "image/png",
+          "fromDiskCache": false,
+          "encodedDataLength": 19214
+        },
+        {
+          "url": "http://127.0.0.1:8082/world/map-front.png",
+          "status": 200,
+          "mimeType": "image/png",
+          "fromDiskCache": false,
+          "encodedDataLength": 1728
+        },
+        {
+          "url": "http://127.0.0.1:8082/world/sprites.png",
+          "status": 200,
+          "mimeType": "image/png",
+          "fromDiskCache": false,
+          "encodedDataLength": 2205
+        }
+      ],
+      "encodedTransferredBytes": 202648,
+      "violations": []
+    }
+  ],
+  "fallback": [
+    {
+      "locale": "en",
+      "mode": "no-js",
+      "text": "A PIXEL COURTYARD BY LEO CHAI\n\nLittle World\n\nA little garden. A busy workshop.\nCome sit for a while.\n\nAn afternoon in the courtyard\nIllustration · Bundled fixture\n\nA watered garden. A repaired seat. Lunch together.\n\nThe three residents have gathered at the table.\n\nThis is the completed still. Follow the three moments below.\n\nSmall things, coming together\n\nThree fictional adult residents. One shared afternoon.\n\nFirst, a small snag\n\nThe empty watering can changes nothing. The gardener goes to the well, refills it, and returns.\n\nFrom garden to kitchen\n\nThe garden is watered. The cook gathers existing herbs for lunch while the maker repairs a loose stool.\n\nA place to share it\n\nThe repaired stool joins the table, lunch is served, and all three residents gather. An authored illustration, with no live simulation or model calls.\n\nA little about this world",
+      "overflow": false,
+      "runningAnimations": 0,
+      "images": [
+        {
+          "src": "/world/poster.png",
+          "complete": true,
+          "width": 512
+        },
+        {
+          "src": "/world/still-1.png",
+          "complete": true,
+          "width": 512
+        },
+        {
+          "src": "/world/still-2.png",
+          "complete": true,
+          "width": 512
+        },
+        {
+          "src": "/world/still-3.png",
+          "complete": true,
+          "width": 512
+        }
+      ]
+    },
+    {
+      "locale": "en",
+      "mode": "reduced-motion",
+      "text": "A PIXEL COURTYARD BY LEO CHAI\n\nLittle World\n\nA little garden. A busy workshop.\nCome sit for a while.\n\nAn afternoon in the courtyard\nIllustration · Bundled fixture\nNext moment\nReplay progress\n0:40 / 0:40\n\nA watered garden. A repaired seat. Lunch together.\n\nThe three residents have gathered at the table.\n\nSmall things, coming together\n\nThree fictional adult residents. One shared afternoon.\n\nFirst, a small snag\n\nThe empty watering can changes nothing. The gardener goes to the well, refills it, and returns.\n\nFrom garden to kitchen\n\nThe garden is watered. The cook gathers existing herbs for lunch while the maker repairs a loose stool.\n\nA place to share it\n\nThe repaired stool joins the table, lunch is served, and all three residents gather. An authored illustration, with no live simulation or model calls.\n\nA little about this world",
+      "overflow": false,
+      "runningAnimations": 0,
+      "images": [
+        {
+          "src": "/world/poster.png",
+          "complete": true,
+          "width": 512
+        },
+        {
+          "src": "/world/still-1.png",
+          "complete": true,
+          "width": 512
+        },
+        {
+          "src": "/world/still-2.png",
+          "complete": true,
+          "width": 512
+        },
+        {
+          "src": "/world/still-3.png",
+          "complete": true,
+          "width": 512
+        }
+      ]
+    },
+    {
+      "locale": "en",
+      "mode": "blocked-enhancement",
+      "text": "A PIXEL COURTYARD BY LEO CHAI\n\nLittle World\n\nA little garden. A busy workshop.\nCome sit for a while.\n\nAn afternoon in the courtyard\nIllustration · Bundled fixture\n\nA watered garden. A repaired seat. Lunch together.\n\nThe three residents have gathered at the table.\n\nSmall things, coming together\n\nThree fictional adult residents. One shared afternoon.\n\nFirst, a small snag\n\nThe empty watering can changes nothing. The gardener goes to the well, refills it, and returns.\n\nFrom garden to kitchen\n\nThe garden is watered. The cook gathers existing herbs for lunch while the maker repairs a loose stool.\n\nA place to share it\n\nThe repaired stool joins the table, lunch is served, and all three residents gather. An authored illustration, with no live simulation or model calls.\n\nA little about this world",
+      "overflow": false,
+      "runningAnimations": 0,
+      "images": [
+        {
+          "src": "/world/poster.png",
+          "complete": true,
+          "width": 512
+        },
+        {
+          "src": "/world/still-1.png",
+          "complete": true,
+          "width": 512
+        },
+        {
+          "src": "/world/still-2.png",
+          "complete": true,
+          "width": 512
+        },
+        {
+          "src": "/world/still-3.png",
+          "complete": true,
+          "width": 512
+        }
+      ]
+    },
+    {
+      "locale": "zh",
+      "mode": "no-js",
+      "text": "LEO CHAI 的像素庭院\n\n小小世界\n\n一方花园，一间工坊。\n忙完了，就一起坐下来吧。\n\n庭院里的午后\n示意场景 · 内置示例\n\n浇好的花园，修好的座位，一起吃午餐。\n\n三位居民都来到了餐桌旁。\n\n这是完成后的静态场景。下方按顺序展示三个片段。\n\n小事，慢慢连在一起\n\n三位虚构的成年居民，共度一个午后。\n\n先遇到一个小问题\n\n空水壶没有浇出水。园丁去井边打水，再回到香草地。\n\n从花园到厨房\n\n香草地浇好了。厨师采下长成的香草做午餐，手艺人则修好松动的凳子。\n\n一起坐下来\n\n修好的凳子搬到了桌旁，午餐上桌，三位居民聚在一起。这是编排的示意场景，没有实时模拟或模型调用。\n\n这个世界是怎样做的",
+      "overflow": false,
+      "runningAnimations": 0,
+      "images": [
+        {
+          "src": "/world/poster.png",
+          "complete": true,
+          "width": 512
+        },
+        {
+          "src": "/world/still-1.png",
+          "complete": true,
+          "width": 512
+        },
+        {
+          "src": "/world/still-2.png",
+          "complete": true,
+          "width": 512
+        },
+        {
+          "src": "/world/still-3.png",
+          "complete": true,
+          "width": 512
+        }
+      ]
+    },
+    {
+      "locale": "zh",
+      "mode": "reduced-motion",
+      "text": "LEO CHAI 的像素庭院\n\n小小世界\n\n一方花园，一间工坊。\n忙完了，就一起坐下来吧。\n\n庭院里的午后\n示意场景 · 内置示例\n下一步\n回放进度\n0:40 / 0:40\n\n浇好的花园，修好的座位，一起吃午餐。\n\n三位居民都来到了餐桌旁。\n\n小事，慢慢连在一起\n\n三位虚构的成年居民，共度一个午后。\n\n先遇到一个小问题\n\n空水壶没有浇出水。园丁去井边打水，再回到香草地。\n\n从花园到厨房\n\n香草地浇好了。厨师采下长成的香草做午餐，手艺人则修好松动的凳子。\n\n一起坐下来\n\n修好的凳子搬到了桌旁，午餐上桌，三位居民聚在一起。这是编排的示意场景，没有实时模拟或模型调用。\n\n这个世界是怎样做的",
+      "overflow": false,
+      "runningAnimations": 0,
+      "images": [
+        {
+          "src": "/world/poster.png",
+          "complete": true,
+          "width": 512
+        },
+        {
+          "src": "/world/still-1.png",
+          "complete": true,
+          "width": 512
+        },
+        {
+          "src": "/world/still-2.png",
+          "complete": true,
+          "width": 512
+        },
+        {
+          "src": "/world/still-3.png",
+          "complete": true,
+          "width": 512
+        }
+      ]
+    },
+    {
+      "locale": "zh",
+      "mode": "blocked-enhancement",
+      "text": "LEO CHAI 的像素庭院\n\n小小世界\n\n一方花园，一间工坊。\n忙完了，就一起坐下来吧。\n\n庭院里的午后\n示意场景 · 内置示例\n\n浇好的花园，修好的座位，一起吃午餐。\n\n三位居民都来到了餐桌旁。\n\n小事，慢慢连在一起\n\n三位虚构的成年居民，共度一个午后。\n\n先遇到一个小问题\n\n空水壶没有浇出水。园丁去井边打水，再回到香草地。\n\n从花园到厨房\n\n香草地浇好了。厨师采下长成的香草做午餐，手艺人则修好松动的凳子。\n\n一起坐下来\n\n修好的凳子搬到了桌旁，午餐上桌，三位居民聚在一起。这是编排的示意场景，没有实时模拟或模型调用。\n\n这个世界是怎样做的",
+      "overflow": false,
+      "runningAnimations": 0,
+      "images": [
+        {
+          "src": "/world/poster.png",
+          "complete": true,
+          "width": 512
+        },
+        {
+          "src": "/world/still-1.png",
+          "complete": true,
+          "width": 512
+        },
+        {
+          "src": "/world/still-2.png",
+          "complete": true,
+          "width": 512
+        },
+        {
+          "src": "/world/still-3.png",
+          "complete": true,
+          "width": 512
+        }
+      ]
+    }
+  ]
+}

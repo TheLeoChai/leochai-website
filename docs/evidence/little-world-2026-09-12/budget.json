@@ -1,0 +1,386 @@
+{
+  "base": "https://b186b7df4d624d00e0a8-8082-tunnel.kimaki.dev",
+  "measuredAt": "2026-09-12T05:42:43.669Z",
+  "method": "Fresh Chromium contexts; CDP Network.loadingFinished encodedDataLength during real tunnel page load. HTTP encoded transfer observations, not gzip estimates. OS/TLS overhead excluded.",
+  "pages": [
+    {
+      "locale": "en",
+      "status": 200,
+      "beforePlayBytes": 237268,
+      "afterPlayBytes": 237268,
+      "network": [
+        {
+          "url": "https://b186b7df4d624d00e0a8-8082-tunnel.kimaki.dev/en/work/tiny-world/",
+          "status": 200,
+          "mimeType": "text/html",
+          "encoding": "zstd",
+          "cache": false,
+          "encodedDataLength": 3357
+        },
+        {
+          "url": "https://static.cloudflareinsights.com/beacon.min.js/v31edd6df95cf4e85bb4c19e7a9bdbcba1788362987495",
+          "status": 200,
+          "mimeType": "text/javascript",
+          "encoding": "gzip",
+          "cache": false,
+          "encodedDataLength": 10338
+        },
+        {
+          "url": "https://b186b7df4d624d00e0a8-8082-tunnel.kimaki.dev/css/tokens.css",
+          "status": 200,
+          "mimeType": "text/css",
+          "encoding": "zstd",
+          "cache": false,
+          "encodedDataLength": 576
+        },
+        {
+          "url": "https://b186b7df4d624d00e0a8-8082-tunnel.kimaki.dev/css/world.css",
+          "status": 200,
+          "mimeType": "text/css",
+          "encoding": "zstd",
+          "cache": false,
+          "encodedDataLength": 2360
+        },
+        {
+          "url": "https://b186b7df4d624d00e0a8-8082-tunnel.kimaki.dev/css/typography.css",
+          "status": 200,
+          "mimeType": "text/css",
+          "encoding": "zstd",
+          "cache": false,
+          "encodedDataLength": 629
+        },
+        {
+          "url": "https://b186b7df4d624d00e0a8-8082-tunnel.kimaki.dev/css/fonts.css",
+          "status": 200,
+          "mimeType": "text/css",
+          "encoding": "zstd",
+          "cache": false,
+          "encodedDataLength": 906
+        },
+        {
+          "url": "https://b186b7df4d624d00e0a8-8082-tunnel.kimaki.dev/js/world.js",
+          "status": 200,
+          "mimeType": "text/javascript",
+          "encoding": "zstd",
+          "cache": false,
+          "encodedDataLength": 3101
+        },
+        {
+          "url": "https://b186b7df4d624d00e0a8-8082-tunnel.kimaki.dev/css/components.css",
+          "status": 200,
+          "mimeType": "text/css",
+          "encoding": "zstd",
+          "cache": false,
+          "encodedDataLength": 2497
+        },
+        {
+          "url": "https://b186b7df4d624d00e0a8-8082-tunnel.kimaki.dev/world/poster.png",
+          "status": 200,
+          "mimeType": "image/png",
+          "encoding": null,
+          "cache": false,
+          "encodedDataLength": 21116
+        },
+        {
+          "url": "https://b186b7df4d624d00e0a8-8082-tunnel.kimaki.dev/js/world-model.js",
+          "status": 200,
+          "mimeType": "text/javascript",
+          "encoding": "zstd",
+          "cache": false,
+          "encodedDataLength": 2868
+        },
+        {
+          "url": "https://b186b7df4d624d00e0a8-8082-tunnel.kimaki.dev/world/still-2.png",
+          "status": 200,
+          "mimeType": "image/png",
+          "encoding": null,
+          "cache": false,
+          "encodedDataLength": 21043
+        },
+        {
+          "url": "https://b186b7df4d624d00e0a8-8082-tunnel.kimaki.dev/world/still-3.png",
+          "status": 200,
+          "mimeType": "image/png",
+          "encoding": null,
+          "cache": false,
+          "encodedDataLength": 21219
+        },
+        {
+          "url": "https://b186b7df4d624d00e0a8-8082-tunnel.kimaki.dev/world/still-1.png",
+          "status": 200,
+          "mimeType": "image/png",
+          "encoding": null,
+          "cache": false,
+          "encodedDataLength": 21092
+        },
+        {
+          "url": "https://b186b7df4d624d00e0a8-8082-tunnel.kimaki.dev/fonts/source-sans-3-latin.woff2",
+          "status": 200,
+          "mimeType": "font/woff2",
+          "encoding": null,
+          "cache": false,
+          "encodedDataLength": 45124
+        },
+        {
+          "url": "https://b186b7df4d624d00e0a8-8082-tunnel.kimaki.dev/fonts/newsreader-latin.woff2",
+          "status": 200,
+          "mimeType": "font/woff2",
+          "encoding": null,
+          "cache": false,
+          "encodedDataLength": 51937
+        },
+        {
+          "url": "https://b186b7df4d624d00e0a8-8082-tunnel.kimaki.dev/world/scene.json",
+          "status": 200,
+          "mimeType": "application/json",
+          "encoding": "zstd",
+          "cache": false,
+          "encodedDataLength": 1365
+        },
+        {
+          "url": "https://b186b7df4d624d00e0a8-8082-tunnel.kimaki.dev/world/trace.json",
+          "status": 200,
+          "mimeType": "application/json",
+          "encoding": "zstd",
+          "cache": false,
+          "encodedDataLength": 3316
+        },
+        {
+          "url": "https://b186b7df4d624d00e0a8-8082-tunnel.kimaki.dev/cdn-cgi/rum?",
+          "status": 204,
+          "mimeType": "text/plain",
+          "encoding": null,
+          "cache": false,
+          "encodedDataLength": 501
+        },
+        {
+          "url": "https://b186b7df4d624d00e0a8-8082-tunnel.kimaki.dev/world/map-front.png",
+          "status": 200,
+          "mimeType": "image/png",
+          "encoding": null,
+          "cache": false,
+          "encodedDataLength": 1988
+        },
+        {
+          "url": "https://b186b7df4d624d00e0a8-8082-tunnel.kimaki.dev/world/sprites.png",
+          "status": 200,
+          "mimeType": "image/png",
+          "encoding": null,
+          "cache": false,
+          "encodedDataLength": 2460
+        },
+        {
+          "url": "https://b186b7df4d624d00e0a8-8082-tunnel.kimaki.dev/world/map-base.png",
+          "status": 200,
+          "mimeType": "image/png",
+          "encoding": null,
+          "cache": false,
+          "encodedDataLength": 19475
+        }
+      ]
+    },
+    {
+      "locale": "zh",
+      "status": 200,
+      "beforePlayBytes": 185812,
+      "afterPlayBytes": 185812,
+      "network": [
+        {
+          "url": "https://b186b7df4d624d00e0a8-8082-tunnel.kimaki.dev/zh/work/tiny-world/",
+          "status": 200,
+          "mimeType": "text/html",
+          "encoding": "zstd",
+          "cache": false,
+          "encodedDataLength": 3851
+        },
+        {
+          "url": "https://static.cloudflareinsights.com/beacon.min.js/v31edd6df95cf4e85bb4c19e7a9bdbcba1788362987495",
+          "status": 200,
+          "mimeType": "text/javascript",
+          "encoding": "gzip",
+          "cache": false,
+          "encodedDataLength": 10338
+        },
+        {
+          "url": "https://b186b7df4d624d00e0a8-8082-tunnel.kimaki.dev/css/fonts.css",
+          "status": 200,
+          "mimeType": "text/css",
+          "encoding": "zstd",
+          "cache": false,
+          "encodedDataLength": 935
+        },
+        {
+          "url": "https://b186b7df4d624d00e0a8-8082-tunnel.kimaki.dev/css/tokens.css",
+          "status": 200,
+          "mimeType": "text/css",
+          "encoding": "zstd",
+          "cache": false,
+          "encodedDataLength": 546
+        },
+        {
+          "url": "https://b186b7df4d624d00e0a8-8082-tunnel.kimaki.dev/css/world.css",
+          "status": 200,
+          "mimeType": "text/css",
+          "encoding": "zstd",
+          "cache": false,
+          "encodedDataLength": 2356
+        },
+        {
+          "url": "https://b186b7df4d624d00e0a8-8082-tunnel.kimaki.dev/css/typography.css",
+          "status": 200,
+          "mimeType": "text/css",
+          "encoding": "zstd",
+          "cache": false,
+          "encodedDataLength": 630
+        },
+        {
+          "url": "https://b186b7df4d624d00e0a8-8082-tunnel.kimaki.dev/css/components.css",
+          "status": 200,
+          "mimeType": "text/css",
+          "encoding": "zstd",
+          "cache": false,
+          "encodedDataLength": 2495
+        },
+        {
+          "url": "https://b186b7df4d624d00e0a8-8082-tunnel.kimaki.dev/world/poster.png",
+          "status": 200,
+          "mimeType": "image/png",
+          "encoding": null,
+          "cache": false,
+          "encodedDataLength": 21112
+        },
+        {
+          "url": "https://b186b7df4d624d00e0a8-8082-tunnel.kimaki.dev/js/world.js",
+          "status": 200,
+          "mimeType": "text/javascript",
+          "encoding": "zstd",
+          "cache": false,
+          "encodedDataLength": 3096
+        },
+        {
+          "url": "https://b186b7df4d624d00e0a8-8082-tunnel.kimaki.dev/world/still-1.png",
+          "status": 200,
+          "mimeType": "image/png",
+          "encoding": null,
+          "cache": false,
+          "encodedDataLength": 21131
+        },
+        {
+          "url": "https://b186b7df4d624d00e0a8-8082-tunnel.kimaki.dev/js/world-model.js",
+          "status": 200,
+          "mimeType": "text/javascript",
+          "encoding": "zstd",
+          "cache": false,
+          "encodedDataLength": 2836
+        },
+        {
+          "url": "https://b186b7df4d624d00e0a8-8082-tunnel.kimaki.dev/world/still-3.png",
+          "status": 200,
+          "mimeType": "image/png",
+          "encoding": null,
+          "cache": false,
+          "encodedDataLength": 21223
+        },
+        {
+          "url": "https://b186b7df4d624d00e0a8-8082-tunnel.kimaki.dev/world/still-2.png",
+          "status": 200,
+          "mimeType": "image/png",
+          "encoding": null,
+          "cache": false,
+          "encodedDataLength": 21039
+        },
+        {
+          "url": "https://b186b7df4d624d00e0a8-8082-tunnel.kimaki.dev/fonts/source-sans-3-latin.woff2",
+          "status": 200,
+          "mimeType": "font/woff2",
+          "encoding": null,
+          "cache": false,
+          "encodedDataLength": 45126
+        },
+        {
+          "url": "https://b186b7df4d624d00e0a8-8082-tunnel.kimaki.dev/cdn-cgi/rum?",
+          "status": 204,
+          "mimeType": "text/plain",
+          "encoding": null,
+          "cache": false,
+          "encodedDataLength": 501
+        },
+        {
+          "url": "https://b186b7df4d624d00e0a8-8082-tunnel.kimaki.dev/world/scene.json",
+          "status": 200,
+          "mimeType": "application/json",
+          "encoding": "zstd",
+          "cache": false,
+          "encodedDataLength": 1363
+        },
+        {
+          "url": "https://b186b7df4d624d00e0a8-8082-tunnel.kimaki.dev/world/trace.json",
+          "status": 200,
+          "mimeType": "application/json",
+          "encoding": "zstd",
+          "cache": false,
+          "encodedDataLength": 3317
+        },
+        {
+          "url": "https://b186b7df4d624d00e0a8-8082-tunnel.kimaki.dev/world/map-front.png",
+          "status": 200,
+          "mimeType": "image/png",
+          "encoding": null,
+          "cache": false,
+          "encodedDataLength": 1981
+        },
+        {
+          "url": "https://b186b7df4d624d00e0a8-8082-tunnel.kimaki.dev/world/map-base.png",
+          "status": 200,
+          "mimeType": "image/png",
+          "encoding": null,
+          "cache": false,
+          "encodedDataLength": 19477
+        },
+        {
+          "url": "https://b186b7df4d624d00e0a8-8082-tunnel.kimaki.dev/world/sprites.png",
+          "status": 200,
+          "mimeType": "image/png",
+          "encoding": null,
+          "cache": false,
+          "encodedDataLength": 2459
+        }
+      ]
+    }
+  ],
+  "width320": {
+    "viewport": 320,
+    "scrollWidth": 320
+  },
+  "artifacts": {
+    "js/world.js": {
+      "fileBytes": 7138,
+      "gzipEstimate": 2637
+    },
+    "js/world-model.js": {
+      "fileBytes": 6756,
+      "gzipEstimate": 2257
+    },
+    "css/world.css": {
+      "fileBytes": 6644,
+      "gzipEstimate": 1900
+    },
+    "world/poster.png": {
+      "fileBytes": 20772,
+      "gzipEstimate": 20429
+    },
+    "world/scene.json": {
+      "fileBytes": 4402,
+      "gzipEstimate": 846
+    },
+    "world/sprites.png": {
+      "fileBytes": 2018,
+      "gzipEstimate": 2016
+    },
+    "world/trace.json": {
+      "fileBytes": 8200,
+      "gzipEstimate": 2700
+    }
+  },
+  "replayCodeGzipEstimate": 4894
+}

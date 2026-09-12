@@ -1,0 +1,60 @@
+
+> check
+> node scripts/build.mjs --check-all
+
+Text teal/canvas contrast: 5.26:1
+Stylelint: pinned colors and token boundaries passed.
+Content gate: emoji icon check passed; wording hints are advisory.
+[11ty] Writing /tmp/leochai-world-preview/.build/candidate-QQKOzE/en/rss.xml from ./content/locale-feed-en.njk (virtual)
+[11ty] Writing /tmp/leochai-world-preview/.build/candidate-QQKOzE/zh/rss.xml from ./content/locale-feed-zh.njk (virtual)
+[11ty] Writing /tmp/leochai-world-preview/.build/candidate-QQKOzE/work/job-matching/index.html from ./content/aliases.njk
+[11ty] Writing /tmp/leochai-world-preview/.build/candidate-QQKOzE/.nojekyll from ./content/nojekyll.njk
+[11ty] Writing /tmp/leochai-world-preview/.build/candidate-QQKOzE/sitemap.xml from ./content/sitemap.njk
+[11ty] Writing /tmp/leochai-world-preview/.build/candidate-QQKOzE/work/tiny-world/index.html from ./content/aliases.njk
+[11ty] Writing /tmp/leochai-world-preview/.build/candidate-QQKOzE/work/opencode/index.html from ./content/aliases.njk
+[11ty] Writing /tmp/leochai-world-preview/.build/candidate-QQKOzE/notes/index.html from ./content/aliases.njk
+[11ty] Writing /tmp/leochai-world-preview/.build/candidate-QQKOzE/index.html from ./content/en/pages.njk
+[11ty] Writing /tmp/leochai-world-preview/.build/candidate-QQKOzE/zh/index.html from ./content/zh/pages.njk
+[11ty] Writing /tmp/leochai-world-preview/.build/candidate-QQKOzE/en/index.html from ./content/en/pages.njk
+[11ty] Writing /tmp/leochai-world-preview/.build/candidate-QQKOzE/zh/projects/index.html from ./content/zh/pages.njk
+[11ty] Writing /tmp/leochai-world-preview/.build/candidate-QQKOzE/en/projects/index.html from ./content/en/pages.njk
+[11ty] Writing /tmp/leochai-world-preview/.build/candidate-QQKOzE/zh/work/job-matching/index.html from ./content/zh/pages.njk
+[11ty] Writing /tmp/leochai-world-preview/.build/candidate-QQKOzE/en/work/job-matching/index.html from ./content/en/pages.njk
+[11ty] Writing /tmp/leochai-world-preview/.build/candidate-QQKOzE/zh/work/tiny-world/index.html from ./content/zh/pages.njk
+[11ty] Writing /tmp/leochai-world-preview/.build/candidate-QQKOzE/en/work/tiny-world/index.html from ./content/en/pages.njk
+[11ty] Writing /tmp/leochai-world-preview/.build/candidate-QQKOzE/zh/work/opencode/index.html from ./content/zh/pages.njk
+[11ty] Writing /tmp/leochai-world-preview/.build/candidate-QQKOzE/en/work/opencode/index.html from ./content/en/pages.njk
+[11ty] Writing /tmp/leochai-world-preview/.build/candidate-QQKOzE/zh/leo/index.html from ./content/zh/pages.njk
+[11ty] Writing /tmp/leochai-world-preview/.build/candidate-QQKOzE/en/leo/index.html from ./content/en/pages.njk
+[11ty] Writing /tmp/leochai-world-preview/.build/candidate-QQKOzE/zh/notes/index.html from ./content/zh/pages.njk
+[11ty] Writing /tmp/leochai-world-preview/.build/candidate-QQKOzE/en/notes/index.html from ./content/en/pages.njk
+[11ty] Copied 34 Wrote 23 files in 0.58 seconds (v3.1.6)
+Validated 15 pages, 4 aliases at /
+Fonts: 96128 bytes maximum per English route; Chinese system stack: 0 bytes; 19 routes checked
+[11ty] Writing /tmp/leochai-world-preview/.build/candidate-xdS2I1/en/rss.xml from ./content/locale-feed-en.njk (virtual)
+[11ty] Writing /tmp/leochai-world-preview/.build/candidate-xdS2I1/zh/rss.xml from ./content/locale-feed-zh.njk (virtual)
+[11ty] Writing /tmp/leochai-world-preview/.build/candidate-xdS2I1/.nojekyll from ./content/nojekyll.njk
+[11ty] Writing /tmp/leochai-world-preview/.build/candidate-xdS2I1/sitemap.xml from ./content/sitemap.njk
+[11ty] Writing /tmp/leochai-world-preview/.build/candidate-xdS2I1/work/job-matching/index.html from ./content/aliases.njk
+[11ty] Writing /tmp/leochai-world-preview/.build/candidate-xdS2I1/work/tiny-world/index.html from ./content/aliases.njk
+[11ty] Writing /tmp/leochai-world-preview/.build/candidate-xdS2I1/work/opencode/index.html from ./content/aliases.njk
+[11ty] Writing /tmp/leochai-world-preview/.build/candidate-xdS2I1/notes/index.html from ./content/aliases.njk
+[11ty] Writing /tmp/leochai-world-preview/.build/candidate-xdS2I1/index.html from ./content/en/pages.njk
+[11ty] Writing /tmp/leochai-world-preview/.build/candidate-xdS2I1/zh/index.html from ./content/zh/pages.njk
+[11ty] Writing /tmp/leochai-world-preview/.build/candidate-xdS2I1/en/index.html from ./content/en/pages.njk
+[11ty] Writing /tmp/leochai-world-preview/.build/candidate-xdS2I1/zh/projects/index.html from ./content/zh/pages.njk
+[11ty] Writing /tmp/leochai-world-preview/.build/candidate-xdS2I1/en/projects/index.html from ./content/en/pages.njk
+[11ty] Writing /tmp/leochai-world-preview/.build/candidate-xdS2I1/zh/work/job-matching/index.html from ./content/zh/pages.njk
+[11ty] Writing /tmp/leochai-world-preview/.build/candidate-xdS2I1/en/work/job-matching/index.html from ./content/en/pages.njk
+[11ty] Writing /tmp/leochai-world-preview/.build/candidate-xdS2I1/zh/work/tiny-world/index.html from ./content/zh/pages.njk
+[11ty] Writing /tmp/leochai-world-preview/.build/candidate-xdS2I1/en/work/tiny-world/index.html from ./content/en/pages.njk
+[11ty] Writing /tmp/leochai-world-preview/.build/candidate-xdS2I1/zh/work/opencode/index.html from ./content/zh/pages.njk
+[11ty] Writing /tmp/leochai-world-preview/.build/candidate-xdS2I1/en/work/opencode/index.html from ./content/en/pages.njk
+[11ty] Writing /tmp/leochai-world-preview/.build/candidate-xdS2I1/zh/leo/index.html from ./content/zh/pages.njk
+[11ty] Writing /tmp/leochai-world-preview/.build/candidate-xdS2I1/en/leo/index.html from ./content/en/pages.njk
+[11ty] Writing /tmp/leochai-world-preview/.build/candidate-xdS2I1/zh/notes/index.html from ./content/zh/pages.njk
+[11ty] Writing /tmp/leochai-world-preview/.build/candidate-xdS2I1/en/notes/index.html from ./content/en/pages.njk
+[11ty] Benchmark     50ms   9%    23× (Configuration) "@11ty/eleventy/html-transformer" Transform
+[11ty] Copied 34 Wrote 23 files in 0.56 seconds (v3.1.6)
+Validated 15 pages, 4 aliases at /leochai-website/
+Fonts: 96128 bytes maximum per English route; Chinese system stack: 0 bytes; 19 routes checked

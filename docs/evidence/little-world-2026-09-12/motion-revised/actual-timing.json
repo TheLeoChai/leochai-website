@@ -1,0 +1,50 @@
+[
+  {
+    "target": 0,
+    "elapsed": 202,
+    "time": "0:00 / 0:40",
+    "caption": "A courtyard afternoon"
+  },
+  {
+    "target": 3000,
+    "elapsed": 3139,
+    "time": "0:03 / 0:40",
+    "caption": "An empty can cannot water the herbs"
+  },
+  {
+    "target": 8000,
+    "elapsed": 8160,
+    "time": "0:08 / 0:40",
+    "caption": "An empty can cannot water the herbs"
+  },
+  {
+    "target": 14000,
+    "elapsed": 14108,
+    "time": "0:14 / 0:40",
+    "caption": "A loose stool gets a repair"
+  },
+  {
+    "target": 20000,
+    "elapsed": 20103,
+    "time": "0:20 / 0:40",
+    "caption": "A handful of herbs for lunch"
+  },
+  {
+    "target": 27000,
+    "elapsed": 27108,
+    "time": "0:27 / 0:40",
+    "caption": "Garden herbs finish the meal"
+  },
+  {
+    "target": 34000,
+    "elapsed": 34105,
+    "time": "0:34 / 0:40",
+    "caption": "Lunch reaches the courtyard table"
+  },
+  {
+    "target": 40100,
+    "elapsed": 40213,
+    "time": "0:40 / 0:40",
+    "caption": "A watered garden. A repaired seat. Lunch together."
+  }
+]

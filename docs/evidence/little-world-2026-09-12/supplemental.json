@@ -1,0 +1,280 @@
+{
+  "base": "http://127.0.0.1:8082",
+  "checkedAt": "2026-09-12T05:42:54.312Z",
+  "limitations": [
+    "Font checks verify blocked requests, visible heading geometry and absence of horizontal overflow; visual glyph quality is not assessed.",
+    "Visibility uses a synthetic hidden property/event, not OS background-tab lifecycle."
+  ],
+  "results": [
+    {
+      "locale": "en",
+      "name": "keyboard-and-targets",
+      "pass": true,
+      "playing": "Pause",
+      "paused": "Continue",
+      "buttonFocused": true,
+      "rangeFocused": true,
+      "before": "100",
+      "after": "200",
+      "targets": [
+        {
+          "name": "Leo Chai",
+          "width": 62,
+          "height": 44,
+          "pass": true
+        },
+        {
+          "name": "Projects",
+          "width": 48,
+          "height": 44,
+          "pass": true
+        },
+        {
+          "name": "Notes",
+          "width": 44,
+          "height": 44,
+          "pass": true
+        },
+        {
+          "name": "Request résumé",
+          "width": 97,
+          "height": 44,
+          "pass": true
+        },
+        {
+          "name": "Continue",
+          "width": 273,
+          "height": 44,
+          "pass": true
+        },
+        {
+          "name": "Replay",
+          "width": 77,
+          "height": 44,
+          "pass": true
+        },
+        {
+          "name": "Next moment",
+          "width": 118,
+          "height": 44,
+          "pass": true
+        },
+        {
+          "name": "range",
+          "width": 283,
+          "height": 44,
+          "pass": true
+        }
+      ]
+    },
+    {
+      "locale": "en",
+      "name": "reduced-motion-discrete-controls",
+      "pass": true,
+      "hidden": true,
+      "zero": "0",
+      "next": "2000",
+      "stable": "2000",
+      "seek": "2100"
+    },
+    {
+      "locale": "en",
+      "name": "blocked-trace.json",
+      "pass": true,
+      "ready": false,
+      "failed": true,
+      "posterLoaded": true,
+      "posterVisible": true,
+      "storyCount": 3,
+      "bodyText": 1032,
+      "canvasPixels": 0,
+      "controlsHidden": true
+    },
+    {
+      "locale": "en",
+      "name": "blocked-map-base.png",
+      "pass": true,
+      "ready": false,
+      "failed": true,
+      "posterLoaded": true,
+      "posterVisible": true,
+      "storyCount": 3,
+      "bodyText": 1032,
+      "canvasPixels": 0,
+      "controlsHidden": true
+    },
+    {
+      "locale": "en",
+      "name": "blocked-poster.png",
+      "pass": true,
+      "ready": true,
+      "failed": false,
+      "posterLoaded": false,
+      "posterVisible": true,
+      "storyCount": 3,
+      "bodyText": 1104,
+      "canvasPixels": 255,
+      "controlsHidden": false
+    },
+    {
+      "locale": "en",
+      "name": "blocked-fonts",
+      "pass": true,
+      "blocked": 2,
+      "overflow": false,
+      "fontFamily": "Newsreader, Georgia, serif",
+      "heading": "Little World"
+    },
+    {
+      "locale": "en",
+      "name": "home-world-isolation",
+      "pass": true,
+      "worldRequests": [],
+      "totalRequests": 9
+    },
+    {
+      "locale": "en",
+      "name": "visibility-pause-handler",
+      "pass": true,
+      "at": "100",
+      "after": "100",
+      "label": "Continue",
+      "limitation": "Synthetic document.hidden + visibilitychange checks handler; actual OS tab-background lifecycle was not exercised."
+    },
+    {
+      "locale": "zh",
+      "name": "keyboard-and-targets",
+      "pass": true,
+      "playing": "暂停",
+      "paused": "继续",
+      "buttonFocused": true,
+      "rangeFocused": true,
+      "before": "100",
+      "after": "200",
+      "targets": [
+        {
+          "name": "Leo Chai",
+          "width": 81.84375,
+          "height": 44,
+          "pass": true
+        },
+        {
+          "name": "项目",
+          "width": 44,
+          "height": 44,
+          "pass": true
+        },
+        {
+          "name": "笔记",
+          "width": 44,
+          "height": 44,
+          "pass": true
+        },
+        {
+          "name": "索取简历",
+          "width": 56,
+          "height": 44,
+          "pass": true
+        },
+        {
+          "name": "继续",
+          "width": 199,
+          "height": 44,
+          "pass": true
+        },
+        {
+          "name": "重播",
+          "width": 64,
+          "height": 44,
+          "pass": true
+        },
+        {
+          "name": "下一步",
+          "width": 79,
+          "height": 44,
+          "pass": true
+        },
+        {
+          "name": "range",
+          "width": 265.5,
+          "height": 44,
+          "pass": true
+        }
+      ]
+    },
+    {
+      "locale": "zh",
+      "name": "reduced-motion-discrete-controls",
+      "pass": true,
+      "hidden": true,
+      "zero": "0",
+      "next": "2000",
+      "stable": "2000",
+      "seek": "2100"
+    },
+    {
+      "locale": "zh",
+      "name": "blocked-trace.json",
+      "pass": true,
+      "ready": false,
+      "failed": true,
+      "posterLoaded": true,
+      "posterVisible": true,
+      "storyCount": 3,
+      "bodyText": 389,
+      "canvasPixels": 0,
+      "controlsHidden": true
+    },
+    {
+      "locale": "zh",
+      "name": "blocked-map-base.png",
+      "pass": true,
+      "ready": false,
+      "failed": true,
+      "posterLoaded": true,
+      "posterVisible": true,
+      "storyCount": 3,
+      "bodyText": 389,
+      "canvasPixels": 0,
+      "controlsHidden": true
+    },
+    {
+      "locale": "zh",
+      "name": "blocked-poster.png",
+      "pass": true,
+      "ready": true,
+      "failed": false,
+      "posterLoaded": false,
+      "posterVisible": true,
+      "storyCount": 3,
+      "bodyText": 414,
+      "canvasPixels": 255,
+      "controlsHidden": false
+    },
+    {
+      "locale": "zh",
+      "name": "blocked-fonts",
+      "pass": true,
+      "blocked": 1,
+      "overflow": false,
+      "fontFamily": "\"Songti SC\", SimSun, \"Noto Serif CJK SC\", serif",
+      "heading": "小小世界"
+    },
+    {
+      "locale": "zh",
+      "name": "home-world-isolation",
+      "pass": true,
+      "worldRequests": [],
+      "totalRequests": 7
+    },
+    {
+      "locale": "zh",
+      "name": "visibility-pause-handler",
+      "pass": true,
+      "at": "100",
+      "after": "100",
+      "label": "继续",
+      "limitation": "Synthetic document.hidden + visibilitychange checks handler; actual OS tab-background lifecycle was not exercised."
+    }
+  ]
+}
