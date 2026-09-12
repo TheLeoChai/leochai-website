@@ -1,0 +1,42 @@
+{
+  "verified": "2026-09-12",
+  "license": "CC0-1.0",
+  "packs": [
+    {
+      "id": "farm",
+      "creator": "Kenney",
+      "name": "Tiny Farm 1.0",
+      "page": "https://kenney.nl/assets/tiny-farm",
+      "archive": "https://kenney.nl/media/pages/assets/tiny-farm/dfded1ae3e-1782913588/kenney_tiny-farm.zip",
+      "sha256": "a06f75f312c27eff15a2288475612e6f6699411be7259d408323cd15a790decc",
+      "files": [
+        {"entry":"Tilemap/tilemap_packed.png","path":"farm/tiles.png","sha256":"0c4b3b4058cacf6a9bf021666838156d46da9ce27500d4c13e30cd5a92b722f4"},
+        {"entry":"License.txt","path":"farm/License.txt","sha256":"9c4b5fc75e585a3495f6aa55b62172504780a51b7b4394066e1dc1a45403c548"}
+      ]
+    },
+    {
+      "id": "town",
+      "creator": "Kenney",
+      "name": "Tiny Town 1.1",
+      "page": "https://kenney.nl/assets/tiny-town",
+      "archive": "https://kenney.nl/media/pages/assets/tiny-town/a415fbeb49-1735736916/kenney_tiny-town.zip",
+      "sha256": "9768692dccff1d706408a5aedd6ca4f6cd1409506cbc84cb2f862919764be977",
+      "files": [
+        {"entry":"Tilemap/tilemap_packed.png","path":"town/tiles.png","sha256":"3a54d99ecde790d4fdea207a3644cf130fc56fa838f1beb1507c185a95b8e902"},
+        {"entry":"License.txt","path":"town/License.txt","sha256":"c483c167cc3bdfe17c15f957ff847d409f64d81b410b28783636cf3b2b7814c5"}
+      ]
+    },
+    {
+      "id": "puny",
+      "creator": "Shade",
+      "name": "Puny Characters — Character Base",
+      "page": "https://merchant-shade.itch.io/16x16-puny-characters",
+      "artistMirror": "https://opengameart.org/content/puny-characters",
+      "archive": "https://opengameart.org/sites/default/files/puny-characters.zip",
+      "sha256": "971d7b07eea18fb2cce475cd6554a176ebf783bb064dec5a637ba33c7829320e",
+      "files": [
+        {"entry":"Puny-Characters/Character-Base.png","path":"puny/Character-Base.png","sha256":"a542332ff1ed66ce28e7eea489f2e1e304d90671aa531fc9ccf0b00b9f2857ff"}
+      ]
+    }
+  ]
+}
