@@ -1,0 +1,120 @@
+{
+  "base": "http://127.0.0.1:8082",
+  "capturedAt": "2026-09-12T05:42:37.756Z",
+  "results": [
+    {
+      "locale": "en",
+      "posterDifference": 0,
+      "initialPending": 0,
+      "comparisons": [
+        {
+          "target": 2000,
+          "samePixels": true,
+          "sameCaption": true,
+          "sameObservation": true,
+          "time": "2000",
+          "stillDifference": 0
+        },
+        {
+          "target": 9000,
+          "samePixels": true,
+          "sameCaption": true,
+          "sameObservation": true,
+          "time": "9000",
+          "stillDifference": null
+        },
+        {
+          "target": 15000,
+          "samePixels": true,
+          "sameCaption": true,
+          "sameObservation": true,
+          "time": "15000",
+          "stillDifference": null
+        },
+        {
+          "target": 19000,
+          "samePixels": true,
+          "sameCaption": true,
+          "sameObservation": true,
+          "time": "19000",
+          "stillDifference": 0
+        },
+        {
+          "target": 28000,
+          "samePixels": true,
+          "sameCaption": true,
+          "sameObservation": true,
+          "time": "28000",
+          "stillDifference": null
+        },
+        {
+          "target": 40000,
+          "samePixels": true,
+          "sameCaption": true,
+          "sameObservation": true,
+          "time": "40000",
+          "stillDifference": 0
+        }
+      ],
+      "replayPending": 1,
+      "pausedPending": 0
+    },
+    {
+      "locale": "zh",
+      "posterDifference": 0,
+      "initialPending": 0,
+      "comparisons": [
+        {
+          "target": 2000,
+          "samePixels": true,
+          "sameCaption": true,
+          "sameObservation": true,
+          "time": "2000",
+          "stillDifference": 0
+        },
+        {
+          "target": 9000,
+          "samePixels": true,
+          "sameCaption": true,
+          "sameObservation": true,
+          "time": "9000",
+          "stillDifference": null
+        },
+        {
+          "target": 15000,
+          "samePixels": true,
+          "sameCaption": true,
+          "sameObservation": true,
+          "time": "15000",
+          "stillDifference": null
+        },
+        {
+          "target": 19000,
+          "samePixels": true,
+          "sameCaption": true,
+          "sameObservation": true,
+          "time": "19000",
+          "stillDifference": 0
+        },
+        {
+          "target": 28000,
+          "samePixels": true,
+          "sameCaption": true,
+          "sameObservation": true,
+          "time": "28000",
+          "stillDifference": null
+        },
+        {
+          "target": 40000,
+          "samePixels": true,
+          "sameCaption": true,
+          "sameObservation": true,
+          "time": "40000",
+          "stillDifference": 0
+        }
+      ],
+      "replayPending": 1,
+      "pausedPending": 0
+    }
+  ]
+}

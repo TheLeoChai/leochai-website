@@ -1,0 +1,74 @@
+[
+  {
+    "locale": "en",
+    "width": 390,
+    "world": {
+      "x": 0,
+      "y": 334.578125,
+      "width": 390,
+      "height": 390
+    },
+    "ready": true,
+    "overflow": false
+  },
+  {
+    "locale": "en",
+    "width": 768,
+    "world": {
+      "x": 32,
+      "y": 332.15625,
+      "width": 704,
+      "height": 440
+    },
+    "ready": true,
+    "overflow": false
+  },
+  {
+    "locale": "en",
+    "width": 1440,
+    "world": {
+      "x": 144,
+      "y": 290.6875,
+      "width": 1152,
+      "height": 720
+    },
+    "ready": true,
+    "overflow": false
+  },
+  {
+    "locale": "zh",
+    "width": 390,
+    "world": {
+      "x": 0,
+      "y": 335.78125,
+      "width": 390,
+      "height": 390
+    },
+    "ready": true,
+    "overflow": false
+  },
+  {
+    "locale": "zh",
+    "width": 768,
+    "world": {
+      "x": 32,
+      "y": 333.453125,
+      "width": 704,
+      "height": 440
+    },
+    "ready": true,
+    "overflow": false
+  },
+  {
+    "locale": "zh",
+    "width": 1440,
+    "world": {
+      "x": 144,
+      "y": 291.984375,
+      "width": 1152,
+      "height": 720
+    },
+    "ready": true,
+    "overflow": false
+  }
+]
