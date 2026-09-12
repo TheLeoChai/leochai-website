@@ -2,7 +2,7 @@
 
 Little World is an **authored illustration**. Its three adult residents, their
 roles and their afternoon are fictional; the scene is not Leo's biography or a
-recorded simulation. No model generated these images. No paid assets, copied
+recorded simulation. No image-generation model was used. No paid assets, copied
 game characters, music, Miku artwork or logos are used.
 
 | Source | Creator | License | Reuse |

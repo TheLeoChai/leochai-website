@@ -17,6 +17,7 @@
     "width": 256,
     "height": 256
   },
+  "carryScale": 0.5,
   "anchors": {
     "well": {
       "x": 192,

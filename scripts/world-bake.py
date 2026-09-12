@@ -2,6 +2,7 @@
 """Bake the authored finite Tiled courtyard. Requires Python 3 and Pillow 9.4+."""
 import hashlib
 import json
+import math
 import argparse
 import subprocess
 import sys
@@ -144,13 +145,16 @@ def main():
            'provenance':'Illustration — authored setting and routes, not simulation telemetry.',
            'images':{'base':'map-base.png','front':'map-front.png','sprites':'sprites.png','poster':'poster.png'},
            'mobileView':{'x':128,'y':48,'width':256,'height':256},
+           'carryScale':0.5,
            'anchors':anchors,'sprites':sprites,
            'actors':{a:{'idle':f'{a}-idle','walk':f'{a}-walk'} for a in ['gardener','maker','cook']},
            'stateProps':{'water':{'x':240,'y':160},'bed':{'x':240,'y':160},'stool':{'x':280,'y':239},'stoolWorkshop':{'x':198,'y':152},'meal':{'x':305,'y':229},'herbs':{'x':320,'y':164},'steam':{'x':350,'y':141}},
            'posterActors':{'gardener':'table-gardener','maker':'table-maker','cook':'table'}}
-    def sprite(dst,key,x,y):
+    def sprite(dst,key,x,y,scale=1):
         r=sprites[key];im=atlas.crop((r['x'],r['y'],r['x']+r['w'],r['y']+r['h']))
-        dst.alpha_composite(im,(round(x-r['anchorX']),round(y-r['anchorY'])))
+        if scale != 1:
+            im=im.resize((round(r['w']*scale),round(r['h']*scale)),Image.Resampling.NEAREST)
+        dst.alpha_composite(im,(math.floor(x-r['anchorX']*scale+0.5),math.floor(y-r['anchorY']*scale+0.5)))
     (OUT/'scene.json').write_text(json.dumps(scene,ensure_ascii=False,indent=2)+'\n')
     # The page and bake consume the same state reader, never a second timeline.
     js="""
@@ -175,7 +179,7 @@ def main():
             p=data['position'];sprite(result,actor+'-idle',p['x'],p['y'])
             carry=data['carrying']
             if carry in sprites:
-                sprite(result,carry,p['x']+11,p['y']+3)
+                sprite(result,carry,p['x']+11,p['y']+3,scene['carryScale'])
         result.alpha_composite(front)
         return result
     for number,item in enumerate(states,1):save(render(item['state']),f'still-{number}.png')
