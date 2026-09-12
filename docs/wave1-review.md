@@ -1,5 +1,7 @@
 # Wave 1 and Home design demonstration
 
+> **Leo's 2026-09-12 decision: Home visual direction REJECTED** as a résumé/document/Claude artifact. CP2 is not approved. The checks and merged PRs below are historical implementation evidence, not visual sign-off. [Little World direction](little-world-direction.md) now governs: build Little World first without the old CP2 dependency, obtain world feedback, then revisit Home through LEO-76.
+
 Scope: Foundation plus the first Home exemplar, after CP1 and before CP2.
 Nothing in this run publishes to GitHub Pages or changes the domain. The
 remaining core destinations have structural routes, not finished case studies.
@@ -17,7 +19,7 @@ remaining core destinations have structural routes, not finished case studies.
 
 The builder and reviewer are separate agents. Parent review includes generated
 output, browser behavior and screenshots, not only the implementation report.
-Integrated Home evidence is recorded below; CP2 remains pending Leo’s review.
+Integrated Home evidence is recorded below; Leo subsequently rejected this visual direction. CP2 remains unapproved.
 
 ## Explicit first-iteration limits
 
@@ -109,7 +111,7 @@ Local review artifacts are in `/tmp/leochai-review/home-parent/` (six responsive
 screenshots, no-JS stills, blocked-font stills, audit and budget reports).
 
 Leo's designated thread was notified as soon as the passing Home build was
-served by the current tunnel. CP2 visual approval and the missing authored
-content remain with Leo. Foundation completion does not authorize Wave 2 fan-out
-or production publication. Tunnel URLs are session-specific; read the active
+served by the current tunnel. CP2 was subsequently rejected; missing authored
+content remains with Leo. Little World work is now authorized before Home
+approval; production publication remains unauthorized. Tunnel URLs are session-specific; read the active
 `leochai-dev` tuistory session before sharing a URL again.

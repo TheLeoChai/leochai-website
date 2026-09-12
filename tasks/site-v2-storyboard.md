@@ -1,5 +1,7 @@
 # leochai.com v2 — Revised Site Storyboard
 
+> **2026-09-12 superseding direction:** [Little World direction](../docs/little-world-direction.md) governs current design, order and handoff. Wave 1 Home was rejected; CP2 is not approved. Build the bilingual Little World prototype first, then Leo's world feedback, then future Home integration. The older Home-first composition and farm-only presentation below are historical; backend budgets, safety and evidence contracts remain in force.
+
 > Revised 2026-09-10 from the converged storyboard and Leo's raw thoughts.
 > **“I build systems you can understand.”** Home alone closes the call.
 > People living on a little farm, a job pipeline talking in a chat window,

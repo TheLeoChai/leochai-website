@@ -2,6 +2,8 @@
 
 Personal website for Leo Chai. Live at https://leochai.com (frontend on GitHub Pages).
 
+Current design/order/process revision: read `docs/little-world-direction.md` before frontend work. Little World precedes Home redesign; Wave 1 Home was rejected and CP2 is not approved. It overrides conflicting earlier visual and handoff rules. Author source in `content/` and `assets/`; `site/` is generated output. This prototype session must not publish.
+
 ## Structure
 
 - `site/` — static frontend only. **No server-side runtime is possible here**: GitHub Pages serves static files. No Node/Python servers, no APIs.
