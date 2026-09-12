@@ -173,6 +173,7 @@ def main():
         if entities['bed-01']['watered']:
             prop('bed','bed-watered' if entities['bed-01']['herbs'] else 'bed-harvested')
         if entities['stool']['placed']:prop('stool')
+        if not entities['stool']['repaired']:prop('stoolWorkshop','stool')
         if entities['table']['served']:prop('meal')
         if entities['kitchen']['meal']:prop('steam')
         for actor,data in sorted(state['actors'].items(),key=lambda pair:pair[1]['position']['y']):
