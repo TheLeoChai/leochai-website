@@ -6,7 +6,7 @@ This records Leo's current instruction and overrides conflicting Home-first, vis
 
 Leo rejected Wave 1 Home as resembling a résumé/document/Claude artifact. CP2 is **not approved**; merged LEO-50 and LEO-114 remain historical completed work, not visual approval. Little World comes first to discover the site's design and does not wait for old Home CP2.
 
-1. **Now:** a polished, spacious pixel world prototype on the existing `/en/work/tiny-world/` and `/zh/work/tiny-world/` routes, retaining `#live`. Show two or three connected cooking, music, building or garden activities. The world should feel inhabited and worth looking at before its technical explanation. Use licensed/original art and truthful bundled fixtures. No backend or inference.
+1. **Now:** a polished, spacious pixel world prototype on the existing `/en/work/tiny-world/` and `/zh/work/tiny-world/` routes, retaining `#live`. Show two or three connected cooking, music, building or garden activities. The world should feel inhabited and worth looking at before its technical explanation. Use licensed/original art and truthful bundled fixtures. No backend or inference. Choose the workshop courtyard over the alternative stacked terrace: broad garden/workshop left, shared table right, a winding connecting path and creek in the foreground. This preserves breadth and legibly connected activity.
 2. **Next:** independent visual review of actual initial and revised desktop/mobile screenshots, then Leo's Little World visual feedback. Future Home integration belongs to unfinished LEO-76; do not rebuild Home during this prototype.
 3. **Later:** shared episodes and gateway work under LEO-62 and existing backend issues. Security, accounting, isolation and inference budgets are unchanged.
 
@@ -29,7 +29,7 @@ Show the completed poster immediately. Explanatory replay requires explicit Play
 | LEO-90 | Scene/trace interface, stable event IDs and pure deterministic `stateAt(trace, time)` replay; fixture and state validation |
 | LEO-91 | Bilingual page/Canvas renderer, controls, responsive composition and static fallback; consumes art and schema |
 | LEO-89 / 92 / 93 / 94 | Concise introduction / readable state details / truthful limits / exact provenance and credits |
-| Visual-review child of LEO-53 | Independent screenshot review of initial and revised renders before Leo feedback |
+| [LEO-164](https://linear.app/leochai/issue/LEO-164) | Independent screenshot review of initial and revised renders before Leo feedback |
 | LEO-76 | Future Home world opening after Little World feedback |
 | LEO-160 | Index only; decisions live in feature issues and this document |
 
@@ -39,4 +39,4 @@ Acceptance requires licensed, coherent art at desktop and mobile sizes; two or t
 
 ## Execution and review
 
-Use native subagents with actual model selection: `gpt-6-astra` at high for frontend/art and independent visual review; medium for bounded tooling/docs/Linear work. Builder and reviewer are separate. Each issue has a branch and reviewed PR to `main`; only merged implementation issues become Done. Do not force-push any branch, upload critiques, send notifications, publish, run the publish script or change domains. Review initial and revised screenshots at 390, 768 and 1440px in both locales, recording concrete visual findings; iterate as needed without an arbitrary pass cap. Passing tests or an agent review does not constitute Leo's visual sign-off.
+Use native subagents with actual model selection: `gpt-6-astra` at high for frontend/art and independent visual review; medium for bounded tooling/docs/Linear work. Builder and reviewer are separate. Each issue has a branch and reviewed PR to `main`; only merged implementation issues become Done. Do not force-push any branch, upload critiques, publish, run the publish script or change domains. The only authorized notification is the explicitly requested completion callback to session `ses_f7203b7f8ffe26tPnR1h5IRq6D`, after verifying the actual CLI invocation; do not send other notifications. Review initial and revised screenshots at 390, 768 and 1440px in both locales, recording concrete visual findings; iterate as needed without an arbitrary pass cap. Passing tests or an agent review does not constitute Leo's visual sign-off.
