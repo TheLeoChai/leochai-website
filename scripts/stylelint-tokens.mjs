@@ -27,8 +27,8 @@ export default stylelint.createPlugin(ruleName, enabled => (root, result) => {
       }
       if (!tokens && ((node.type === 'word' && (/^#[a-f0-9]{3,8}$/i.test(node.value) || colors.has(node.value.toLowerCase()))) || (node.type === 'function' && colorFunctions.test(node.value)))) report(decl, 'Reference a pinned color token; literal colors and generated color functions belong only in tokens.css.');
     });
-    if (/gradient\(/i.test(decl.value)) report(decl, 'Gradients are not part of this design system.');
-    if (decl.prop === 'box-shadow' && !['none', 'var(--elevation)'].includes(decl.value)) report(decl, 'Use the hard-offset elevation token.');
+    // LEO-53, 2026-09-12: gradients and soft shadows are art-direction choices.
+    // Their colors still pass the same token boundary checks above.
   });
   if (tokens) for (const name of names) if (!seen.has(name)) report(root, `Missing pinned token: ${name}`);
 });

@@ -3,6 +3,8 @@ layout: base.njk
 ---
 {% if route.key == 'home' %}
 {% include "home.njk" %}
+{% elif route.key == 'tiny-world' %}
+{% include "world.njk" %}
 {% else %}
 <h1>{{ route.title }}</h1>
 <p>{{ route.description }}</p>
@@ -11,7 +13,7 @@ layout: base.njk
 {% if route.key == 'notes' %}
 <p><a href="/{{ route.locale }}/rss.xml">{% if route.locale == 'zh' %}订阅中文笔记（Atom）{% else %}Subscribe to English Notes (Atom){% endif %}</a></p>
 {% endif %}
-{% for anchor in route.anchors %}<section id="{{ anchor }}" aria-label="{{ anchor }}"></section>{% endfor %}
+{% if route.key != 'tiny-world' %}{% for anchor in route.anchors %}<section id="{{ anchor }}" aria-label="{{ anchor }}"></section>{% endfor %}{% endif %}
 {% if route.key == 'notes' and route.locale == 'zh' %}
 <section aria-labelledby="awaiting-translation">
   <h2 id="awaiting-translation">待翻译的英文文章</h2>

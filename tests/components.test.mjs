@@ -38,11 +38,12 @@ test('execution metadata gate rejects synthetic recordings and replay LIVE label
   assert.equal(evidenceRows({}).rows.filter(row => row.value === 'Not supplied').length, 9);
 });
 test('stylelint rejects color escapes and invented tokens, permits approved usage', async () => {
-  for (const code of ['a{color:red}', 'a{color:#fff}', 'a{color:rgb(1 2 3)}', 'a{--custom:4px}', 'a{color:var(--custom)}', 'a{box-shadow:0 2px 8px var(--ink)}']) {
+  for (const code of ['a{color:red}', 'a{color:#fff}', 'a{color:rgb(1 2 3)}', 'a{--custom:4px}', 'a{color:var(--custom)}', 'a{box-shadow:0 2px 8px red}']) {
     const result = await stylelint.lint({ code, codeFilename: 'assets/css/test.css', configFile: 'stylelint.config.mjs' });
     assert(result.errored, code);
   }
   assert.equal((await stylelint.lint({ code: 'a{color:var(--ink);box-shadow:var(--elevation)}', codeFilename: 'assets/css/test.css', configFile: 'stylelint.config.mjs' })).errored, false);
+  assert.equal((await stylelint.lint({ code: 'a{background:linear-gradient(var(--canvas),var(--pastel-teal));box-shadow:0 2px 8px var(--ink)}', codeFilename: 'assets/css/test.css', configFile: 'stylelint.config.mjs' })).errored, false);
 });
 test('player and deterministic model stay within the measured 3 KB gzip budget', async () => {
   const bytes = (await Promise.all(['timeline.js', 'timeline-model.js'].map(async name => gzipSync(await readFile(new URL(`../assets/js/${name}`, import.meta.url))).length))).reduce((a, b) => a + b);
