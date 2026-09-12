@@ -28,10 +28,12 @@
   },
   {
     "key": "tiny-world",
-    "title": "Tiny World",
-    "description": "A shared farm simulation.",
-    "revision": "scaffold-1",
-    "body": "This page is being built."
+    "title": "Little World",
+    "description": "A little garden, a busy workshop, and a table with room for everyone. An illustrated courtyard by Leo Chai.",
+    "revision": "courtyard-1",
+    "body": "An illustrated courtyard afternoon.",
+    "pageStyles": ["/css/world.css"],
+    "pageScripts": ["/js/world.js"]
   },
   {
     "key": "opencode",
