@@ -4,9 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>小小世界 · Leo Chai</title>
-  <meta name="description" content="共享的农场模拟。">
-  <meta name="content-revision" content="scaffold-1">
-<meta name="translation-source-revision" content="scaffold-1">  <link rel="stylesheet" href="/css/tokens.css">
+  <meta name="description" content="一方花园，一间工坊，一张等大家来坐的餐桌。Leo Chai 的像素庭院。">
+  <meta name="content-revision" content="courtyard-1">
+<meta name="translation-source-revision" content="courtyard-1">  <link rel="stylesheet" href="/css/tokens.css">
   <link rel="stylesheet" href="/css/fonts.css">
   <link rel="stylesheet" href="/css/typography.css">
   <link rel="canonical" href="https://leochai.com/zh/work/tiny-world/">
@@ -14,8 +14,8 @@
 <link rel="alternate" hreflang="en" href="https://leochai.com/en/work/tiny-world/">
 <link rel="alternate" hreflang="zh-Hans" href="https://leochai.com/zh/work/tiny-world/">
   <link rel="stylesheet" href="/css/components.css">
-</head>
-<body>
+<link rel="stylesheet" href="/css/world.css"><script type="module" src="/js/world.js"></script></head>
+<body class="world-page">
   <a class="skip-link" href="#main">跳到正文</a>
 <nav class="site-nav site-width" aria-label="主导航">
   <a class="site-name" href="/zh/">Leo Chai</a>
@@ -25,10 +25,55 @@
     <li><a href="mailto:contact@leochai.com?subject=R%C3%A9sum%C3%A9%20request">索取简历</a></li>
   </ul>
 </nav>
-  <main class="site-main site-width" id="main" tabindex="-1"><h1>小小世界</h1>
-<p>共享的农场模拟。</p>
-<p>此页面正在建设中。</p>
-<section id="live" aria-label="live"></section></main>
+  <main class="site-main site-width" id="main" tabindex="-1"><header class="world-intro">
+  <div>
+    <p class="world-intro__eyebrow">Leo Chai 的像素庭院</p>
+    <h1>小小世界</h1>
+  </div>
+  <p class="world-intro__hello">一方花园，一间工坊。<br>忙完了，就一起坐下来吧。</p>
+</header>
+
+<section class="world" id="live" aria-label="庭院场景与回放" data-world data-locale="zh" data-scene="/world/scene.json" data-trace="/world/trace.json">
+  <figure>
+    <div class="world__view">
+      <img class="world__poster" src="/world/poster.png" width="512" height="320" fetchpriority="high" alt="溪水环绕的像素庭院：左侧是花园和工坊，右侧是厨房，三位居民聚在摆好午餐的餐桌旁。">
+      <canvas class="world__canvas" width="512" height="320" aria-hidden="true"></canvas>
+      <p class="world__fallback" data-asset-error hidden>场景图片未能加载。下方的三个片段仍可阅读。</p>
+    </div>
+    <figcaption class="world__caption"><strong>庭院里的午后</strong><span>示意场景 · 内置示例</span></figcaption>
+  </figure>
+  <div class="world__controls" data-controls hidden>
+    <button class="world__button world__button--play" type="button" data-play><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="m8 5 11 7-11 7Z"/></svg><span data-play-label>播放这个午后</span></button>
+    <button class="world__button" type="button" data-replay>重播</button>
+    <button class="world__button" type="button" data-step>下一步</button>
+    <label class="world__scrub"><span class="world-visually-hidden">回放进度</span><input type="range" min="0" max="40000" step="100" value="40000" data-seek><span class="world__time" data-time>0:40 / 0:40</span></label>
+  </div>
+  <div class="world__observation" data-observation>
+    <p class="world__observation-title" data-event-caption>浇好的花园，修好的座位，一起吃午餐。</p>
+    <p class="world__observation-detail" data-event-observation>三位居民都来到了餐桌旁。</p>
+  </div>
+  <p class="world-visually-hidden" aria-live="polite" data-announcement></p>
+  <noscript><p>这是完成后的静态场景。下方按顺序展示三个片段。</p></noscript>
+</section>
+
+<section class="world-story" aria-labelledby="world-story-title">
+  <div class="world-story__heading"><h2 id="world-story-title">小事，慢慢连在一起</h2><p>三位虚构的成年居民，共度一个午后。</p></div>
+  <ol class="world-story__steps">
+    <li><div class="world-story__image"><img src="/world/still-1.png" width="512" height="320" loading="lazy" alt="先遇到一个小问题"></div><h3>先遇到一个小问题</h3><p>空水壶没有浇出水。园丁去井边打水，再回到香草地。</p></li>
+    <li><div class="world-story__image"><img src="/world/still-2.png" width="512" height="320" loading="lazy" alt="从花园到厨房"></div><h3>从花园到厨房</h3><p>香草地浇好了。厨师采下长成的香草做午餐，手艺人则修好松动的凳子。</p></li>
+    <li><div class="world-story__image"><img src="/world/still-3.png" width="512" height="320" loading="lazy" alt="一起坐下来"></div><h3>一起坐下来</h3><p>修好的凳子搬到了桌旁，午餐上桌，三位居民聚在一起。这是编排的示意场景，没有实时模拟或模型调用。</p></li>
+  </ol>
+</section>
+
+<details class="world-details">
+  <summary>这个世界是怎样做的</summary>
+  <div class="world-details__body">
+    <p><strong>一个用来观看的小场景。</strong> 画面与回放使用同一个内置示例。动作、文字与路线均经过编排，不是实时运行记录，也不代表角色的真实思考或私人记忆。没有后台服务、模型调用或声音。</p>
+    <p>路线与压缩后的时间均为编排，用于说明过程，并非运行记录。香草在开始时已长成。 拖动进度条，可查看任意时刻；关闭 JavaScript 时仍可阅读静态场景。</p>
+    <p><strong>画作来源。</strong> 场景使用 <a href="https://kenney.nl/assets/tiny-town">Kenney Tiny Town</a>、<a href="https://kenney.nl/assets/tiny-farm">Tiny Farm</a> 与 <a href="https://merchant-shade.itch.io/16x16-puny-characters">Shade Puny Characters</a> 的 CC0 素材，另加原创编排与修改。</p>
+  </div>
+</details>
+</main>
 <footer class="site-footer site-width">
   <ul aria-label="联系方式和订阅">
     <li><a href="mailto:contact@leochai.com">contact@leochai.com</a></li>

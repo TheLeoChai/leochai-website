@@ -48,9 +48,12 @@ artifacts and are not browser payload.
 `scene.sprites` maps used frame keys to `{x,y,w,h,anchorX,anchorY}` source atlas
 rectangles. `scene.actors` maps resident IDs to `idle` and `walk` frame keys.
 Draw base, state props, actors sorted by foot Y, carried items, then front.
-Carried item foot position is actor foot plus `[11,3]`. Held items use
-`scene.carryScale` (0.5), with their frame dimensions and anchor scaled together
-using nearest-neighbor sampling. Placed world props remain at native scale.
+Carried item foot position is actor foot plus `[11,3]`. `scene.heldSprites` maps
+inventory keys to native 16×16 frames (anchor `[8,12]`), prebaked with Pillow's
+nearest-neighbor sampling. `scene.carryScale` records their source scale (0.5);
+the renderer never downsamples them. Placed world props remain at native scale.
+Normal-motion stills select the same absolute-time walk frame as Canvas:
+moving and `floor(time / 240) % 2`. Reduced-motion rendering can retain idle.
 
 Initial herbs are baked into base. Replace bed-01 using `bed-watered` or
 `bed-harvested` at `stateProps.bed`; the latter hides harvested leaves and adds

@@ -1,4 +1,17 @@
 {
-  "description": "Every JS-rendered string must also occur in static HTML or be declared here, grouped by route and font role. Paths exclude deployment prefix. No dynamic UI is shipped yet.",
-  "routes": {}
+  "description": "Every JS-rendered string must also occur in static HTML or be declared here, grouped by route and font role. Paths exclude deployment prefix.",
+  "routes": {
+    "/en/work/tiny-world/": [
+      {
+        "role": "body",
+        "text": "Play the afternoon Pause Continue Play again Paused. Playing the illustrated afternoon. The afternoon is complete. Replay is unavailable. The completed still and three story moments remain below. 0:00 / 0:40 A courtyard afternoon The herb bed is dry. The can is empty. An empty can cannot water the herbs No water came out. The bed is unchanged. Water from the well The can now holds one portion of water. A loose stool gets a repair The stool is steady and ready for the table. The herbs get their water The soil is wet; the can is empty again. A handful of herbs for lunch The already-grown herbs go into the basket. Garden herbs finish the meal Lunch is ready to carry to the table. One more seat at the table The repaired stool is in place for lunch. Lunch reaches the courtyard table The herb meal is on the table beside the repaired stool. A watered garden. A repaired seat. Lunch together. The three residents have gathered at the table."
+      }
+    ],
+    "/zh/work/tiny-world/": [
+      {
+        "role": "body",
+        "text": "播放这个午后 暂停 继续 再看一次 已暂停。正在播放庭院里的午后。这个午后播放完了。回放暂不可用，仍可查看完成后的静态场景和下方三个片段。0:00 / 0:40 庭院里的午后 香草地干了，水壶也是空的。 空水壶浇不了香草 没有水流出，香草地没有变化。 从井里打水 水壶里现在有一份水。 修好松动的凳子 凳子稳当了，可以搬到餐桌旁。 给香草浇上水 土壤湿了，水壶又空了。 摘一把香草做午餐 把已经长成的香草放进篮子。 用院里的香草完成午餐 午餐做好了，可以端到餐桌上。 餐桌旁多了一个座位 修好的凳子已放好，等着开饭。 午餐上桌了 香草午餐摆上了桌，修好的凳子就在旁边。 浇好的花园，修好的座位，一起吃午餐。 三位居民都来到了餐桌旁。"
+      }
+    ]
+  }
 }

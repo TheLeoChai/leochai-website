@@ -1,0 +1,46 @@
+{
+  "version": 1,
+  "id": "courtyard-afternoon",
+  "duration": 40000,
+  "posterTime": 40000,
+  "provenance": {"kind": "illustration", "source": "bundled-fixture", "revision": "courtyard-v1", "capture": null},
+  "actors": {
+    "gardener": {"label": {"en": "Gardener", "zh": "园丁"}, "fictionalAdult": true, "initial": {"carrying": "empty-can"}},
+    "maker": {"label": {"en": "Maker", "zh": "手艺人"}, "fictionalAdult": true, "initial": {"carrying": "tools"}},
+    "cook": {"label": {"en": "Cook", "zh": "厨师"}, "fictionalAdult": true, "initial": {"carrying": "basket"}}
+  },
+  "entities": {
+    "can": {"label": {"en": "Watering can", "zh": "浇水壶"}, "initial": {"water": 0}},
+    "well": {"label": {"en": "Well", "zh": "水井"}, "initial": {"available": true}},
+    "bed-01": {"label": {"en": "Herb bed", "zh": "香草地"}, "initial": {"watered": false, "herbs": true}},
+    "stool": {"label": {"en": "Loose stool", "zh": "松动的凳子"}, "initial": {"repaired": false, "placed": false}},
+    "kitchen": {"label": {"en": "Kitchen", "zh": "厨房"}, "initial": {"meal": false}},
+    "table": {"label": {"en": "Shared table", "zh": "餐桌"}, "initial": {"served": false, "gathered": false}}
+  },
+  "presentation": {
+    "kind": "authored-routes",
+    "note": {"en": "Authored paths and compressed timing illustrate the sequence; these are not captured positions. The herbs are already grown.", "zh": "路线与压缩后的时间均为编排，用于说明过程，并非运行记录。香草在开始时已长成。"},
+    "routes": {
+      "gardener": [{"at":0,"anchor":"bed-01"},{"at":4000,"anchor":"bed-01"},{"at":8000,"anchor":"well"},{"at":10000,"anchor":"well"},{"at":14000,"anchor":"bed-01"},{"at":30000,"anchor":"bed-01"},{"at":36000,"anchor":"table-gardener"},{"at":40000,"anchor":"table-gardener"}],
+      "maker": [{"at":0,"anchor":"workbench"},{"at":24000,"anchor":"workbench"},{"at":28000,"anchor":"table-maker"},{"at":40000,"anchor":"table-maker"}],
+      "cook": [{"at":0,"anchor":"kitchen"},{"at":16000,"anchor":"kitchen"},{"at":18000,"anchor":"herb-pickup"},{"at":20000,"anchor":"herb-pickup"},{"at":24000,"anchor":"kitchen"},{"at":28000,"anchor":"kitchen"},{"at":32000,"anchor":"table"},{"at":40000,"anchor":"table"}]
+    }
+  },
+  "events": [
+    {"id":"afternoon-start","seq":0,"at":0,"actor":"gardener","target":"bed-01","action":"observe","outcome":"illustrated","caption":{"en":"A courtyard afternoon","zh":"庭院里的午后"},"observation":{"id":"notice-dry-bed","actor":"gardener","text":{"en":"The herb bed is dry. The can is empty.","zh":"香草地干了，水壶也是空的。"}},"changes":[]},
+    {"id":"water-rejected","seq":1,"at":2000,"actor":"gardener","target":"bed-01","action":"water","outcome":"rejected","caption":{"en":"An empty can cannot water the herbs","zh":"空水壶浇不了香草"},"observation":{"id":"notice-empty-can","actor":"gardener","text":{"en":"No water came out. The bed is unchanged.","zh":"没有水流出，香草地没有变化。"}},"changes":[]},
+    {"id":"can-refilled","seq":2,"at":9000,"actor":"gardener","target":"well","action":"refill","outcome":"accepted","caption":{"en":"Water from the well","zh":"从井里打水"},"observation":{"id":"notice-full-can","actor":"gardener","text":{"en":"The can now holds one portion of water.","zh":"水壶里现在有一份水。"}},"changes":[{"target":"can","field":"water","from":0,"to":1},{"target":"gardener","field":"carrying","from":"empty-can","to":"full-can"}]},
+    {"id":"stool-repaired","seq":3,"at":12000,"actor":"maker","target":"stool","action":"repair","outcome":"accepted","caption":{"en":"A loose stool gets a repair","zh":"修好松动的凳子"},"observation":{"id":"notice-stool-fixed","actor":"maker","text":{"en":"The stool is steady and ready for the table.","zh":"凳子稳当了，可以搬到餐桌旁。"}},"changes":[{"target":"stool","field":"repaired","from":false,"to":true},{"target":"maker","field":"carrying","from":"tools","to":"stool"}]},
+    {"id":"herbs-watered","seq":4,"at":15000,"actor":"gardener","target":"bed-01","action":"water","outcome":"accepted","caption":{"en":"The herbs get their water","zh":"给香草浇上水"},"observation":{"id":"notice-wet-bed","actor":"gardener","text":{"en":"The soil is wet; the can is empty again.","zh":"土壤湿了，水壶又空了。"}},"changes":[{"target":"can","field":"water","from":1,"to":0},{"target":"gardener","field":"carrying","from":"full-can","to":"empty-can"},{"target":"bed-01","field":"watered","from":false,"to":true}]},
+    {"id":"herbs-collected","seq":5,"at":19000,"actor":"cook","target":"bed-01","action":"harvest","outcome":"accepted","caption":{"en":"A handful of herbs for lunch","zh":"摘一把香草做午餐"},"observation":{"id":"notice-herbs-picked","actor":"cook","text":{"en":"The already-grown herbs go into the basket.","zh":"把已经长成的香草放进篮子。"}},"changes":[{"target":"bed-01","field":"herbs","from":true,"to":false},{"target":"cook","field":"carrying","from":"basket","to":"herbs"}]},
+    {"id":"lunch-prepared","seq":6,"at":25000,"actor":"cook","target":"kitchen","action":"prepare","outcome":"accepted","caption":{"en":"Garden herbs finish the meal","zh":"用院里的香草完成午餐"},"observation":{"id":"notice-meal-ready","actor":"cook","text":{"en":"Lunch is ready to carry to the table.","zh":"午餐做好了，可以端到餐桌上。"}},"changes":[{"target":"kitchen","field":"meal","from":false,"to":true},{"target":"cook","field":"carrying","from":"herbs","to":"meal"}]},
+    {"id":"stool-placed","seq":7,"at":29000,"actor":"maker","target":"stool","action":"place","outcome":"accepted","caption":{"en":"One more seat at the table","zh":"餐桌旁多了一个座位"},"observation":{"id":"notice-seat-ready","actor":"maker","text":{"en":"The repaired stool is in place for lunch.","zh":"修好的凳子已放好，等着开饭。"}},"changes":[{"target":"stool","field":"placed","from":false,"to":true},{"target":"maker","field":"carrying","from":"stool","to":"nothing"}]},
+    {"id":"lunch-served","seq":8,"at":33000,"actor":"cook","target":"table","action":"serve","outcome":"accepted","caption":{"en":"Lunch reaches the courtyard table","zh":"午餐上桌了"},"observation":{"id":"notice-lunch-served","actor":"cook","text":{"en":"The herb meal is on the table beside the repaired stool.","zh":"香草午餐摆上了桌，修好的凳子就在旁边。"}},"changes":[{"target":"kitchen","field":"meal","from":true,"to":false},{"target":"table","field":"served","from":false,"to":true},{"target":"cook","field":"carrying","from":"meal","to":"nothing"}]},
+    {"id":"afternoon-complete","seq":9,"at":40000,"actor":"gardener","target":"table","action":"gather","outcome":"illustrated","caption":{"en":"A watered garden. A repaired seat. Lunch together.","zh":"浇好的花园，修好的座位，一起吃午餐。"},"observation":{"id":"notice-shared-table","actor":"gardener","text":{"en":"The three residents have gathered at the table.","zh":"三位居民都来到了餐桌旁。"}},"changes":[{"target":"table","field":"gathered","from":false,"to":true}]}
+  ],
+  "stills": [
+    {"event":"water-rejected","title":{"en":"First, a small snag","zh":"先遇到一个小问题"},"body":{"en":"The empty watering can changes nothing. The gardener goes to the well, refills it, and returns.","zh":"空水壶没有浇出水。园丁去井边打水，再回到香草地。"}},
+    {"event":"herbs-collected","title":{"en":"From garden to kitchen","zh":"从花园到厨房"},"body":{"en":"The garden is watered. The cook gathers existing herbs for lunch while the maker repairs a loose stool.","zh":"香草地浇好了。厨师采下长成的香草做午餐，手艺人则修好松动的凳子。"}},
+    {"event":"afternoon-complete","title":{"en":"A place to share it","zh":"一起坐下来"},"body":{"en":"The repaired stool joins the table, lunch is served, and all three residents gather. An authored illustration, with no live simulation or model calls.","zh":"修好的凳子搬到了桌旁，午餐上桌，三位居民聚在一起。这是编排的示意场景，没有实时模拟或模型调用。"}}
+  ]
+}

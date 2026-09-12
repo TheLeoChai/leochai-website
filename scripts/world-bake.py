@@ -137,24 +137,31 @@ def main():
         d.line((12,19,9,16,7,16),fill='#403547',width=3)
         d.line((12,18,9,15,7,15),fill='#a9abc7',width=1)
         frames.append((name,im,16,24))
+    # Bake small carried variants once: browser nearest sampling differs from
+    # Pillow at half-scale boundaries, so runtime always draws native pixels.
+    held_sprites={name:'held-'+name for name in ['empty-can','full-can','stool','herbs','meal']}
+    held_frames=[]
+    for name,im,ax,ay in frames:
+        if name in held_sprites:
+            held_frames.append((held_sprites[name],im.resize((16,16),Image.Resampling.NEAREST),ax//2,ay//2))
+    frames=[frame for frame in frames if frame[0] not in ['empty-can','full-can','herbs']]+held_frames
     atlas=Image.new('RGBA',(32*len(frames),32))
     for i,(name,im,ax,ay) in enumerate(frames):
         atlas.alpha_composite(im,(32*i,0))
-        sprites[name]={'x':32*i,'y':0,'w':32,'h':32,'anchorX':ax,'anchorY':ay}
+        sprites[name]={'x':32*i,'y':0,'w':im.width,'h':im.height,'anchorX':ax,'anchorY':ay}
     scene={'schemaVersion':1,'id':'workshop-courtyard','width':512,'height':320,'tileSize':16,
            'provenance':'Illustration — authored setting and routes, not simulation telemetry.',
            'images':{'base':'map-base.png','front':'map-front.png','sprites':'sprites.png','poster':'poster.png'},
            'mobileView':{'x':128,'y':48,'width':256,'height':256},
            'carryScale':0.5,
+           'heldSprites':held_sprites,
            'anchors':anchors,'sprites':sprites,
            'actors':{a:{'idle':f'{a}-idle','walk':f'{a}-walk'} for a in ['gardener','maker','cook']},
            'stateProps':{'water':{'x':240,'y':160},'bed':{'x':240,'y':160},'stool':{'x':280,'y':239},'stoolWorkshop':{'x':198,'y':152},'meal':{'x':305,'y':229},'herbs':{'x':320,'y':164},'steam':{'x':350,'y':141}},
            'posterActors':{'gardener':'table-gardener','maker':'table-maker','cook':'table'}}
-    def sprite(dst,key,x,y,scale=1):
+    def sprite(dst,key,x,y):
         r=sprites[key];im=atlas.crop((r['x'],r['y'],r['x']+r['w'],r['y']+r['h']))
-        if scale != 1:
-            im=im.resize((round(r['w']*scale),round(r['h']*scale)),Image.Resampling.NEAREST)
-        dst.alpha_composite(im,(math.floor(x-r['anchorX']*scale+0.5),math.floor(y-r['anchorY']*scale+0.5)))
+        dst.alpha_composite(im,(math.floor(x-r['anchorX']+0.5),math.floor(y-r['anchorY']+0.5)))
     (OUT/'scene.json').write_text(json.dumps(scene,ensure_ascii=False,indent=2)+'\n')
     # The page and bake consume the same state reader, never a second timeline.
     js="""
@@ -177,10 +184,12 @@ def main():
         if entities['table']['served']:prop('meal')
         if entities['kitchen']['meal']:prop('steam')
         for actor,data in sorted(state['actors'].items(),key=lambda pair:pair[1]['position']['y']):
-            p=data['position'];sprite(result,actor+'-idle',p['x'],p['y'])
+            p=data['position']
+            walking=data['moving'] and math.floor(state['time']/240)%2
+            sprite(result,actor+('-walk' if walking else '-idle'),p['x'],p['y'])
             carry=data['carrying']
-            if carry in sprites:
-                sprite(result,carry,p['x']+11,p['y']+3,scene['carryScale'])
+            if carry in held_sprites:
+                sprite(result,held_sprites[carry],p['x']+11,p['y']+3)
         result.alpha_composite(front)
         return result
     for number,item in enumerate(states,1):save(render(item['state']),f'still-{number}.png')

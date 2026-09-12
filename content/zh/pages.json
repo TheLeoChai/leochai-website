@@ -32,10 +32,12 @@
   {
     "key": "tiny-world",
     "title": "小小世界",
-    "description": "共享的农场模拟。",
-    "revision": "scaffold-1",
-    "body": "此页面正在建设中。",
-    "sourceRevision": "scaffold-1"
+    "description": "一方花园，一间工坊，一张等大家来坐的餐桌。Leo Chai 的像素庭院。",
+    "revision": "courtyard-1",
+    "body": "用像素描绘庭院里的午后。",
+    "sourceRevision": "courtyard-1",
+    "pageStyles": ["/css/world.css"],
+    "pageScripts": ["/js/world.js"]
   },
   {
     "key": "opencode",

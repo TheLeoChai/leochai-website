@@ -36,7 +36,7 @@ export default function (config) {
   config.addPassthroughCopy({ assets: '.' });
   // The visual contract names site/_includes; authored components remain here.
   config.addPassthroughCopy({ 'content/_includes': '_includes' });
-  if (existsSync('site/CNAME')) config.addPassthroughCopy({ 'site/CNAME': 'CNAME' });
+  config.addPassthroughCopy({ [existsSync('site/CNAME') ? 'site/CNAME' : 'content/CNAME']: 'CNAME' });
   return {
     dir: { input: 'content', includes: '_includes', data: '_data', output: '.build/unvalidated' },
     templateFormats: ['njk', '11ty.js'],

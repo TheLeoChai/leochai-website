@@ -3,9 +3,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Tiny World · Leo Chai</title>
-  <meta name="description" content="A shared farm simulation.">
-  <meta name="content-revision" content="scaffold-1">
+  <title>Little World · Leo Chai</title>
+  <meta name="description" content="A little garden, a busy workshop, and a table with room for everyone. An illustrated courtyard by Leo Chai.">
+  <meta name="content-revision" content="courtyard-1">
   <link rel="stylesheet" href="/css/tokens.css">
   <link rel="stylesheet" href="/css/fonts.css">
   <link rel="stylesheet" href="/css/typography.css">
@@ -14,8 +14,8 @@
 <link rel="alternate" hreflang="en" href="https://leochai.com/en/work/tiny-world/">
 <link rel="alternate" hreflang="zh-Hans" href="https://leochai.com/zh/work/tiny-world/">
   <link rel="stylesheet" href="/css/components.css">
-</head>
-<body>
+<link rel="stylesheet" href="/css/world.css"><script type="module" src="/js/world.js"></script></head>
+<body class="world-page">
   <a class="skip-link" href="#main">Skip to content</a>
 <nav class="site-nav site-width" aria-label="Main navigation">
   <a class="site-name" href="/en/">Leo Chai</a>
@@ -25,10 +25,55 @@
     <li><a href="mailto:contact@leochai.com?subject=R%C3%A9sum%C3%A9%20request">Request résumé</a></li>
   </ul>
 </nav>
-  <main class="site-main site-width" id="main" tabindex="-1"><h1>Tiny World</h1>
-<p>A shared farm simulation.</p>
-<p>This page is being built.</p>
-<section id="live" aria-label="live"></section></main>
+  <main class="site-main site-width" id="main" tabindex="-1"><header class="world-intro">
+  <div>
+    <p class="world-intro__eyebrow">A pixel courtyard by Leo Chai</p>
+    <h1>Little World</h1>
+  </div>
+  <p class="world-intro__hello">A little garden. A busy workshop.<br>Come sit for a while.</p>
+</header>
+
+<section class="world" id="live" aria-label="Courtyard scene and replay" data-world data-locale="en" data-scene="/world/scene.json" data-trace="/world/trace.json">
+  <figure>
+    <div class="world__view">
+      <img class="world__poster" src="/world/poster.png" width="512" height="320" fetchpriority="high" alt="A pixel courtyard beside a creek: garden and workshop to the left, kitchen to the right, and three residents gathered around a table set for lunch.">
+      <canvas class="world__canvas" width="512" height="320" aria-hidden="true"></canvas>
+      <p class="world__fallback" data-asset-error hidden>The courtyard image could not load. Its three story moments are still available below.</p>
+    </div>
+    <figcaption class="world__caption"><strong>An afternoon in the courtyard</strong><span>Illustration · Bundled fixture</span></figcaption>
+  </figure>
+  <div class="world__controls" data-controls hidden>
+    <button class="world__button world__button--play" type="button" data-play><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="m8 5 11 7-11 7Z"/></svg><span data-play-label>Play the afternoon</span></button>
+    <button class="world__button" type="button" data-replay>Replay</button>
+    <button class="world__button" type="button" data-step>Next moment</button>
+    <label class="world__scrub"><span class="world-visually-hidden">Replay progress</span><input type="range" min="0" max="40000" step="100" value="40000" data-seek><span class="world__time" data-time>0:40 / 0:40</span></label>
+  </div>
+  <div class="world__observation" data-observation>
+    <p class="world__observation-title" data-event-caption>A watered garden. A repaired seat. Lunch together.</p>
+    <p class="world__observation-detail" data-event-observation>The three residents have gathered at the table.</p>
+  </div>
+  <p class="world-visually-hidden" aria-live="polite" data-announcement></p>
+  <noscript><p>This is the completed still. Follow the three moments below.</p></noscript>
+</section>
+
+<section class="world-story" aria-labelledby="world-story-title">
+  <div class="world-story__heading"><h2 id="world-story-title">Small things, coming together</h2><p>Three fictional adult residents. One shared afternoon.</p></div>
+  <ol class="world-story__steps">
+    <li><div class="world-story__image"><img src="/world/still-1.png" width="512" height="320" loading="lazy" alt="First, a small snag"></div><h3>First, a small snag</h3><p>The empty watering can changes nothing. The gardener goes to the well, refills it, and returns.</p></li>
+    <li><div class="world-story__image"><img src="/world/still-2.png" width="512" height="320" loading="lazy" alt="From garden to kitchen"></div><h3>From garden to kitchen</h3><p>The garden is watered. The cook gathers existing herbs for lunch while the maker repairs a loose stool.</p></li>
+    <li><div class="world-story__image"><img src="/world/still-3.png" width="512" height="320" loading="lazy" alt="A place to share it"></div><h3>A place to share it</h3><p>The repaired stool joins the table, lunch is served, and all three residents gather. An authored illustration, with no live simulation or model calls.</p></li>
+  </ol>
+</section>
+
+<details class="world-details">
+  <summary>A little about this world</summary>
+  <div class="world-details__body">
+    <p><strong>A little scene to watch.</strong> The stills and replay use the same bundled fixture. Its actions, words, and routes are authored, not a captured live run or a claim about actual cognition or private memory. There is no backend, model inference, or audio.</p>
+    <p>Authored paths and compressed timing illustrate the sequence; these are not captured positions. The herbs are already grown. Seek to any moment; the completed scene and numbered story also work without JavaScript.</p>
+    <p><strong>Art credits.</strong> Built with CC0 art from <a href="https://kenney.nl/assets/tiny-town">Kenney Tiny Town</a>, <a href="https://kenney.nl/assets/tiny-farm">Tiny Farm</a>, and <a href="https://merchant-shade.itch.io/16x16-puny-characters">Shade Puny Characters</a>, with original composition and edits.</p>
+  </div>
+</details>
+</main>
 <footer class="site-footer site-width">
   <ul aria-label="Contact and feeds">
     <li><a href="mailto:contact@leochai.com">contact@leochai.com</a></li>

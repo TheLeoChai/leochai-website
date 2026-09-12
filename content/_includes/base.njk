@@ -18,7 +18,7 @@
   {% for style in route.pageStyles or pageStyles %}<link rel="stylesheet" href="{{ style }}">{% endfor %}
   {% for script in route.pageScripts or pageScripts %}<script type="module" src="{{ script }}"></script>{% endfor %}
 </head>
-<body>
+<body{% if route.key == 'tiny-world' %} class="world-page"{% endif %}>
   <a class="skip-link" href="#main">{% if route.locale == 'zh' %}跳到正文{% else %}Skip to content{% endif %}</a>
   {% include "components/nav.njk" %}
   <main class="site-main site-width" id="main" tabindex="-1">{% block main %}{{ content | safe }}{% endblock %}</main>
